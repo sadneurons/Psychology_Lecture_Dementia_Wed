@@ -21,7 +21,23 @@ format:
     width: 1280
     height: 820
     footer: "Dementia - novel treatments"
-bibliography: Sources/refs.bib  
+    excalidraw:
+      button: true
+      shortcut: "`"
+    confetti:
+      particleCount: 150
+      angle: 90
+      spread: 360
+      startVelocity: 25
+      gravity: 0.8ccc5
+      drift: 0
+      ticks: 400
+      colors: ["#feba00", "#f54281", "#1fd14f"]
+      scalar: 0.7
+bibliography: Sources/refs.bib
+revealjs-plugins:
+  - confetti
+  - excalidraw
 ---
 
 ```{=html}
@@ -47,6 +63,7 @@ bibliography: Sources/refs.bib
 .reveal .trial-lab { display:block; font-size:0.4em; color:#6272a4; letter-spacing:0.04em; margin-top:0.1em; line-height:1.25; }
 .reveal .trial-ref { text-align:center; color:#6272a4; font-size:0.42em; font-style:italic; margin-top:0.7em; border-top:1px solid #44475a; padding-top:0.55em; }
 .reveal .trial-chart { width:100%; height:auto; display:block; margin:0.4em 0 0.7em; }
+
 </style>
 ```
 

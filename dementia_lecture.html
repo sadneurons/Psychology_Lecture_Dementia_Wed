@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Dr.&nbsp;Ross A. Dunne">
-  <meta name="dcterms.date" content="2026-04-25">
+  <meta name="dcterms.date" content="2026-04-26">
   <title>Dementia and its treatments</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -56,6 +56,7 @@
   <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.css" rel="stylesheet">
   <link href="dementia_lecture_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -164,7 +165,7 @@ Dr.&nbsp;Ross A. Dunne
     </div>
 </div>
 
-  <p class="date">2026-04-25</p>
+  <p class="date">2026-04-26</p>
 </section>
 <section class="slide level2">
 
@@ -190,6 +191,7 @@ Dr.&nbsp;Ross A. Dunne
 .reveal .trial-lab { display:block; font-size:0.4em; color:#6272a4; letter-spacing:0.04em; margin-top:0.1em; line-height:1.25; }
 .reveal .trial-ref { text-align:center; color:#6272a4; font-size:0.42em; font-style:italic; margin-top:0.7em; border-top:1px solid #44475a; padding-top:0.55em; }
 .reveal .trial-chart { width:100%; height:auto; display:block; margin:0.4em 0 0.7em; }
+
 </style>
 </section>
 <section id="outline" class="slide level2">
@@ -1469,6 +1471,11 @@ This is where psychologists work, with clinicians, on the things that actually s
   <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
   <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-confetti/confetti.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-excalidraw/react.development.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-excalidraw/react-dom.development.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.development.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.js"></script>
   <script src="dementia_lecture_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1492,6 +1499,8 @@ This is where psychologists work, with clinicians, on the things that actually s
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
+'confetti': {"particleCount":150,"angle":90,"spread":360,"startVelocity":25,"decay":0.9,"gravity":"0.8ccc5","drift":0,"ticks":400,"colors":["#feba00","#f54281","#1fd14f"],"shapes":null,"scalar":0.7,"zIndex":100,"disableForReducedMotion":false},
+'excalidraw': {"button":true,"shortcut":"`","template":"","library":"","langCode":"en","viewModeEnabled":false,"zenModeEnabled":false,"gridModeEnabled":false,"theme":"light","autoFocus":false,"useLocalStorage":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1662,7 +1671,7 @@ This is where psychologists work, with clinicians, on the things that actually s
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealConfetti, RevealExcalidraw, QuartoSupport,
 
           RevealMath,
           RevealNotes,
