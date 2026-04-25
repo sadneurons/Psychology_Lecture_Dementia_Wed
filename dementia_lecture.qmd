@@ -417,7 +417,7 @@ Physical examination, laboratory tests (to exclude comorbid conditions that may 
 
 ::::
 
-## AChE inhibitors: clinical use {.smaller}
+## AChE inhibitors: clinical use 
 
 ::: {.panel-tabset}
 
