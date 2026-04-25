@@ -64,7 +64,7 @@ The most common ones are:
 
 <iframe src="Widgets/alzheimer_timeline.html" width="1480" height="840" style="border:0;"></iframe>
 
-## Biological vs clinical definition
+## Biological vs clinical definition {.small}
 
 :::: {.columns}
 
@@ -243,7 +243,7 @@ The clinician's expertise is crucial in the following situations:
 - **Treatment cue**: aggressive vascular risk control; modest AChEi benefit
 :::
 
-## Reversible mimics {.smaller}
+## Reversible mimics 
 
 ::: {.callout-warning title="Treatable contributors to cognitive impairment"}
 - B12 / folate deficiency
@@ -456,7 +456,7 @@ two cognitive-decline curves running in parallel, untreated vs on AChEi, **offse
 - **Caregiver education and support**: often high-yield
 :::
 
-## Pharmacological management of BPSD {.smaller}
+## Pharmacological management of BPSD
 
 ::: {.callout-important title="Antipsychotics are last-resort"}
 - ↑ stroke and all-cause mortality `CATIE-AD, FDA black box`
@@ -469,7 +469,7 @@ two cognitive-decline curves running in parallel, untreated vs on AChEi, **offse
 - **Trazodone**: sleep, agitation; mostly off-label
 - **Avoid benzodiazepines**: falls, paradoxical agitation, dependence
 
-## Limits of symptomatic treatment {.smaller}
+## Limits of symptomatic treatment 
 
 - They do not slow neuronal loss
 - They do not clear Aβ or tau
@@ -479,12 +479,12 @@ two cognitive-decline curves running in parallel, untreated vs on AChEi, **offse
 ## 5 minute break {background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
-back at HH:MM
+
 :::
 
 ## Part 3: Disease-modifying treatments {background-color="#44475a"}
 
-## The amyloid hypothesis (Hardy & Higgins, 1992) {.smaller}
+## The amyloid hypothesis (Hardy & Higgins, 1992)
 
 - **Aβ accumulation** is the upstream driver of AD
 - Genetic anchor: every gene mutation that causes autosomal-dominant AD `APP, PSEN1, PSEN2` alters Aβ production or clearance
@@ -504,7 +504,7 @@ back at HH:MM
   - Insufficient brain penetration / dosing
   - Endpoint too noisy in mild populations
 
-## Aducanumab (2021) {.smaller}
+## Aducanumab (2021) 
 
 - Two Phase 3 trials (EMERGE, ENGAGE): discordant; pre-specified analysis was negative
 - Post-hoc reanalysis at high dose suggested cognitive benefit on EMERGE
@@ -513,7 +513,7 @@ back at HH:MM
 - NHS / NICE: **not commissioned**
 - Eli Lilly withdrew it from market 2024
 
-## Lecanemab: CLARITY-AD (2023) {.smaller}
+## Lecanemab: CLARITY-AD (2023) 
 
 - **CLARITY-AD**, Phase 3, 1795 participants, early symptomatic AD
 - Targets **soluble Aβ protofibrils** specifically
@@ -525,7 +525,7 @@ back at HH:MM
 
 <!-- TODO: Pictures/clarity_ad_curves.png — CDR-SB separation curves from van Dyck et al. NEJM 2023 -->
 
-## Donanemab: TRAILBLAZER-ALZ 2 (2024) {.smaller}
+## Donanemab: TRAILBLAZER-ALZ 2 (2024) 
 
 - **TRAILBLAZER-ALZ 2**, Phase 3, 1736 participants, MCI / mild AD
 - Targets **pyroglutamate-modified Aβ** found only in established plaques
@@ -537,15 +537,14 @@ back at HH:MM
 
 <!-- TODO: Pictures/donanemab_curves.png — iADRS curves from Sims et al. JAMA 2023 -->
 
-## Antibody specificity {.smaller}
-
+## Antibody specificity 
 ::: {style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;"}
 **[FIGURE PLACEHOLDER]**
 
 Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · **aducanumab** binds oligomers and fibrils · **lecanemab** selective for protofibrils · **donanemab** binds pyroglutamate-modified plaques only
 :::
 
-## Patient selection {.smaller}
+## Patient selection 
 
 ::: {.incremental}
 - **Confirmed Aβ pathology**: amyloid-PET or CSF Aβ42/40
