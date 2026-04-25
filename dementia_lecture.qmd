@@ -19,6 +19,15 @@ format:
 # bibliography: Sources/refs.bib   # uncomment once Sources/refs.bib is populated
 ---
 
+```{=html}
+<style>
+.reveal .fragment.blur-reveal { opacity: 1 !important; visibility: visible !important; }
+.reveal .fragment.blur-reveal img { filter: blur(22px); transition: filter 600ms ease; }
+.reveal .fragment.blur-reveal.visible img { filter: blur(0); }
+.reveal .fragment.blur-reveal figcaption { color: #6272a4; font-style: italic; }
+</style>
+```
+
 ## Outline
 - 20 minutes on "Dementia", to give a modern framework for understanding
 - 20 minutes on the development of symptomatic treatments
@@ -98,43 +107,85 @@ The most common ones are:
 
 <iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;"></iframe>
 
-## The ATX(N) framework {.smaller}
+## The AT(N)(X) framework {.smaller}
 
 ::: {.panel-tabset}
 
 ### A: Amyloid
+:::: {.columns}
 
+::: {.column width="55%"}
 What it measures: cerebral Aβ pathology.
 
 - CSF Aβ42/40 ratio `low = abnormal`
 - Plasma Aβ42/40 `replaces some lumbar punctures`
 - Amyloid-PET `florbetapir, flutemetamol`
+:::
 
+::: {.column width="45%"}
+::: {.fragment .blur-reveal}
+![click to reveal: lumbar puncture (LP is painless)](Pictures/BHC_LP.jpeg)
+:::
+:::
+
+::::
 ### T: Tau
 
+:::: {.columns}
+
+::: {.column width="55%"}
 What it measures: tau pathology.
 
 - CSF p-tau181, p-tau217
 - **Plasma p-tau217**
 - Tau-PET `flortaucipir, tracks Braak staging`
+:::
+
+::: {.column width="45%"}
+![TAU PET Imaging](Pictures/tauPET.webp)
+:::
+
+::::
 
 ### N: Neurodegeneration
 
+:::: {.columns}
+
+::: {.column width="55%"}
 What it measures: downstream injury, not specific to AD.
 
 - Structural MRI atrophy `MTA score`
 - FDG-PET `temporo-parietal hypometabolism`
 - CSF total tau
+:::
+
+::: {.column width="45%"}
+![MTA score](Pictures/MTAScore.jpg)
+:::
+
+::::
 
 ### X: Other
 
+:::: {.columns}
+
+::: {.column width="55%"}
 What it measures: vascular, inflammatory, synaptic axes added in 2024.
 
 - Vascular markers `WMH, infarcts`
 - Inflammatory `GFAP, astrocyte activation`
 - Synaptic `neurogranin, SNAP-25`
+:::
+
+::: {.column width="45%"}
+![Fazekas score](Pictures/Fazekas%20scoring.jpeg)
+:::
+
+::::
 
 :::
+
+
 
 ## Question 3
 
