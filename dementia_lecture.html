@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="dementia_lecture_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dementia_lecture_files/libs/quarto-html/tabby.min.js"></script>
+<script src="dementia_lecture_files/libs/quarto-html/popper.min.js"></script>
+<script src="dementia_lecture_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="dementia_lecture_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dementia_lecture_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="dementia_lecture_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
+
+  <meta name="author" content="Dr.&nbsp;Ross A. Dunne">
+  <meta name="dcterms.date" content="2026-04-25">
+  <title>Dementia and its treatments</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="dementia_lecture_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="dementia_lecture_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="dementia_lecture_files/libs/revealjs/dist/theme/quarto-a1d3734469117662d4af4794742e8c15.css">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="dementia_lecture_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Dementia and its treatments</h1>
+  <p class="subtitle">Psychology Undergrad Lecture April 26</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Ross A. Dunne 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-04-25</p>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ul>
+<li>20 minutes on “Dementia”, to give a modern framework for understanding</li>
+<li>20 minutes on the development of symptomatic treatments</li>
+<li>5 minute break</li>
+<li>20 minutes on “Disease modifying” treatments.</li>
+<li>5 minutes for questions for me on the material presented</li>
+<li>10-20 minutes Q and A patient with me</li>
+<li>10 minutes Qs from students</li>
+</ul>
+</section>
+<section id="part-1-dementia" class="slide level2" data-background-color="#44475a">
+<h2>Part 1: Dementia</h2>
+<div class="r-fit-text" style="color:#bd93f9;">
+<p>A modern framework</p>
+</div>
+</section>
+<section id="alzheimers-disease-is-not-synonymous-with-dementia" class="slide level2 smaller">
+<h2>Alzheimer’s disease is not synonymous with dementia</h2>
+<p>Dementia is an umbrella term used to describe a state where an individual has lost the ability to carry out daily life activities independently, because of cognitive impairment.</p>
+<p>There are many types and causes of dementia.</p>
+<p>The most common ones are:</p>
+<ol type="1">
+<li class="fragment">Alzheimer’s disease (AD) <code>pathological definition</code></li>
+<li class="fragment">Vascular dementia <code>aetiological definition</code></li>
+<li class="fragment">Dementia with Lewy bodies <code>molecular definition</code></li>
+<li class="fragment">Frontotemporal dementia <code>anatomical definition</code></li>
+</ol>
+</section>
+<section id="question-1" class="slide level2">
+<h2>Question 1</h2>
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;">
+</iframe>
+</section>
+<section id="alzheimers-disease-is-a-disease-like-any-other" class="slide level2">
+<h2>Alzheimer’s disease is a disease like any other</h2>
+<ul>
+<li><p>AD refers to the abnormal presence of Aβ and tau proteins which define AD among many other neurodegenerative diseases</p></li>
+<li><p>Some individuals may have dementia without Aβ or tau pathology, while others (rarely) may have no clinical symptoms, even in the presence of Aβ pathology.</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<iframe src="Widgets/alzheimer_timeline.html" width="1480" height="840" style="border:0;">
+</iframe>
+</section>
+<section id="biological-vs-clinical-definition" class="slide level2">
+<h2>Biological vs clinical definition</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>The old way</strong> <code>pre-2010</code></p>
+<ul>
+<li>Clinical syndrome → “probable AD”</li>
+<li>Pathology only confirmed at post-mortem</li>
+<li>Heterogeneous cohorts in trials</li>
+<li><em>“Dementia of the Alzheimer type”</em></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p><strong>The modern way</strong> <code>2018 NIA-AA, 2024 revised criteria</code></p>
+<ul>
+<li>Biology defines the disease <code>Aβ + tau</code></li>
+<li>Clinical stage is described separately</li>
+<li>Biomarkers in life: CSF, plasma, PET</li>
+<li>Allows pre-symptomatic diagnosis</li>
+</ul>
+</div></div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<iframe src="Widgets/biomarker_cascade.html" width="1480" height="800" style="border:0;">
+</iframe>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+</section>
+<section id="question-2-higher-or-lower" class="slide level2">
+<h2>Question 2, Higher or Lower?</h2>
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;">
+</iframe>
+</section>
+<section id="the-atxn-framework" class="slide level2 smaller">
+<h2>The ATX(N) framework</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">A: Amyloid</a></li><li><a href="#tabset-1-2">T: Tau</a></li><li><a href="#tabset-1-3">N: Neurodegeneration</a></li><li><a href="#tabset-1-4">X: Other</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>What it measures: cerebral Aβ pathology.</p>
+<ul>
+<li>CSF Aβ42/40 ratio <code>low = abnormal</code></li>
+<li>Plasma Aβ42/40 <code>replaces some lumbar punctures</code></li>
+<li>Amyloid-PET <code>florbetapir, flutemetamol</code></li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<p>What it measures: tau pathology.</p>
+<ul>
+<li>CSF p-tau181, p-tau217</li>
+<li><strong>Plasma p-tau217</strong></li>
+<li>Tau-PET <code>flortaucipir, tracks Braak staging</code></li>
+</ul>
+</div>
+<div id="tabset-1-3">
+<p>What it measures: downstream injury, not specific to AD.</p>
+<ul>
+<li>Structural MRI atrophy <code>MTA score</code></li>
+<li>FDG-PET <code>temporo-parietal hypometabolism</code></li>
+<li>CSF total tau</li>
+</ul>
+</div>
+<div id="tabset-1-4">
+<p>What it measures: vascular, inflammatory, synaptic axes added in 2024.</p>
+<ul>
+<li>Vascular markers <code>WMH, infarcts</code></li>
+<li>Inflammatory <code>GFAP, astrocyte activation</code></li>
+<li>Synaptic <code>neurogranin, SNAP-25</code></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3" class="slide level2">
+<h2>Question 3</h2>
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;">
+</iframe>
+</section>
+<section id="the-global-prevalence-of-dementia-is-increasing" class="slide level2 smaller">
+<h2>The global prevalence of dementia is increasing</h2>
+<ul>
+<li class="fragment"><p>There are many causes of dementia, but AD is the most common cause in individuals older than 65 years of age.</p></li>
+<li class="fragment"><p>In 2020, it was estimated that over 55 million people worldwide were living with neurodegenerative disease at the <em>dementia</em> stage.</p></li>
+<li class="fragment"><p>The number of people affected is set to rise to <strong>139 million</strong> by 2050, with the most significant increases in lower-middle-income (LMIC) countries.</p></li>
+<li class="fragment"><p>Dementia (including dementia due to AD) incidence and prevalence are increasing globally but are likely to be underestimated because of underdiagnosis and misdiagnosis</p></li>
+<li class="fragment"><p>As global lifespan continues to increase, the number of people affected by dementia is expected to rise. Up to three-quarters of those with dementia worldwide have not received a diagnosis.</p></li>
+</ul>
+</section>
+<section id="m-to-139m-by-2050" class="slide level2 smaller">
+<h2>55M to 139M by 2050</h2>
+<div style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>bar chart, global dementia prevalence 2020 (<strong>55M</strong>) vs 2050 projection (<strong>139M</strong>) · +84M growth, most in low- and middle-income countries · ≈ 75% currently undiagnosed</p>
+</div>
+</section>
+<section id="historical-development-of-alzheimers-disease-diagnostic-criteria" class="slide level2 smaller">
+<h2>Historical development of Alzheimer’s disease diagnostic criteria</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li>The 2023 revised criteria for diagnosis and staging of AD emphasizes that AD is a disease defined by its biology</li>
+<li>However, to avoid misdiagnosis, only biomarkers that have been proven to be accurate with respect to an accepted reference standard should be used for diagnosis</li>
+<li>It is important to note that biomarker tests should always be interpreted with clinical judgment</li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p>The clinician’s expertise is crucial in the following situations:</p>
+<ol type="1">
+<li>When the biomarker test result contradicts the clinical presentation</li>
+<li>When evaluating the probable contribution of AD versus other pathologies to clinical symptoms</li>
+<li>When assessing how other medical conditions could possibly impact the biomarker results</li>
+</ol>
+</div></div>
+</section>
+<section id="alzheimers-disease-diagnostic-biomarkers" class="slide level2 smaller">
+<h2>Alzheimer’s disease diagnostic biomarkers</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Core 1</strong> <code>currently accepted for diagnosis</code></p>
+<ul>
+<li>CSF Aβ42/40</li>
+<li>CSF p-tau181/Aβ42</li>
+<li>CSF t-tau/Aβ42</li>
+<li>Accurate plasma assays</li>
+<li>Amyloid-PET</li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p><strong>Core 2</strong> <code>emerging / research-grade</code></p>
+<ul>
+<li>Plasma p-tau217 <code>near-CSF accuracy</code></li>
+<li>Plasma MTBR-tau243</li>
+<li>GFAP <code>astrocyte activation</code></li>
+<li>NfL <code>non-specific neurodegeneration</code></li>
+<li>Tau-PET <code>Braak staging in life</code></li>
+</ul>
+</div></div>
+</section>
+<section id="differential-diagnosis" class="slide level2 smaller">
+<h2>Differential diagnosis</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">AD</a></li><li><a href="#tabset-2-2">DLB</a></li><li><a href="#tabset-2-3">FTD</a></li><li><a href="#tabset-2-4">VaD</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<ul>
+<li><strong>Onset</strong>: insidious, episodic memory first</li>
+<li><strong>Signature</strong>: temporo-parietal cognition; language; getting lost</li>
+<li><strong>Imaging</strong>: medial temporal and parietal atrophy</li>
+<li><strong>Treatment cue</strong>: AChEi and memantine; now anti-amyloid eligible</li>
+</ul>
+</div>
+<div id="tabset-2-2">
+<ul>
+<li><strong>Onset</strong>: fluctuating cognition, visual hallucinations, REM sleep behaviour disorder, parkinsonism</li>
+<li><strong>Signature</strong>: attention/executive &gt; memory early; very neuroleptic-sensitive</li>
+<li><strong>Imaging</strong>: relatively preserved MTL; DAT scan abnormal</li>
+<li><strong>Treatment cue</strong>: rivastigmine often helpful; <strong>avoid antipsychotics</strong></li>
+</ul>
+</div>
+<div id="tabset-2-3">
+<ul>
+<li><strong>Onset</strong>: typically &lt;65 y; behavioural variant or primary progressive aphasia</li>
+<li><strong>Signature</strong>: disinhibition, apathy, loss of empathy, dietary change <em>(bvFTD)</em></li>
+<li><strong>Imaging</strong>: frontal / anterior temporal atrophy</li>
+<li><strong>Treatment cue</strong>: AChEi unhelpful or may worsen behaviour; SSRIs, environmental management</li>
+</ul>
+</div>
+<div id="tabset-2-4">
+<ul>
+<li><strong>Onset</strong>: stepwise, after vascular events</li>
+<li><strong>Signature</strong>: executive dysfunction, slowed processing, focal neurology</li>
+<li><strong>Imaging</strong>: infarcts, white matter hyperintensities, microbleeds</li>
+<li><strong>Treatment cue</strong>: aggressive vascular risk control; modest AChEi benefit</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="reversible-mimics" class="slide level2 smaller">
+<h2>Reversible mimics</h2>
+<div title="Treatable contributors to cognitive impairment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Treatable contributors to cognitive impairment</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>B12 / folate deficiency</li>
+<li>Hypothyroidism</li>
+<li>Depression <code>pseudo-dementia</code></li>
+<li>Normal pressure hydrocephalus <code>gait, urinary, cognitive</code></li>
+<li>Drug effects <code>anticholinergics, benzodiazepines, opioids</code></li>
+<li>Delirium <code>often superimposed</code></li>
+<li>Obstructive sleep apnoea</li>
+<li>Subdural haematoma</li>
+<li>Alcohol misuse</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="assessment" class="slide level2 smaller">
+<h2>Assessment</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Clinical History</a></li><li><a href="#tabset-3-2">Cognitive examination</a></li><li><a href="#tabset-3-3">Examination</a></li><li><a href="#tabset-3-4">Neuroimaging</a></li><li><a href="#tabset-3-5">Biomarkers</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>A medical history from the patient and collateral history from an appropriate informant.</p>
+<ul>
+<li>Educational attainment <code>quantitative and qualitative</code></li>
+<li>Occupational attainment <code>manual/ skilled/ professional</code></li>
+<li>Head Injury / Contact sports <code>rugby and boxing</code></li>
+<li>Lifetime Alcohol + substances <code>peak, sustained</code></li>
+<li>Smoking history</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Rapid forgetfulness</li>
+<li>Repetitive questioning</li>
+<li>Loss of recent memory <code>with relative preservation of remote</code></li>
+<li>Functional decline <code>IADLs first, then ADLs</code></li>
+<li>BPSD <code>agitation, depression, sleep</code></li>
+</ul>
+</div></div>
+</div>
+<div id="tabset-3-2">
+<p>A cognitive, functional, behavioural and mental state examination (preferably using validated assessment scales)</p>
+<ul>
+<li>RBANS <code>sensitive to different sorts of decline</code></li>
+<li>Addenbrookes’ Cognitive Evaluation (III) <code>(90% of UK memory clinics)</code></li>
+<li>Mini Mental State Examination <code>insensitive to early decline</code></li>
+<li>Montreal Cognitive Assessment <code>better than MMSE, retains ceiling effects</code></li>
+</ul>
+</div>
+<div id="tabset-3-3">
+<p>Physical examination, laboratory tests (to exclude comorbid conditions that may be impairing cognitive function), and review of medication (to identify drugs that may be impairing cognitive function)</p>
+</div>
+<div id="tabset-3-4">
+<ul>
+<li><strong>Structural MRI</strong> <code>first-line</code>: medial temporal atrophy (MTA score), parietal atrophy (Koedam), white-matter disease, microbleeds</li>
+<li><strong>FDG-PET</strong>: temporo-parietal hypometabolism in AD; frontal in FTD</li>
+<li><strong>Amyloid-PET</strong>: confirms or excludes Aβ pathology in life</li>
+<li><strong>Tau-PET</strong>: research and disease-modifying treatment selection</li>
+<li><strong>DAT scan</strong>: supports DLB when uncertain</li>
+</ul>
+<!-- TODO: Pictures/atrophy_montage.png — coronal MRI grid AD/DLB/FTD/VaD -->
+</div>
+<div id="tabset-3-5">
+<ul>
+<li><strong>CSF panel</strong>: Aβ42/40, p-tau181, t-tau <code>requires lumbar puncture</code></li>
+<li><strong>Plasma p-tau217</strong> <code>near-CSF accuracy, primary care feasible</code></li>
+<li><strong>Plasma Aβ42/40, GFAP, NfL</strong>: pre-screening tools</li>
+<li><strong>APOE genotyping</strong>: risk stratification; mandatory before anti-amyloid antibodies</li>
+<li><strong>Genetic testing</strong>: <em>APP, PSEN1, PSEN2</em> in early-onset / familial cases</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2-symptomatic-treatments" class="slide level2" data-background-color="#44475a">
+<h2>Part 2: Symptomatic treatments</h2>
+</section>
+<section id="the-cholinergic-hypothesis-1976" class="slide level2 smaller">
+<h2>The cholinergic hypothesis (1976)</h2>
+<ul>
+<li>Bowen, Davies, Perry independently observed loss of choline acetyltransferase in post-mortem AD brain</li>
+<li>Source: degenerating cholinergic projections from the <strong>nucleus basalis of Meynert</strong></li>
+<li>Implication: boost acetylcholine, improve cognition</li>
+</ul>
+</section>
+<section id="the-drug-approval-timeline" class="slide level2">
+<h2>The drug approval timeline</h2>
+<div style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>horizontal timeline 1993–2024 · <strong>symptomatic</strong> group: tacrine 1993 · donepezil 1996 · rivastigmine 2000 · galantamine 2001 · memantine 2003 · brexpiprazole 2023 (BPSD) · <strong>disease-modifying</strong> group: aducanumab 2021 · lecanemab 2023 · donanemab 2024</p>
+</div>
+</section>
+<section id="ache-inhibitor-mechanism" class="slide level2 smaller">
+<h2>AChE inhibitor mechanism</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div style="border:2px dashed #6272a4;padding:1.5em;margin:0;text-align:center;color:#6272a4;border-radius:8px;height:90%;display:flex;flex-direction:column;justify-content:center;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>cholinergic synapse · presynaptic ACh release · AChE breaking ACh in cleft · <strong>AChEi blocking AChE → more ACh available</strong></p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>AD brains have loss of cortical and hippocampal ACh</li>
+<li>AChEi inhibit synaptic breakdown of ACh, increasing transmitter availability per release</li>
+<li>Effect is presynaptic compensation; does not modify disease</li>
+<li>Side-effects from cholinergic excess: ↑ vagal tone, GI cramping, bradycardia, vivid dreams</li>
+</ul>
+</div></div>
+</section>
+<section id="ache-inhibitors-clinical-use" class="slide level2 smaller">
+<h2>AChE inhibitors: clinical use</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Donepezil</a></li><li><a href="#tabset-4-2">Rivastigmine</a></li><li><a href="#tabset-4-3">Galantamine</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<ul>
+<li>Once daily, oral; 5 mg → 10 mg after 4 weeks <code>most common UK first-line</code></li>
+<li>Long half-life</li>
+<li>Side effects: GI upset, vivid dreams, bradycardia</li>
+<li>Cardiac history → ECG before starting</li>
+</ul>
+</div>
+<div id="tabset-4-2">
+<ul>
+<li>BD oral or <strong>transdermal patch</strong> <code>useful when swallowing or compliance issues</code></li>
+<li>Inhibits both AChE and butyrylcholinesterase</li>
+<li>Patch reduces GI side-effects substantially</li>
+<li><strong>Drug of choice in DLB and PDD</strong></li>
+</ul>
+</div>
+<div id="tabset-4-3">
+<ul>
+<li>BD oral; also a <strong>nicotinic allosteric modulator</strong></li>
+<li>Cardiac caution <code>rare reports of bradyarrhythmia</code></li>
+<li>Less commonly used in UK</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="memantine-nmda-receptor-antagonism" class="slide level2 smaller">
+<h2>Memantine: NMDA receptor antagonism</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div style="border:2px dashed #6272a4;padding:1.5em;margin:0;text-align:center;color:#6272a4;border-radius:8px;height:90%;display:flex;flex-direction:column;justify-content:center;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>glutamatergic synapse · NMDA receptor channel · excess glutamate driving pathological tonic activation · <strong>memantine</strong> sitting in the channel as an uncompetitive, low-affinity antagonist</p>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>Glutamatergic excitotoxicity → tonic NMDA-R activation → calcium overload</li>
+<li>Memantine sits in the channel only when it’s pathologically open <code>voltage-dependent</code></li>
+<li>Strong physiological NMDA bursts displace it, preserving physiological learning</li>
+<li><strong>Indication</strong>: moderate to severe AD, or AChEi-intolerant</li>
+<li>Often combined with donepezil</li>
+</ul>
+</div></div>
+</section>
+<section id="effect-size-of-symptomatic-treatment" class="slide level2 smaller">
+<h2>Effect size of symptomatic treatment</h2>
+<div style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>two cognitive-decline curves running in parallel, untreated vs on AChEi, <strong>offset horizontally by ≈ 6 months</strong>, with annotation: <em>curves run parallel; disease trajectory unchanged · ADAS-cog ~2–3 points · MMSE ~1 point</em></p>
+</div>
+</section>
+<section id="differential-responsiveness-across-subtypes" class="slide level2 smaller">
+<h2>Differential responsiveness across subtypes</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>Helpful in</strong></p>
+<ul>
+<li><strong>AD</strong> <code>modest, all severities</code></li>
+<li><strong>DLB</strong> <code>often substantial; rivastigmine first choice</code></li>
+<li><strong>PDD</strong> <code>cholinergic deficit prominent</code></li>
+<li><strong>VaD</strong> <code>mixed disease often benefits</code></li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>Limited or harmful in</strong></p>
+<ul>
+<li><strong>bvFTD</strong> <code>no benefit, may worsen agitation</code></li>
+<li><strong>Pure VaD</strong> <code>inconsistent</code></li>
+<li><strong>Severe AD</strong> <code>memantine takes over</code></li>
+</ul>
+</div></div>
+</section>
+<section id="bpsd" class="slide level2 smaller">
+<h2>BPSD</h2>
+<ul>
+<li class="fragment"><strong>B</strong>ehavioural and <strong>P</strong>sychological <strong>S</strong>ymptoms of <strong>D</strong>ementia</li>
+<li class="fragment">Up to 90% of patients experience at least one over the course of illness</li>
+<li class="fragment">Drives <code>caregiver burden</code>, <code>institutionalisation</code>, <code>mortality</code></li>
+<li class="fragment">Five clusters:
+<ol type="1">
+<li class="fragment">Agitation / aggression</li>
+<li class="fragment">Psychosis <code>delusions, hallucinations</code></li>
+<li class="fragment">Depression / anxiety</li>
+<li class="fragment">Apathy</li>
+<li class="fragment">Sleep disturbance</li>
+</ol></li>
+</ul>
+</section>
+<section id="non-pharmacological-management-of-bpsd" class="slide level2 smaller">
+<h2>Non-pharmacological management of BPSD</h2>
+<ul>
+<li class="fragment"><strong>Always rule out a precipitant</strong>: pain, infection (UTI, chest), constipation, drug effect, sensory deprivation</li>
+<li class="fragment"><strong>Cognitive Stimulation Therapy</strong> <code>NICE-recommended, group-based</code></li>
+<li class="fragment"><strong>Exercise</strong> <code>aerobic + resistance</code></li>
+<li class="fragment"><strong>Music therapy</strong>: strong evidence in agitation</li>
+<li class="fragment"><strong>Environmental modification</strong>: light, routine, signage, familiar objects</li>
+<li class="fragment"><strong>Caregiver education and support</strong>: often high-yield</li>
+</ul>
+</section>
+<section id="pharmacological-management-of-bpsd" class="slide level2 smaller">
+<h2>Pharmacological management of BPSD</h2>
+<div title="Antipsychotics are last-resort">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Antipsychotics are last-resort</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>↑ stroke and all-cause mortality <code>CATIE-AD, FDA black box</code></li>
+<li><strong>Severe sensitivity in DLB</strong>: can cause irreversible parkinsonism / NMS</li>
+<li>Use only when behaviour endangers patient or others, lowest dose, short duration, regular review</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>SSRIs</strong> for depression (citalopram has agitation evidence, but QTc concern)</li>
+<li><strong>Brexpiprazole</strong>: first FDA approval for agitation in AD, 2023 <code>not yet NICE-approved on NHS for this indication</code></li>
+<li><strong>Trazodone</strong>: sleep, agitation; mostly off-label</li>
+<li><strong>Avoid benzodiazepines</strong>: falls, paradoxical agitation, dependence</li>
+</ul>
+</section>
+<section id="limits-of-symptomatic-treatment" class="slide level2 smaller">
+<h2>Limits of symptomatic treatment</h2>
+<ul>
+<li>They do not slow neuronal loss</li>
+<li>They do not clear Aβ or tau</li>
+<li>They do not change underlying trajectory</li>
+<li>A patient on AChEi 5 years from diagnosis has the same brain pathology as one untreated</li>
+</ul>
+</section>
+<section id="minute-break" class="slide level2" data-background-color="#44475a">
+<h2>5 minute break</h2>
+<div class="r-fit-text" style="color:#50fa7b;">
+<p>back at HH:MM</p>
+</div>
+</section>
+<section id="part-3-disease-modifying-treatments" class="slide level2" data-background-color="#44475a">
+<h2>Part 3: Disease-modifying treatments</h2>
+</section>
+<section id="the-amyloid-hypothesis-hardy-higgins-1992" class="slide level2 smaller">
+<h2>The amyloid hypothesis (Hardy &amp; Higgins, 1992)</h2>
+<ul>
+<li><strong>Aβ accumulation</strong> is the upstream driver of AD</li>
+<li>Genetic anchor: every gene mutation that causes autosomal-dominant AD <code>APP, PSEN1, PSEN2</code> alters Aβ production or clearance</li>
+<li>Down syndrome (trisomy 21 → 3 copies of <em>APP</em>) → near-universal AD pathology by age 50</li>
+<li>Tau pathology, inflammation, neurodegeneration: downstream</li>
+<li>Predicted: lower Aβ → less downstream damage → better outcome</li>
+</ul>
+</section>
+<section id="failed-anti-amyloid-trials" class="slide level2 smaller">
+<h2>Failed anti-amyloid trials</h2>
+<ul>
+<li><strong>Solanezumab</strong>: Eli Lilly; failed Phase 3 in mild AD (2014, 2016)</li>
+<li><strong>Bapineuzumab</strong>: Pfizer/J&amp;J; failed (2012); high rate of vasogenic edema</li>
+<li><strong>Crenezumab</strong>: Roche; failed (2019)</li>
+<li><strong>Gantenerumab</strong>: Roche; first GRADUATE trials negative (2022); reformulated for prevention</li>
+<li>Lessons learned:
+<ul>
+<li>Treating too late <code>pathology has spread for 15+ years</code></li>
+<li>Targeting the wrong species <code>monomer vs oligomer vs plaque</code></li>
+<li>Insufficient brain penetration / dosing</li>
+<li>Endpoint too noisy in mild populations</li>
+</ul></li>
+</ul>
+</section>
+<section id="aducanumab-2021" class="slide level2 smaller">
+<h2>Aducanumab (2021)</h2>
+<ul>
+<li>Two Phase 3 trials (EMERGE, ENGAGE): discordant; pre-specified analysis was negative</li>
+<li>Post-hoc reanalysis at high dose suggested cognitive benefit on EMERGE</li>
+<li><strong>FDA accelerated approval</strong> June 2021, over near-unanimous advisory panel objection</li>
+<li>EMA <strong>refused</strong> authorisation</li>
+<li>NHS / NICE: <strong>not commissioned</strong></li>
+<li>Eli Lilly withdrew it from market 2024</li>
+</ul>
+</section>
+<section id="lecanemab-clarity-ad-2023" class="slide level2 smaller">
+<h2>Lecanemab: CLARITY-AD (2023)</h2>
+<ul>
+<li><strong>CLARITY-AD</strong>, Phase 3, 1795 participants, early symptomatic AD</li>
+<li>Targets <strong>soluble Aβ protofibrils</strong> specifically</li>
+<li>Primary outcome: CDR-SB at 18 months</li>
+<li><strong>27% slowing</strong> of clinical decline vs placebo (–0.45 points on CDR-SB)</li>
+<li>ARIA-E in 13%; ARIA-H in 17%; mostly asymptomatic</li>
+<li>FDA full approval July 2023; EMA approved 2024</li>
+<li><strong>NICE rejected</strong> for NHS use (Aug 2024); benefit not judged cost-effective at list price</li>
+</ul>
+<!-- TODO: Pictures/clarity_ad_curves.png — CDR-SB separation curves from van Dyck et al. NEJM 2023 -->
+</section>
+<section id="donanemab-trailblazer-alz-2-2024" class="slide level2 smaller">
+<h2>Donanemab: TRAILBLAZER-ALZ 2 (2024)</h2>
+<ul>
+<li><strong>TRAILBLAZER-ALZ 2</strong>, Phase 3, 1736 participants, MCI / mild AD</li>
+<li>Targets <strong>pyroglutamate-modified Aβ</strong> found only in established plaques</li>
+<li><strong>iADRS slowing 35%</strong> in low/medium-tau population over 76 weeks</li>
+<li><strong>Stop-when-cleared</strong> design: patients with negative amyloid-PET stopped treatment</li>
+<li>ARIA-E 24%; ARIA-H 31%; serious in ~1.6%</li>
+<li>FDA approval July 2024</li>
+<li>NICE: also rejected for NHS use 2024</li>
+</ul>
+<!-- TODO: Pictures/donanemab_curves.png — iADRS curves from Sims et al. JAMA 2023 -->
+</section>
+<section id="antibody-specificity" class="slide level2 smaller">
+<h2>Antibody specificity</h2>
+<div style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;">
+<p><strong>[FIGURE PLACEHOLDER]</strong></p>
+<p>Aβ aggregation pathway, <strong>monomer → oligomer → protofibril → plaque</strong> · <strong>aducanumab</strong> binds oligomers and fibrils · <strong>lecanemab</strong> selective for protofibrils · <strong>donanemab</strong> binds pyroglutamate-modified plaques only</p>
+</div>
+</section>
+<section id="patient-selection" class="slide level2 smaller">
+<h2>Patient selection</h2>
+<ul>
+<li class="fragment"><strong>Confirmed Aβ pathology</strong>: amyloid-PET or CSF Aβ42/40</li>
+<li class="fragment"><strong>Disease stage</strong>: MCI or mild AD dementia (not moderate or severe)</li>
+<li class="fragment"><strong>MRI suitable</strong>: no severe cerebral amyloid angiopathy, ≤4 microbleeds, no superficial siderosis</li>
+<li class="fragment"><strong>Anticoagulation</strong>: caution or contraindication</li>
+<li class="fragment"><strong>APOE4 genotyping</strong>: needed for ARIA risk counselling</li>
+<li class="fragment"><strong>Capable of attending infusions</strong> every 2–4 weeks for 18+ months</li>
+<li class="fragment"><strong>Capacity</strong> to consent</li>
+</ul>
+</section>
+<section id="aria" class="slide level2 smaller">
+<h2>ARIA</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>ARIA-E</strong> <code>oedema, effusion</code></p>
+<ul>
+<li>Vasogenic oedema, leptomeningeal effusion</li>
+<li>Best seen on <strong>FLAIR</strong></li>
+<li>Most asymptomatic; caught on surveillance MRI</li>
+<li>Can present with headache, confusion, focal symptoms, seizures</li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>ARIA-H</strong> <code>haemorrhage</code></p>
+<ul>
+<li>Microbleeds, superficial siderosis</li>
+<li>Best seen on <strong>SWI / GRE</strong></li>
+<li>Usually asymptomatic</li>
+<li>Persists indefinitely after resolution</li>
+</ul>
+</div></div>
+<ul>
+<li>Severity is mostly mild; ~3% serious; rare deaths reported</li>
+<li>Surveillance MRI before infusions 5, 7, 14 (lecanemab) or before 2, 3, 4, 7 (donanemab)</li>
+</ul>
+<!-- TODO: Pictures/aria_examples.png — FLAIR ARIA-E + SWI ARIA-H montage -->
+</section>
+<section id="apoe4-and-aria-risk" class="slide level2 smaller">
+<h2>APOE4 and ARIA risk</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>APOE genotype</th>
+<th>Lecanemab ARIA-E</th>
+<th>Donanemab ARIA-E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Non-carrier</td>
+<td>~5%</td>
+<td>~16%</td>
+</tr>
+<tr class="even">
+<td>Heterozygote</td>
+<td>~11%</td>
+<td>~23%</td>
+</tr>
+<tr class="odd">
+<td><strong>Homozygote</strong></td>
+<td><strong>~33%</strong></td>
+<td><strong>~41%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ε4 homozygotes are ~2% of the population but bear most of the risk</li>
+<li><strong>Counselling</strong>: genotype results have implications beyond the individual <code>family members, life insurance</code></li>
+<li>Donanemab US label restricts use in homozygotes; EMA mandates discussion of relative risk</li>
+<li>Patients can decline genotyping but must be counselled to the higher-risk assumption</li>
+</ul>
+</section>
+<section id="uk-implementation" class="slide level2 smaller">
+<h2>UK implementation</h2>
+<ul>
+<li class="fragment"><strong>Drug cost</strong>: £20–25k per patient per year (lecanemab list)</li>
+<li class="fragment"><strong>Infrastructure</strong>: infusion suite every 2 (lecanemab) or 4 (donanemab) weeks</li>
+<li class="fragment"><strong>Surveillance MRI</strong>: 4–7 scans per patient course</li>
+<li class="fragment"><strong>Workforce</strong>: trained nurses, neurologists, neuroradiologists</li>
+<li class="fragment"><strong>NICE August 2024</strong>: rejected lecanemab for NHS commissioning; benefit too small at price</li>
+<li class="fragment">Currently available only privately in the UK; major equity concern</li>
+<li class="fragment">Open question whether amyloid lowering alone is sufficient or whether combinations will be needed</li>
+</ul>
+</section>
+<section id="other-approaches" class="slide level2 smaller">
+<h2>Other approaches</h2>
+<ul>
+<li><strong>Anti-tau antibodies</strong>: E2814, JNJ-2056 (zagotenemab discontinued 2023) <code>Phase 2</code></li>
+<li><strong>Tau ASOs</strong> <code>intrathecal antisense oligonucleotides, BIIB080</code></li>
+<li><strong>Inflammation</strong>: TREM2 agonists in early trials</li>
+<li><strong>Vaccines</strong>: UB-311, ABvac40 (Phase 2)</li>
+<li><strong>Prevention trials</strong> in pre-symptomatic carriers:
+<ul>
+<li><strong>DIAN-TU</strong>: autosomal-dominant AD families</li>
+<li><strong>AHEAD 3-45</strong>: sporadic, plasma p-tau217 stratified</li>
+<li><em>A4 closed early; solanezumab failed</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="current-state" class="slide level2 smaller">
+<h2>Current state</h2>
+<ul>
+<li class="fragment">The first disease-modifying drugs exist. Their effect size is modest. ARIA limits use. Access in the UK is restricted.</li>
+<li class="fragment"><strong>Diagnosis</strong>: plasma p-tau217 may make primary-care testing feasible.</li>
+<li class="fragment"><strong>Prevention</strong> may matter more than any antibody:
+<ul>
+<li class="fragment"><em>Lancet Commission 2024: 14 modifiable risk factors account for ~45% of dementia risk</em></li>
+<li class="fragment">Hearing, education, BP, smoking, obesity, depression, physical inactivity, diabetes, alcohol, social isolation, air pollution, head injury, vision, cholesterol</li>
+</ul></li>
+</ul>
+</section>
+<section id="questions-on-the-material-5-min" class="slide level2" data-background-color="#44475a">
+<h2>Questions on the material (5 min)</h2>
+<div class="r-fit-text" style="color:#8be9fd;">
+<p>?</p>
+</div>
+</section>
+<section id="qa-with-our-patient-1020-min" class="slide level2" data-background-color="#44475a">
+<h2>Q&amp;A with our patient (10–20 min)</h2>
+<div class="r-fit-text" style="color:#50fa7b;">
+<p>Welcome</p>
+</div>
+<aside class="notes">
+<p>Confirm consent before introducing patient. Briefly orient students to respectful Q&amp;A: open questions, no diagnostic queries.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="student-questions-10-min" class="slide level2" data-background-color="#44475a">
+<h2>Student questions (10 min)</h2>
+<div class="r-fit-text" style="color:#ffb86c;">
+<p>over to you</p>
+</div>
+</section>
+<section id="summary" class="slide level2 smaller">
+<h2>Summary</h2>
+<ol type="1">
+<li class="fragment"><p><strong>Dementia is a syndrome; AD is defined biologically.</strong> Aβ and tau can be detected in life via CSF, plasma p-tau217, or PET.</p></li>
+<li class="fragment"><p><strong>Symptomatic treatments help modestly and do not change disease course.</strong> AChEi and memantine offer about a 6-month delay. Non-pharmacological BPSD interventions are first-line. Antipsychotics carry mortality risk.</p></li>
+<li class="fragment"><p><strong>Anti-amyloid antibodies are the first disease-modifying drugs.</strong> Effect size is modest. ARIA limits use. NICE has rejected them for the NHS. Prevention may matter more.</p></li>
+</ol>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" role="list">
+
+</div>
+<aside class="notes">
+<p>Key sources for the deck:</p>
+<ul>
+<li>Jack et al.&nbsp;2018: NIA-AA AT(N) framework (Alzheimer’s &amp; Dementia)</li>
+<li>Bateman / Schindler 2022: plasma p-tau217 performance</li>
+<li>van Dyck et al.&nbsp;2023: CLARITY-AD lecanemab (NEJM)</li>
+<li>Sims et al.&nbsp;2023: TRAILBLAZER-ALZ 2 donanemab (JAMA)</li>
+<li>Livingston et al.&nbsp;2024: Lancet Commission on dementia prevention</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Psychology Lecture: Dementia</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="dementia_lecture_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="dementia_lecture_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="dementia_lecture_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="dementia_lecture_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1380,
+
+        height: 820,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

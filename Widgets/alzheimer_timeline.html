@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A History of Alzheimer's Disease — Interactive Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #0e0c08;
+  --bg-2:         #181410;
+  --bg-3:         #221c16;
+  --ink:          #ece2cb;
+  --ink-soft:     #c8bca0;
+  --ink-dim:      #8a7e66;
+  --ink-faint:    #463d2f;
+  --accent:       #c9904a;
+  --accent-bright:#eab474;
+  --accent-glow:  rgba(234, 180, 116, 0.35);
+  --line:         #4a4030;
+  --line-dim:     #2a2418;
+  --shadow:       rgba(0, 0, 0, 0.55);
+
+  --serif-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --serif-body:    'EB Garamond', Georgia, serif;
+  --mono:          'JetBrains Mono', ui-monospace, monospace;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif-body);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, var(--bg-2) 0%, var(--bg) 70%),
+    var(--bg);
+  position: relative;
+}
+
+/* Subtle film-grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+/* ---------- Masthead ---------- */
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 2rem 3rem 1.2rem;
+  border-bottom: 1px solid var(--ink-faint);
+  flex-shrink: 0;
+}
+
+.masthead-text .eyebrow {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.masthead h1 {
+  font-family: var(--serif-display);
+  font-weight: 500;
+  font-size: 2.7rem;
+  line-height: 1;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+.masthead h1 em {
+  font-style: italic;
+  color: var(--accent-bright);
+  font-weight: 400;
+}
+
+.masthead .subtitle {
+  font-family: var(--serif-body);
+  font-style: italic;
+  color: var(--ink-dim);
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  letter-spacing: 0.005em;
+}
+
+.controls {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.counter {
+  color: var(--ink-dim);
+  margin-right: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+.counter b {
+  color: var(--accent-bright);
+  font-weight: 600;
+}
+
+.controls button {
+  background: transparent;
+  border: 1px solid var(--ink-faint);
+  color: var(--ink-soft);
+  padding: 0.5rem 0.85rem;
+  font: inherit;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+.controls button:hover {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  background: rgba(201, 144, 74, 0.06);
+}
+.controls button:active { transform: translateY(1px); }
+.controls button[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ---------- Hint strip ---------- */
+.hint {
+  text-align: center;
+  padding: 0.55rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line-dim);
+}
+.hint kbd {
+  background: var(--bg-3);
+  border: 1px solid var(--ink-faint);
+  padding: 0.1rem 0.45rem;
+  margin: 0 0.18rem;
+  border-radius: 3px;
+  font-family: inherit;
+  color: var(--ink);
+  font-size: 0.66rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline-wrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--ink-faint) transparent;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1700px;
+  min-width: 1100px;
+  height: 100%;
+  min-height: 22rem;
+  /* Half a card width plus a little breathing room.
+     Events are distributed across (100% - 2 * --inset) so the
+     first/last cards never overflow the timeline edges. */
+  --inset: 7.5rem;
+}
+
+/* The horizontal axis with progress overlay */
+.axis {
+  position: absolute;
+  top: 50%;
+  left: var(--inset);
+  right: var(--inset);
+  height: 0;
+  border-top: 1px dashed var(--line-dim);
+}
+.axis::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 0;
+  width: var(--progress, 0%);
+  border-top: 1px solid var(--accent);
+  box-shadow: 0 0 14px var(--accent-glow);
+  transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Anchor points along the axis */
+.events {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Each event */
+.event {
+  position: absolute;
+  /* Distribute events across the inset region: ratio 0 => left edge of axis,
+     ratio 1 => right edge of axis. Cards centred on this point via translateX. */
+  left: calc(var(--inset) + var(--ratio, 0) * (100% - 2 * var(--inset)));
+  width: 14rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* HTML order is always: card, connector, year-pill */
+.event[data-side="top"] {
+  bottom: 50%;
+}
+.event[data-side="bottom"] {
+  top: 50%;
+  flex-direction: column-reverse;
+}
+
+/* The year-pill straddles the axis */
+.year-pill {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    color 250ms ease,
+    border-color 250ms ease,
+    background 250ms ease,
+    box-shadow 250ms ease,
+    transform 200ms ease;
+  z-index: 3;
+}
+.event[data-side="top"]    .year-pill { transform: translateY(50%); }
+.event[data-side="bottom"] .year-pill { transform: translateY(-50%); }
+
+.year-pill:hover {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+}
+.event.revealed .year-pill {
+  color: var(--accent-bright);
+  border-color: var(--accent);
+  background: var(--bg);
+  box-shadow: 0 0 0 3px rgba(201, 144, 74, 0.08), 0 0 18px var(--accent-glow);
+}
+.event[data-side="top"].revealed    .year-pill { transform: translateY(50%); }
+.event[data-side="bottom"].revealed .year-pill { transform: translateY(-50%); }
+
+.event.active .year-pill {
+  color: var(--bg);
+  background: var(--accent-bright);
+  border-color: var(--accent-bright);
+}
+
+/* Connector */
+.connector {
+  width: 1px;
+  flex: 0 0 1.6rem;
+  background: var(--line-dim);
+  transition: background 500ms ease;
+}
+.event.revealed .connector {
+  background: var(--accent);
+}
+
+/* Card */
+.card {
+  width: 100%;
+  background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg-3) 100%);
+  border: 1px solid var(--ink-faint);
+  padding: 0.85rem 0.95rem 0.95rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 600ms ease-out,
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+  cursor: default;
+  pointer-events: none;
+}
+.event[data-side="bottom"] .card { transform: translateY(-14px); }
+
+.card::before {
+  /* a tiny serif decorative corner mark */
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 8px; height: 8px;
+  border-top: 1px solid var(--accent);
+  border-left: 1px solid var(--accent);
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+.event.revealed .card::before { opacity: 0.7; }
+
+.event.revealed .card {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.event.active .card {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 14px 40px var(--shadow);
+}
+
+.card .ref {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.55rem;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.card p {
+  font-family: var(--serif-body);
+  font-size: 0.96rem;
+  line-height: 1.36;
+  color: var(--ink);
+  hyphens: auto;
+}
+
+.card .lede {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--accent-bright);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+}
+
+/* ---------- Footer ---------- */
+.colophon {
+  flex-shrink: 0;
+  padding: 0.55rem 3rem;
+  border-top: 1px solid var(--line-dim);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: flex;
+  justify-content: space-between;
+}
+.colophon .dot-sep { margin: 0 0.6rem; opacity: 0.5; }
+
+/* ---------- Print ---------- */
+@media print {
+  body { background: white; color: black; overflow: visible; }
+  .controls, .hint, .colophon { display: none; }
+  .event { opacity: 1 !important; }
+  .card { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
+}
+
+/* ---------- Narrow viewport: keep horizontal scroll ---------- */
+@media (max-width: 1100px) {
+  .masthead { padding: 1.2rem 1.4rem 0.9rem; flex-direction: column; align-items: flex-start; }
+  .masthead h1 { font-size: 2rem; }
+  .timeline-wrap { padding: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-text">
+    <div class="eyebrow">Interactive Timeline</div>
+    <h1>A History of <em>Alzheimer's Disease</em></h1>
+    <div class="subtitle">From plaques and tangles to disease-modifying therapy &nbsp;·&nbsp; 1906 — 2023</div>
+  </div>
+  <div class="controls">
+    <span class="counter"><b id="count">0</b>&nbsp;/&nbsp;<span id="total">0</span></span>
+    <button id="btn-prev" type="button">← back</button>
+    <button id="btn-next" type="button">forward →</button>
+    <button id="btn-all"  type="button">reveal all</button>
+    <button id="btn-reset" type="button">reset</button>
+  </div>
+</header>
+
+<div class="hint">
+  <kbd>→</kbd> or <kbd>space</kbd> reveal next &nbsp;·&nbsp; <kbd>←</kbd> step back &nbsp;·&nbsp; <kbd>A</kbd> reveal all &nbsp;·&nbsp; <kbd>R</kbd> reset &nbsp;·&nbsp; click any year to jump
+</div>
+
+<main class="timeline-wrap" id="wrap">
+  <div class="timeline">
+    <div class="axis" id="axis"></div>
+    <div class="events" id="events"></div>
+  </div>
+</main>
+
+<footer class="colophon">
+  <div>Alois Alzheimer <span class="dot-sep">·</span> Auguste Deter <span class="dot-sep">·</span> AD Research Milestones</div>
+  <div>Numeric superscripts denote primary references in the source figure</div>
+</footer>
+
+<script>
+"use strict";
+
+const events = [
+  { year: "1906",    side: "top",    lede: "Plaques & tangles", text: "Dr Alois Alzheimer first describes the neuropathological hallmarks: <bold>neuritic</bold> plaques and neurofibrillary tangles, in his patient Auguste Deter.", ref: "1" },
+  { year: "1982",    side: "bottom", lede: "Cholinergic hypothesis", text: "Introduction of the cholinergic hypothesis of cognitive decline.", ref: "2" },
+  { year: "1984",    side: "top",    lede: "Clinical criteria", text: "Clinical criteria for 'probable AD dementia' published (NINCDS–ADRDA).", ref: "3" },
+  { year: "1987",    side: "bottom", lede: "APP gene", text: "APP gene identified on chromosome 21 as a risk factor for AD.", ref: "4" },
+  { year: "1991",    side: "top",    lede: "Braak staging", text: "Braak staging system for neurofibrillary tangles first published.", ref: "5" },
+  { year: "1993",    side: "bottom", lede: "AChE inhibitors", text: "Acetylcholinesterase inhibitors first introduced as AD therapeutic drugs.", ref: "6" },
+  { year: "2003",    side: "top",    lede: "Memantine", text: "Memantine, a non-competitive NMDA receptor antagonist, approved for AD in the US and Europe.", ref: "7" },
+  { year: "2004",    side: "bottom", lede: "Amyloid-PET in vivo", text: "Amyloid-PET imaging performed in living humans for the first time (Pittsburgh compound B).", ref: "8" },
+  { year: "2011",    side: "top",    lede: "Preclinical AD", text: "Preclinical AD formally characterised within the NIA-AA research framework.", ref: "9" },
+  { year: "2012–13", side: "bottom", lede: "Biomarker models", text: "Accepted biomarker models of AD published, including the dynamic biomarker cascade.", ref: "10,11" },
+  { year: "2020",    side: "top",    lede: "Plasma p-tau", text: "High-performance blood biomarkers for phosphorylated tau developed and validated in multiple cohort studies.", ref: "12" },
+  { year: "2021–22", side: "bottom", lede: "Aducanumab", text: "FDA accelerated approval of aducanumab — the first disease-modifying therapeutic for AD.", ref: "13" },
+  { year: "2023",    side: "top",    lede: "Donanemab & lecanemab", text: "Phase 3 trial of donanemab in early symptomatic AD published; FDA converts accelerated approval of lecanemab to traditional approval.", ref: "14,15" }
+];
+
+const eventsEl = document.getElementById('events');
+const axisEl   = document.getElementById('axis');
+const countEl  = document.getElementById('count');
+const totalEl  = document.getElementById('total');
+totalEl.textContent = events.length;
+
+let revealedIdx = -1;  // index of the latest revealed event (-1 = none)
+let activeIdx   = -1;  // index of the focused event (-1 = none)
+
+// Build DOM
+events.forEach((ev, i) => {
+  const ratio = (events.length === 1) ? 0.5 : i / (events.length - 1);
+  const el = document.createElement('div');
+  el.className = 'event';
+  el.dataset.side = ev.side;
+  el.dataset.idx = i;
+  el.style.setProperty('--ratio', ratio);
+
+  el.innerHTML = `
+    <div class="card" data-idx="${i}">
+      <span class="ref">${ev.ref}</span>
+      <div class="lede">${ev.lede}</div>
+      <p>${ev.text}</p>
+    </div>
+    <div class="connector"></div>
+    <button class="year-pill" data-idx="${i}" type="button" aria-label="Jump to ${ev.year}">${ev.year}</button>
+  `;
+  eventsEl.appendChild(el);
+});
+
+// Click on year pill: jump to that event
+eventsEl.addEventListener('click', e => {
+  const pill = e.target.closest('.year-pill');
+  if (!pill) return;
+  const i = parseInt(pill.dataset.idx, 10);
+  jumpTo(i);
+});
+
+// Click on a revealed card: just activate it (highlight)
+eventsEl.addEventListener('click', e => {
+  const card = e.target.closest('.card');
+  if (!card) return;
+  const i = parseInt(card.dataset.idx, 10);
+  if (i <= revealedIdx) {
+    activeIdx = i;
+    update();
+  }
+});
+
+function update() {
+  countEl.textContent = revealedIdx + 1;
+
+  document.querySelectorAll('.event').forEach((el, i) => {
+    el.classList.toggle('revealed', i <= revealedIdx);
+    el.classList.toggle('active',   i === activeIdx);
+  });
+
+  const pct = (revealedIdx < 0)
+    ? 0
+    : (revealedIdx / (events.length - 1)) * 100;
+  axisEl.style.setProperty('--progress', pct + '%');
+
+  document.getElementById('btn-prev').disabled  = revealedIdx < 0;
+  document.getElementById('btn-next').disabled  = revealedIdx >= events.length - 1;
+  document.getElementById('btn-reset').disabled = revealedIdx < 0;
+}
+
+function next() {
+  if (revealedIdx < events.length - 1) {
+    revealedIdx++;
+    activeIdx = revealedIdx;
+    update();
+  }
+}
+function prev() {
+  if (revealedIdx >= 0) {
+    revealedIdx--;
+    activeIdx = revealedIdx;
+    update();
+  }
+}
+function revealAll() {
+  revealedIdx = events.length - 1;
+  activeIdx = -1;
+  update();
+}
+function reset() {
+  revealedIdx = -1;
+  activeIdx = -1;
+  update();
+}
+function jumpTo(i) {
+  revealedIdx = Math.max(revealedIdx, i);
+  activeIdx = i;
+  update();
+}
+
+document.getElementById('btn-next').addEventListener('click', next);
+document.getElementById('btn-prev').addEventListener('click', prev);
+document.getElementById('btn-all').addEventListener('click', revealAll);
+document.getElementById('btn-reset').addEventListener('click', reset);
+
+document.addEventListener('keydown', e => {
+  if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+  switch (e.key) {
+    case 'ArrowRight':
+    case ' ':
+    case 'Spacebar':
+      e.preventDefault(); next(); break;
+    case 'ArrowLeft':
+      e.preventDefault(); prev(); break;
+    case 'a': case 'A':
+      e.preventDefault(); revealAll(); break;
+    case 'r': case 'R': case 'Escape':
+      e.preventDefault(); reset(); break;
+    case 'Home':
+      e.preventDefault(); reset(); break;
+    case 'End':
+      e.preventDefault(); revealAll(); break;
+  }
+});
+
+update();
+</script>
+
+</body>
+</html>
