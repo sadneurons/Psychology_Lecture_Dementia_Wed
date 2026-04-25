@@ -169,6 +169,23 @@ Dr.&nbsp;Ross A. Dunne
 .reveal .fragment.blur-reveal img { filter: blur(22px); transition: filter 600ms ease; }
 .reveal .fragment.blur-reveal.visible img { filter: blur(0); }
 .reveal .fragment.blur-reveal figcaption { color: #6272a4; font-style: italic; }
+
+.reveal .trial-meta { text-align:center; color:#6272a4; font-size:0.55em; font-style:italic; margin:0 0 0.6em; }
+.reveal .trial-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.7em; }
+.reveal .trial-block { background:rgba(68,71,90,0.35); border:1px solid #44475a; border-radius:8px; padding:0.75em 0.9em; }
+.reveal .trial-cat { font-size:0.42em; letter-spacing:0.18em; text-transform:uppercase; color:#bd93f9; margin-bottom:0.75em; font-weight:600; }
+.reveal .trial-block.efficacy .trial-cat { color:#50fa7b; }
+.reveal .trial-block.safety   .trial-cat { color:#ff79c6; }
+.reveal .trial-block.context  .trial-cat { color:#8be9fd; }
+.reveal .trial-stat { margin-bottom:0.6em; line-height:1.05; }
+.reveal .trial-stat:last-child { margin-bottom:0; }
+.reveal .trial-num { font-size:0.95em; font-weight:700; color:#f8f8f2; display:block; }
+.reveal .trial-block.efficacy .trial-num { color:#50fa7b; }
+.reveal .trial-block.safety   .trial-num { color:#ff79c6; }
+.reveal .trial-block.context  .trial-num { color:#8be9fd; }
+.reveal .trial-lab { display:block; font-size:0.4em; color:#6272a4; letter-spacing:0.04em; margin-top:0.1em; line-height:1.25; }
+.reveal .trial-ref { text-align:center; color:#6272a4; font-size:0.42em; font-style:italic; margin-top:0.7em; border-top:1px solid #44475a; padding-top:0.55em; }
+.reveal .trial-chart { width:100%; height:auto; display:block; margin:0.4em 0 0.7em; }
 </style>
 </section>
 <section id="outline" class="slide level2">
@@ -292,7 +309,7 @@ Dr.&nbsp;Ross A. Dunne
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="Pictures/tauPET.webp"></p>
-<figcaption>TAU PET Imaging</figcaption>
+<figcaption>[11C]PBB3 PET images. [11C]PBB3 parametric standardised uptake value ratio (SUVR) images compared with [11C]PiB. [11C]PBB3 shows tracer uptake in cortical areas in advanced AD patient. This research was originally published in JNM. Shah M, Catafau AM. Molecular Imaging Insights into Neurodegeneration: Focus on Tau PET Radiotracers. J. Nucl. Med. 2014;55:871–874.</figcaption>
 </figure>
 </div>
 </div></div>
@@ -403,7 +420,7 @@ Dr.&nbsp;Ross A. Dunne
 </ul>
 </div></div>
 </section>
-<section id="differential-diagnosis" class="slide level2 smaller">
+<section id="differential-diagnosis" class="slide level2">
 <h2>Differential diagnosis</h2>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">AD</a></li><li><a href="#tabset-2-2">DLB</a></li><li><a href="#tabset-2-3">FTD</a></li><li><a href="#tabset-2-4">VaD</a></li></ul>
@@ -758,31 +775,120 @@ Dr.&nbsp;Ross A. Dunne
 <li>Eli Lilly withdrew it from market 2024</li>
 </ul>
 </section>
-<section id="lecanemab-clarity-ad-2023" class="slide level2">
+<section id="lecanemab-clarity-ad-2023" class="slide level2 smaller">
 <h2>Lecanemab: CLARITY-AD (2023)</h2>
-<ul>
-<li><strong>CLARITY-AD</strong>, Phase 3, 1795 participants, early symptomatic AD</li>
-<li>Targets <strong>soluble Aβ protofibrils</strong> specifically</li>
-<li>Primary outcome: CDR-SB at 18 months</li>
-<li><strong>27% slowing</strong> of clinical decline vs placebo (–0.45 points on CDR-SB)</li>
-<li>ARIA-E in 13%; ARIA-H in 17%; mostly asymptomatic</li>
-<li>FDA full approval July 2023; EMA approved 2024</li>
-<li><strong>NICE rejected</strong> for NHS use (Aug 2024); benefit not judged cost-effective at list price</li>
-</ul>
-<!-- TODO: Pictures/clarity_ad_curves.png — CDR-SB separation curves from van Dyck et al. NEJM 2023 -->
+<div class="trial-meta">Phase 3 · n = 1,795 · 18 months · early symptomatic AD, biomarker-confirmed · target: soluble Aβ protofibrils</div>
+<div class="trial-grid">
+  <div class="trial-block efficacy">
+    <div class="trial-cat">Efficacy · CDR-SB change from baseline</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">1.0</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">2.0</text>
+      <polyline points="22,100 62,87.2 102,74 142,62 182,52 222,42 262,33.6" fill="none" stroke="#ff79c6" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <polyline points="22,100 62,89.2 102,80 142,71.6 182,63.6 222,57.2 262,51.6" fill="none" stroke="#50fa7b" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <circle cx="262" cy="33.6" r="2.2" fill="#ff79c6"></circle>
+      <circle cx="262" cy="51.6" r="2.2" fill="#50fa7b"></circle>
+      <text x="258" y="29" fill="#ff79c6" font-size="6.5" text-anchor="end" font-family="monospace">placebo 1.66</text>
+      <text x="258" y="48" fill="#50fa7b" font-size="6.5" text-anchor="end" font-family="monospace">lecanemab 1.21</text>
+      <text x="22" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">0</text>
+      <text x="142" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">9 mo</text>
+      <text x="262" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">18 mo</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">27% slowing</span><span class="trial-lab">−0.45 CDR-SB difference · p &lt; 0.001 primary &amp; all secondaries</span></div>
+  </div>
+  <div class="trial-block safety">
+    <div class="trial-cat">Safety · ARIA-E rate by APOE genotype</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">25%</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">50%</text>
+      <rect x="60" y="92" width="50" height="8" fill="#ff79c6" opacity="0.45"></rect>
+      <rect x="125" y="82.4" width="50" height="17.6" fill="#ff79c6" opacity="0.65"></rect>
+      <rect x="190" y="47.2" width="50" height="52.8" fill="#ff79c6"></rect>
+      <text x="85" y="88" fill="#ff79c6" font-size="6.5" text-anchor="middle" font-family="monospace">~5%</text>
+      <text x="150" y="78" fill="#ff79c6" font-size="6.5" text-anchor="middle" font-family="monospace">~11%</text>
+      <text x="215" y="43" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">~33%</text>
+      <text x="85" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">noncarrier</text>
+      <text x="150" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">heterozygote</text>
+      <text x="215" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">homozygote</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">12.6% / 17.3%</span><span class="trial-lab">overall ARIA-E / ARIA-H · 9.2% symptomatic ARIA-E in homozygotes</span></div>
+  </div>
+  <div class="trial-block context">
+    <div class="trial-cat">Regulatory</div>
+    <div class="trial-stat"><span class="trial-num">FDA · Jul 2023</span><span class="trial-lab">full (traditional) approval</span></div>
+    <div class="trial-stat"><span class="trial-num">EMA · 2025</span><span class="trial-lab">approved on appeal, excluding APOE4 homozygotes</span></div>
+    <div class="trial-stat"><span class="trial-num">NICE · rejected</span><span class="trial-lab">NHS use, Aug 2024 — not cost-effective at list price</span></div>
+  </div>
+</div>
+<div class="trial-ref">van Dyck CH et al. <em>N Engl J Med</em>. 2023;388(1):9–21</div>
 </section>
-<section id="donanemab-trailblazer-alz-2-2024" class="slide level2">
+<section id="donanemab-trailblazer-alz-2-2024" class="slide level2 smaller">
 <h2>Donanemab: TRAILBLAZER-ALZ 2 (2024)</h2>
-<ul>
-<li><strong>TRAILBLAZER-ALZ 2</strong>, Phase 3, 1736 participants, MCI / mild AD</li>
-<li>Targets <strong>pyroglutamate-modified Aβ</strong> found only in established plaques</li>
-<li><strong>iADRS slowing 35%</strong> in low/medium-tau population over 76 weeks</li>
-<li><strong>Stop-when-cleared</strong> design: patients with negative amyloid-PET stopped treatment</li>
-<li>ARIA-E 24%; ARIA-H 31%; serious in ~1.6%</li>
-<li>FDA approval July 2024</li>
-<li>NICE: also rejected for NHS use 2024</li>
-</ul>
-<!-- TODO: Pictures/donanemab_curves.png — iADRS curves from Sims et al. JAMA 2023 -->
+<div class="trial-meta">Phase 3 · n = 1,736 · 76 weeks · MCI / mild AD · target: pyroglutamate-modified Aβ in plaques · stop-when-cleared design</div>
+<div class="trial-grid">
+  <div class="trial-block efficacy">
+    <div class="trial-cat">Efficacy · iADRS decline, low/intermediate-tau (n = 1,182)</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">6 pt</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">12 pt</text>
+      <polyline points="22,100 60,90 98,80 136,70 186,58.7 224,48 262,38" fill="none" stroke="#ff79c6" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <polyline points="22,100 60,93.3 98,86.7 136,80 186,72 224,66 262,60" fill="none" stroke="#50fa7b" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <circle cx="262" cy="38" r="2.2" fill="#ff79c6"></circle>
+      <circle cx="262" cy="60" r="2.2" fill="#50fa7b"></circle>
+      <text x="258" y="34" fill="#ff79c6" font-size="6.5" text-anchor="end" font-family="monospace">placebo −9.3</text>
+      <text x="258" y="56" fill="#50fa7b" font-size="6.5" text-anchor="end" font-family="monospace">donanemab −6.0</text>
+      <text x="22" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">0</text>
+      <text x="142" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">36 wk</text>
+      <text x="262" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">76 wk</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">35% slowing</span><span class="trial-lab">iADRS · CDR-SB slowing 36% · 47% vs 29% no decline at 1 y</span></div>
+  </div>
+  <div class="trial-block safety">
+    <div class="trial-cat">Safety · ARIA in donanemab arm vs placebo</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">20%</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">40%</text>
+      <rect x="55" y="96" width="22" height="4" fill="#ff79c6" opacity="0.4"></rect>
+      <rect x="80" y="52" width="22" height="48" fill="#ff79c6"></rect>
+      <text x="66" y="92" fill="#6272a4" font-size="5.5" text-anchor="middle" font-family="monospace">2%</text>
+      <text x="91" y="48" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">24%</text>
+      <text x="78" y="111" fill="#6272a4" font-size="6" text-anchor="middle">ARIA-E</text>
+      <rect x="160" y="84" width="22" height="16" fill="#ff79c6" opacity="0.4"></rect>
+      <rect x="185" y="37.2" width="22" height="62.8" fill="#ff79c6"></rect>
+      <text x="171" y="80" fill="#6272a4" font-size="5.5" text-anchor="middle" font-family="monospace">8%</text>
+      <text x="196" y="33" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">31%</text>
+      <text x="183" y="111" fill="#6272a4" font-size="6" text-anchor="middle">ARIA-H</text>
+      <rect x="225" y="28" width="6" height="6" fill="#ff79c6" opacity="0.4"></rect>
+      <text x="234" y="33.5" fill="#6272a4" font-size="5.5">placebo</text>
+      <rect x="225" y="38" width="6" height="6" fill="#ff79c6"></rect>
+      <text x="234" y="43.5" fill="#6272a4" font-size="5.5">donanemab</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">5.8% / 1.5%</span><span class="trial-lab">symptomatic / serious ARIA-E · 3 deaths attributed to ARIA</span></div>
+  </div>
+  <div class="trial-block context">
+    <div class="trial-cat">Regulatory · APOE</div>
+    <div class="trial-stat"><span class="trial-num">FDA · Jul 2024</span><span class="trial-lab">full approval</span></div>
+    <div class="trial-stat"><span class="trial-num">NICE · rejected</span><span class="trial-lab">NHS use, Oct 2024</span></div>
+    <div class="trial-stat"><span class="trial-num">OR 4.57</span><span class="trial-lab">ARIA-E in APOE4 homozygotes vs noncarriers</span></div>
+  </div>
+</div>
+<div class="trial-ref">Sims JR et al. <em>JAMA</em>. 2023;330(6):512–527</div>
 </section>
 <section id="antibody-specificity" class="slide level2">
 <h2>Antibody specificity</h2>
