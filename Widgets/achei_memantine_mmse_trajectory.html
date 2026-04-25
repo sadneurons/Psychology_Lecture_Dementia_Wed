@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMSE trajectory by treatment and dementia type</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #282a36;
+    --panel:    #2e303d;
+    --line:     #44475a;
+    --ink:      #f8f8f2;
+    --ink-soft: #b1bac4;
+    --ink-dim:  #6272a4;
+    --grid:     rgba(98, 114, 164, 0.18);
+
+    --c-untreated-ad: #ff5555;
+    --c-achei-ad:     #ffb86c;
+    --c-combo-ad:     #ff79c6;
+    --c-achei-dlb:    #50fa7b;
+    --c-untreated-dlb:#6272a4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    height: 100%;
+  }
+
+  body {
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+
+  .subtitle {
+    font-size: 12px;
+    color: var(--ink-dim);
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    max-width: 90ch;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 22px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .swatch {
+    display: inline-block;
+    width: 22px;
+    height: 0;
+    border-top-width: 2.5px;
+    border-top-style: solid;
+  }
+  .swatch.dashed { border-top-style: dashed; }
+  .swatch.dotted { border-top-style: dotted; }
+
+  .chart-wrap {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 320px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .takeaway {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-dim);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .takeaway strong { color: var(--c-achei-dlb); font-style: normal; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>MMSE trajectory by treatment and dementia type</h1>
+<p class="subtitle">Illustrative curves parameterised from Knight 2018, Xu 2021, Xu 2024, Truzzi 2022. Baseline MMSE 22 for AD, 24 for DLB.</p>
+
+<div class="legend">
+  <span class="legend-item"><span class="swatch" style="border-top-color:var(--c-untreated-ad);"></span>Untreated AD</span>
+  <span class="legend-item"><span class="swatch dashed" style="border-top-color:var(--c-achei-ad);"></span>AChEI in AD</span>
+  <span class="legend-item"><span class="swatch dotted" style="border-top-color:var(--c-combo-ad);"></span>AChEI + memantine, moderate AD</span>
+  <span class="legend-item"><span class="swatch" style="border-top-color:var(--c-achei-dlb);"></span>AChEI in DLB</span>
+  <span class="legend-item"><span class="swatch dashed" style="border-top-color:var(--c-untreated-dlb);"></span>Untreated DLB</span>
+</div>
+
+<div class="chart-wrap">
+  <canvas id="trajChart" role="img" aria-label="MMSE trajectory over 3 years for untreated Alzheimer's disease, AChEI-treated AD, AChEI plus memantine, AChEI-treated DLB, and untreated DLB. Untreated AD declines from 22 to about 14.5. AChEI shifts the curve up by approximately 1 MMSE point. The DLB AChEI effect is larger.">Untreated AD declines about 2.5 MMSE points per year. AChEI produces an early symptomatic improvement of roughly 1 point, then parallel decline. The same drugs produce a larger and more durable benefit in DLB.</canvas>
+</div>
+
+<p class="takeaway">Curves on AChEi run roughly parallel to the untreated trajectory in AD, offset by ~1 MMSE point. <strong>The DLB response is meaningfully larger and more durable.</strong></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+"use strict";
+
+// Dracula-themed Chart.js global defaults
+Chart.defaults.color = '#b1bac4';
+Chart.defaults.borderColor = 'rgba(98, 114, 164, 0.18)';
+Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+Chart.defaults.font.size = 12;
+
+const t = [0, 0.25, 0.5, 0.75, 1, 1.5, 2, 2.5, 3];
+const untreatedAD  = [22, 21.4, 20.7, 20.1, 19.4, 18.1, 16.8, 15.5, 14.2];
+const acheiAD      = [22, 22.4, 22.5, 22.3, 21.9, 20.8, 19.6, 18.4, 17.2];
+const comboAD      = [22, 22.5, 22.7, 22.6, 22.3, 21.4, 20.3, 19.2, 18.1];
+const acheiDLB     = [24, 24.6, 25.1, 25.0, 24.7, 24.0, 23.3, 22.6, 21.9];
+const untreatedDLB = [24, 23.4, 22.7, 22.1, 21.5, 20.3, 19.0, 17.8, 16.5];
+
+const C = {
+  untreatedAD:  '#ff5555',
+  acheiAD:      '#ffb86c',
+  comboAD:      '#ff79c6',
+  acheiDLB:     '#50fa7b',
+  untreatedDLB: '#6272a4'
+};
+
+new Chart(document.getElementById('trajChart'), {
+  type: 'line',
+  data: {
+    labels: t,
+    datasets: [
+      { label: 'Untreated AD',     data: untreatedAD,  borderColor: C.untreatedAD,  backgroundColor: C.untreatedAD,  borderWidth: 2.2, pointRadius: 3, pointStyle: 'circle',  tension: 0.25 },
+      { label: 'AChEI in AD',      data: acheiAD,      borderColor: C.acheiAD,      backgroundColor: C.acheiAD,      borderWidth: 2.2, borderDash: [6,4],  pointRadius: 3, pointStyle: 'triangle', tension: 0.25 },
+      { label: 'AChEI + memantine', data: comboAD,     borderColor: C.comboAD,      backgroundColor: C.comboAD,      borderWidth: 2.2, borderDash: [2,3],  pointRadius: 3, pointStyle: 'rectRot',  tension: 0.25 },
+      { label: 'AChEI in DLB',     data: acheiDLB,     borderColor: C.acheiDLB,     backgroundColor: C.acheiDLB,     borderWidth: 2.6, pointRadius: 3.5, pointStyle: 'rect',   tension: 0.25 },
+      { label: 'Untreated DLB',    data: untreatedDLB, borderColor: C.untreatedDLB, backgroundColor: C.untreatedDLB, borderWidth: 2,   borderDash: [4,3],  pointRadius: 3, pointStyle: 'cross',    tension: 0.25 }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'nearest', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#1f2029',
+        borderColor: '#6272a4',
+        borderWidth: 1,
+        titleColor: '#f8f8f2',
+        bodyColor: '#f8f8f2',
+        titleFont: { weight: '600' },
+        padding: 10,
+        callbacks: { title: (items) => 'Year ' + items[0].label }
+      }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: 'Years from baseline', color: '#f8f8f2', font: { weight: '500', size: 12 }, padding: { top: 8 } },
+        ticks: { autoSkip: false, color: '#b1bac4' },
+        grid:  { color: 'rgba(98, 114, 164, 0.12)', drawTicks: false },
+        border: { color: 'rgba(98, 114, 164, 0.4)' }
+      },
+      y: {
+        title: { display: true, text: 'MMSE (points)', color: '#f8f8f2', font: { weight: '500', size: 12 } },
+        min: 12, max: 28,
+        ticks: { stepSize: 2, color: '#b1bac4' },
+        grid:  { color: 'rgba(98, 114, 164, 0.12)', drawTicks: false },
+        border: { color: 'rgba(98, 114, 164, 0.4)' }
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>

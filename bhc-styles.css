@@ -1,0 +1,382 @@
+/* ==========================================================================
+   BHC lecture — custom styles for Quarto reveal.js
+   Scoped to .slide-cascade, .slide-mbhc, .slide-why so the rest of the
+   deck (dracula-themed) is untouched.
+   Palette: GMMH purple #5C2D91, GMMH teal #00A499, NHS blue #005EB8
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&display=swap');
+
+:root {
+  --bhc-purple: #5C2D91;
+  --bhc-purple-dark: #3d1d65;
+  --bhc-teal: #00A499;
+  --bhc-teal-dark: #007a72;
+  --nhs-blue: #005EB8;
+  --bhc-amber: #e8762a;
+  --bhc-cream: #fbf9f5;
+  --bhc-ink: #1a1a1a;
+  --bhc-ink-soft: #444;
+  --bhc-grey: #6b6b6b;
+}
+
+/* ==========================================================================
+   Scoped base resets — only the three BHC-themed slides
+   ========================================================================== */
+
+.reveal section.slide-cascade,
+.reveal section.slide-mbhc,
+.reveal section.slide-why {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--bhc-ink);
+  text-align: left;
+  height: 100%;
+  padding: 0 !important;
+}
+
+.reveal section.slide-cascade h1, .reveal section.slide-cascade h2, .reveal section.slide-cascade h3,
+.reveal section.slide-mbhc    h1, .reveal section.slide-mbhc    h2, .reveal section.slide-mbhc    h3,
+.reveal section.slide-why     h1, .reveal section.slide-why     h2, .reveal section.slide-why     h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--bhc-purple-dark);
+  text-shadow: none;
+}
+
+.reveal section.slide-cascade h2,
+.reveal section.slide-mbhc    h2,
+.reveal section.slide-why     h2 {
+  font-size: 2.2rem;
+  margin: 0 0 0.6rem 0;
+  padding: 0 0 0.4rem 0;
+  border-bottom: 3px solid var(--bhc-teal);
+  display: inline-block;
+}
+
+.reveal section.slide-cascade p,
+.reveal section.slide-mbhc    p,
+.reveal section.slide-why     p { line-height: 1.45; }
+
+.reveal section.slide-cascade a,
+.reveal section.slide-mbhc    a,
+.reveal section.slide-why     a { color: var(--bhc-teal-dark); }
+
+.reveal section.slide-cascade ul li,
+.reveal section.slide-mbhc    ul li,
+.reveal section.slide-why     ul li { margin-bottom: 0.2em; }
+
+/* Quarto ::: footer renders inside the slide section — scope it */
+.reveal section.slide-cascade .footer,
+.reveal section.slide-mbhc    .footer,
+.reveal section.slide-why     .footer,
+.reveal section.slide-cascade aside.footer,
+.reveal section.slide-mbhc    aside.footer,
+.reveal section.slide-why     aside.footer {
+  font-size: 0.7rem !important;
+  color: var(--bhc-grey) !important;
+  font-style: italic;
+}
+
+/* Quarto column / cell wrappers inside these slides */
+.reveal section.slide-cascade > div.columns,
+.reveal section.slide-mbhc    > div.columns,
+.reveal section.slide-why     > div.columns,
+.reveal section.slide-cascade > div.cell,
+.reveal section.slide-mbhc    > div.cell,
+.reveal section.slide-why     > div.cell { height: auto; }
+
+/* ==========================================================================
+   SLIDE 1 — patient journey contrast
+   ========================================================================== */
+
+.slide-grid-cascade {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.5rem;
+  height: 100%;
+  align-content: start;
+}
+
+.cascade-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.3rem;
+}
+.cascade-figure { display: block; width: 100%; }
+.cascade-figure svg { display: block; width: 100%; height: auto; }
+.cascade-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+.big-q {
+  font-family: 'Fraunces', Georgia, serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+  color: var(--bhc-purple-dark) !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.lede {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--bhc-ink-soft);
+  margin: 0;
+}
+
+.cascade-svg { width: 100%; height: auto; max-height: 470px; }
+
+.principle-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  background: #fff;
+  border-left: 6px solid var(--bhc-teal);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.principle-card:nth-child(2) { border-left-color: var(--bhc-purple); }
+.principle-card:nth-child(3) { border-left-color: var(--bhc-amber); }
+
+.principle-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 0.9;
+  color: var(--bhc-teal);
+  flex-shrink: 0;
+}
+.principle-card:nth-child(2) .principle-num { color: var(--bhc-purple); }
+.principle-card:nth-child(3) .principle-num { color: var(--bhc-amber); }
+
+.principle-body {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--bhc-ink);
+}
+.principle-body strong { color: var(--bhc-purple-dark); }
+
+/* ==========================================================================
+   SLIDE 2 — Manchester BHC
+   ========================================================================== */
+
+.slide-grid-mbhc {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
+  height: 100%;
+}
+
+.mbhc-partners { padding: 0; }
+.partners-svg { width: 100%; height: auto; max-height: 130px; }
+
+.mbhc-pathway { padding: 0; }
+.pathway-svg { width: 100%; height: auto; max-height: 240px; }
+
+.mbhc-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.kpi {
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  background: #fff;
+  border-top: 6px solid var(--bhc-purple);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.mbhc-kpis .kpi:nth-child(1) { border-top-color: var(--bhc-purple); }
+.mbhc-kpis .kpi:nth-child(2) { border-top-color: var(--bhc-teal); }
+.mbhc-kpis .kpi:nth-child(3) { border-top-color: var(--nhs-blue); }
+.mbhc-kpis .kpi:nth-child(4) { border-top-color: var(--bhc-amber); }
+
+.kpi-num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--bhc-purple-dark);
+}
+.mbhc-kpis .kpi:nth-child(1) .kpi-num { color: var(--bhc-purple); }
+.mbhc-kpis .kpi:nth-child(2) .kpi-num { color: var(--bhc-teal-dark); }
+.mbhc-kpis .kpi:nth-child(3) .kpi-num { color: var(--nhs-blue); }
+.mbhc-kpis .kpi:nth-child(4) .kpi-num { color: var(--bhc-amber); }
+
+.kpi-unit {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.kpi-lbl {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  color: var(--bhc-ink);
+  line-height: 1.25;
+}
+
+.kpi-foot {
+  font-size: 0.75rem;
+  color: var(--bhc-grey);
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   SLIDE 3 — risk factors + plans
+   ========================================================================== */
+
+.slide-grid-why {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.why-headline { padding: 0.5rem 0; }
+
+.big-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(95deg, var(--bhc-purple) 0%, var(--bhc-teal) 100%);
+  border-radius: 12px;
+  color: #fff;
+}
+
+.big-stat .num {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.big-stat .lbl {
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: #fff;
+}
+.big-stat .lbl strong { color: #fff; font-weight: 800; }
+
+.rf-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 3fr 1fr;
+  gap: 0.8rem;
+  align-items: stretch;
+}
+
+.rf-life {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 8px;
+}
+
+.rf-life.early { background: rgba(92, 45, 145, 0.08); }
+.rf-life.mid   { background: rgba(0, 164, 153, 0.08); }
+.rf-life.late  { background: rgba(0, 94, 184, 0.08); }
+
+.rf-life.mid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto repeat(2, 1fr);
+  grid-auto-flow: row;
+  gap: 0.4rem;
+  align-items: stretch;
+  padding: 0.6rem 0.7rem;
+}
+
+.rf-life.mid .rf-life-label { grid-column: 1 / -1; }
+
+.rf-life-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bhc-ink-soft);
+  margin-bottom: 0.2rem;
+}
+
+.rf-life.early .rf-life-label { color: var(--bhc-purple); }
+.rf-life.mid   .rf-life-label { color: var(--bhc-teal-dark); }
+.rf-life.late  .rf-life-label { color: var(--nhs-blue); }
+
+.rf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  background: #fff;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  line-height: 1.15;
+  border-left: 4px solid var(--bhc-grey);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.rf .rf-name { font-weight: 600; color: var(--bhc-ink); }
+.rf .rf-paf  { font-weight: 800; color: var(--bhc-ink); margin-left: 0.4rem; font-family: 'Fraunces', serif; }
+
+.rf-7 { border-left-width: 8px; border-left-color: var(--bhc-amber); }
+.rf-5 { border-left-width: 7px; border-left-color: var(--bhc-amber); }
+.rf-3 { border-left-width: 5px; border-left-color: var(--bhc-purple); }
+.rf-2 { border-left-width: 4px; border-left-color: var(--bhc-teal); }
+.rf-1 { border-left-width: 3px; border-left-color: var(--bhc-grey); }
+
+.why-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.next-block, .matters-block {
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.next-block { border-top: 4px solid var(--bhc-teal); }
+.matters-block { border-top: 4px solid var(--bhc-purple); }
+
+.next-block h3, .matters-block h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+.next-block h3 { color: var(--bhc-teal-dark); }
+.matters-block h3 { color: var(--bhc-purple); }
+
+.next-list, .matters-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--bhc-ink);
+}
+
+.next-list li, .matters-list li { margin-bottom: 0.35rem; }
+.next-list strong, .matters-list strong { color: var(--bhc-purple-dark); }
+</content>
+</invoke>

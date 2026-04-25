@@ -1,0 +1,356 @@
+---
+title: "Brain Health Centres"
+subtitle: "What they are, what we built, and why it matters"
+author: "Dr Ross Dunne — Manchester Brain Health Centre"
+format:
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    margin: 0.04
+    transition: fade
+    background-transition: fade
+    slide-number: c/t
+    embed-resources: true
+    progress: true
+    history: false
+    chalkboard: false
+    menu: false
+    css: bhc-styles.css
+---
+
+## What is a Brain Health Centre? {.slide-cascade background-color="#fbf9f5"}
+
+::: {.slide-grid-cascade}
+
+::: {.cascade-header}
+<h2 class="big-q">Same patient. Same disease. Different future.</h2>
+<p class="lede">A Brain Health Centre is not a relabelled memory clinic. It redesigns the pathway so that biomarkers, vascular workup, and behavioural support arrive together, early, before too much brain has been lost.</p>
+:::
+
+::: {.cascade-figure}
+
+```{=html}
+<svg viewBox="0 0 1500 410" xmlns="http://www.w3.org/2000/svg" class="cascade-svg" role="img" aria-label="Two parallel timelines comparing a Memory Assessment Service journey and a Brain Health Centre journey for the same hypothetical patient, Mary aged 64">
+
+  <!-- Patient header -->
+  <rect x="0" y="0" width="1500" height="44" fill="#5C2D91"/>
+  <text x="40" y="28" font-family="Fraunces, Georgia, serif" font-size="20" font-weight="800" fill="#fff">Mary, 64.</text>
+  <text x="170" y="28" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#fff" opacity="0.95" font-style="italic">"My memory's not what it was. My dad had dementia. Should I be worried?"</text>
+
+  <!-- ===== MAS TRACK =====
+       Time scale: x=200 (D0) → x=1380 (D365),  3.233 px/day -->
+  <text x="40" y="84" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#5C2D91">MEMORY ASSESSMENT SERVICE</text>
+  <text x="40" y="101" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" fill="#666" font-style="italic">cognition-led, no biomarkers, sequential appointments</text>
+
+  <line x1="200" y1="148" x2="879" y2="148" stroke="#5C2D91" stroke-width="3"/>
+  <line x1="879" y1="148" x2="1380" y2="148" stroke="#5C2D91" stroke-width="2" stroke-dasharray="3 5" opacity="0.45"/>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <!-- D0 GP referral -->
+    <circle cx="200" cy="148" r="8" fill="#5C2D91"/>
+    <text x="200" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#222">GP referral</text>
+    <text x="200" y="172" text-anchor="middle" font-size="10" fill="#888">Day 0</text>
+    <!-- D60 MAS letter -->
+    <circle cx="394" cy="148" r="8" fill="#5C2D91"/>
+    <text x="394" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#222">MAS letter</text>
+    <text x="394" y="172" text-anchor="middle" font-size="10" fill="#888">Day 60</text>
+    <!-- D90 First visit -->
+    <circle cx="491" cy="148" r="8" fill="#5C2D91"/>
+    <text x="491" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#222">First visit</text>
+    <text x="491" y="172" text-anchor="middle" font-size="10" fill="#888">Day 90 · MMSE 25</text>
+    <!-- D180 Repeat MMSE -->
+    <circle cx="782" cy="148" r="8" fill="#5C2D91"/>
+    <text x="782" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#222">Repeat MMSE</text>
+    <text x="782" y="172" text-anchor="middle" font-size="10" fill="#888">Day 180</text>
+    <!-- D210 Clinical diagnosis (label BELOW line, emphasised) -->
+    <circle cx="879" cy="148" r="11" fill="#5C2D91" stroke="#fff" stroke-width="2"/>
+    <text x="879" y="200" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5C2D91">Clinical diagnosis</text>
+    <text x="879" y="216" text-anchor="middle" font-size="10" fill="#888">Day 210</text>
+  </g>
+
+  <!-- MAS outcome box -->
+  <rect x="1080" y="100" width="380" height="96" rx="8" fill="#fff" stroke="#5C2D91" stroke-width="2"/>
+  <text x="1098" y="123" font-family="Fraunces, Georgia, serif" font-size="14" font-weight="800" fill="#5C2D91">"probable Alzheimer's disease"</text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#333">
+    <text x="1098" y="144">✗ no biomarkers, no diagnostic certainty</text>
+    <text x="1098" y="161">✗ ineligible for disease-modifying therapy</text>
+    <text x="1098" y="178">✗ no structured risk-reduction plan</text>
+  </g>
+
+  <!-- ===== BHC TRACK ===== -->
+  <text x="40" y="244" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#007a72">BRAIN HEALTH CENTRE</text>
+  <text x="40" y="261" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" fill="#666" font-style="italic">biomarker-led, integrated, with active follow-up</text>
+
+  <!-- BHC spine: solid up to D42, then active follow-up bar to D365 -->
+  <line x1="200" y1="305" x2="336" y2="305" stroke="#00A499" stroke-width="3"/>
+  <rect x="336" y="297" width="734" height="16" rx="8" fill="#00A499" opacity="0.25"/>
+  <text x="703" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#007a72" letter-spacing="1">ACTIVE FOLLOW-UP · BRAIN HEALTH ADVISOR · RISK MODIFICATION</text>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <!-- D0 GP referral -->
+    <circle cx="200" cy="305" r="8" fill="#00A499"/>
+    <text x="200" y="287" text-anchor="middle" font-size="11" font-weight="700" fill="#222">GP referral</text>
+    <text x="200" y="329" text-anchor="middle" font-size="10" fill="#888">Day 0</text>
+    <!-- D42 ONE-DAY visit (emphasised) -->
+    <circle cx="336" cy="305" r="13" fill="#00A499" stroke="#fff" stroke-width="2"/>
+    <text x="336" y="284" text-anchor="middle" font-size="11.5" font-weight="800" fill="#007a72">ONE-DAY visit</text>
+    <text x="336" y="335" text-anchor="middle" font-size="10" fill="#666">Day 42</text>
+    <text x="336" y="349" text-anchor="middle" font-size="10" fill="#666">pTau217 + MRI + CV (+LP)</text>
+  </g>
+
+  <!-- BHC outcome box -->
+  <rect x="1080" y="245" width="380" height="96" rx="8" fill="#fff" stroke="#00A499" stroke-width="2"/>
+  <text x="1098" y="268" font-family="Fraunces, Georgia, serif" font-size="14" font-weight="800" fill="#007a72">biomarker-confirmed diagnosis</text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#333">
+    <text x="1098" y="289">✓ blood pressure normalised, statin started</text>
+    <text x="1098" y="306">✓ hearing aid referral, social plan</text>
+    <text x="1098" y="323">✓ DMT-ready, in research, year-on review booked</text>
+  </g>
+
+  <!-- ===== Day axis ===== -->
+  <line x1="200" y1="383" x2="1380" y2="383" stroke="#999" stroke-width="1"/>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#666">
+    <line x1="200"  y1="380" x2="200"  y2="386" stroke="#999"/>
+    <text x="200"  y="400" text-anchor="middle">0</text>
+    <line x1="491"  y1="380" x2="491"  y2="386" stroke="#999"/>
+    <text x="491"  y="400" text-anchor="middle">90</text>
+    <line x1="782"  y1="380" x2="782"  y2="386" stroke="#999"/>
+    <text x="782"  y="400" text-anchor="middle">180</text>
+    <line x1="1073" y1="380" x2="1073" y2="386" stroke="#999"/>
+    <text x="1073" y="400" text-anchor="middle">270</text>
+    <line x1="1380" y1="380" x2="1380" y2="386" stroke="#999"/>
+    <text x="1380" y="400" text-anchor="end" font-weight="700">365 days</text>
+  </g>
+</svg>
+```
+
+:::
+
+::: {.cascade-bottom}
+
+::: {.principle-card}
+<div class="principle-num">1</div>
+<div class="principle-body"><strong>Confirm with biology, not exclusion.</strong> Plasma pTau217, MRI and CSF give a positive diagnosis of Alzheimer's pathology, instead of a diagnosis of last resort.</div>
+:::
+
+::: {.principle-card}
+<div class="principle-num">2</div>
+<div class="principle-body"><strong>Treat the brain like the heart.</strong> Forty-five percent of dementia worldwide is linked to fourteen modifiable risk factors. Most are vascular and behavioural.</div>
+:::
+
+::: {.principle-card}
+<div class="principle-num">3</div>
+<div class="principle-body"><strong>Be ready for therapy.</strong> Lecanemab and donanemab need confirmed amyloid. Without biomarkers, eligibility is impossible to establish.</div>
+:::
+
+:::
+
+:::
+
+::: footer
+Today only **1 in 800** UK patients with memory symptoms gets a biomarker-confirmed diagnosis. The other 799 are Mary on the upper track.
+:::
+
+---
+
+## Manchester Brain Health Centre {.slide-mbhc background-color="#fbf9f5"}
+
+::: {.slide-grid-mbhc}
+
+::: {.mbhc-partners}
+```{=html}
+<svg viewBox="0 0 1100 130" xmlns="http://www.w3.org/2000/svg" class="partners-svg" role="img" aria-label="Three-way partnership: GMMH, MFT, Alzheimer's Society, with University of Manchester academic partner">
+  <!-- Three core partners -->
+  <g>
+    <rect x="40"   y="20" width="320" height="90" rx="14" fill="#5C2D91"/>
+    <text x="200"  y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">GMMH</text>
+    <text x="200"  y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">mental health · old-age psychiatry · clinical lead</text>
+  </g>
+  <g>
+    <rect x="390"  y="20" width="320" height="90" rx="14" fill="#005EB8"/>
+    <text x="550"  y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">MFT</text>
+    <text x="550"  y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">imaging · cardiology · labs · biobank host</text>
+  </g>
+  <g>
+    <rect x="740"  y="20" width="320" height="90" rx="14" fill="#00A499"/>
+    <text x="900"  y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">Alzheimer's Society</text>
+    <text x="900"  y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">funding · Brain Health Advisors · public voice</text>
+  </g>
+  <!-- Academic partner ribbon -->
+  <text x="550" y="125" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-style="italic" fill="#444">academic partner: The University of Manchester</text>
+</svg>
+```
+:::
+
+::: {.mbhc-pathway}
+```{=html}
+<svg viewBox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg" class="pathway-svg" role="img" aria-label="One-day pathway: triage, blood test, MRI, clinical assessment with cardiovascular check, lumbar puncture if indicated, disclosure and Brain Health Advisor follow-up">
+  <!-- Backbone line -->
+  <line x1="80" y1="120" x2="1020" y2="120" stroke="#5C2D91" stroke-width="3" stroke-dasharray="2 6"/>
+
+  <!-- Station: Triage -->
+  <g>
+    <circle cx="100" cy="120" r="34" fill="#fff" stroke="#5C2D91" stroke-width="3"/>
+    <text x="100" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">📋</text>
+    <text x="100" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Triage</text>
+    <text x="100" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">MMSE &gt;22</text>
+    <text x="100" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">ACE-III &gt;85</text>
+  </g>
+
+  <!-- Station: Blood -->
+  <g>
+    <circle cx="265" cy="120" r="34" fill="#fff" stroke="#e8762a" stroke-width="3"/>
+    <text x="265" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🩸</text>
+    <text x="265" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Plasma pTau217</text>
+    <text x="265" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">first-line</text>
+    <text x="265" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">biomarker</text>
+  </g>
+
+  <!-- Station: MRI -->
+  <g>
+    <circle cx="430" cy="120" r="34" fill="#fff" stroke="#1f6feb" stroke-width="3"/>
+    <text x="430" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🧠</text>
+    <text x="430" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Same-day MRI</text>
+    <text x="430" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">T1, FLAIR, dMRI,</text>
+    <text x="430" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">swMRI, ASL</text>
+  </g>
+
+  <!-- Station: Clinic + CV -->
+  <g>
+    <circle cx="595" cy="120" r="34" fill="#fff" stroke="#d62728" stroke-width="3"/>
+    <text x="595" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">❤️</text>
+    <text x="595" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Clinic + CV</text>
+    <text x="595" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">RBANS, history,</text>
+    <text x="595" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">pulse-wave velocity</text>
+  </g>
+
+  <!-- Station: LP -->
+  <g>
+    <circle cx="760" cy="120" r="34" fill="#fff" stroke="#2ca02c" stroke-width="3"/>
+    <text x="760" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">💉</text>
+    <text x="760" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">CSF (if needed)</text>
+    <text x="760" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">~20% of</text>
+    <text x="760" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">patients</text>
+  </g>
+
+  <!-- Station: Disclosure -->
+  <g>
+    <circle cx="925" cy="120" r="34" fill="#fff" stroke="#00A499" stroke-width="3"/>
+    <text x="925" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🤝</text>
+    <text x="925" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#222">Disclosure + BHA</text>
+    <text x="925" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">Brain Health</text>
+    <text x="925" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#555">Advisor follow-up</text>
+  </g>
+
+  <!-- Day banner -->
+  <rect x="60" y="218" width="980" height="22" rx="11" fill="#5C2D91"/>
+  <text x="550" y="234" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" letter-spacing="2">ONE VISIT, ONE DAY (Phase 2, Q3 2026)</text>
+</svg>
+```
+:::
+
+::: {.mbhc-kpis}
+::: {.kpi}
+<div class="kpi-num">49<span class="kpi-unit">d</span></div>
+<div class="kpi-lbl">simulated median pathway, referral to disclosure</div>
+<div class="kpi-foot">vs 187 days currently</div>
+:::
+
+::: {.kpi}
+<div class="kpi-num">73<span class="kpi-unit">%</span></div>
+<div class="kpi-lbl">reduction in time to diagnosis</div>
+<div class="kpi-foot">Phase 2 vs Phase 1b</div>
+:::
+
+::: {.kpi}
+<div class="kpi-num">~80<span class="kpi-unit">%</span></div>
+<div class="kpi-lbl">of patients spared a lumbar puncture</div>
+<div class="kpi-foot">blood-first triage</div>
+:::
+
+::: {.kpi}
+<div class="kpi-num">0</div>
+<div class="kpi-lbl">serious LP adverse events to date</div>
+<div class="kpi-foot">~92% acceptance, atraumatic technique</div>
+:::
+:::
+
+:::
+
+::: footer
+HSJ-recognised model · UK's first Alzheimer's Society-funded Brain Health Advisors in post · pTau217 Elecsys live by mid-2026 (first site globally)
+:::
+
+---
+
+## What's next, and why it matters {.slide-why background-color="#fbf9f5"}
+
+::: {.slide-grid-why}
+
+::: {.why-headline}
+<div class="big-stat"><span class="num">45%</span><span class="lbl">of dementia worldwide is linked to <strong>14 modifiable risk factors</strong> (Lancet Commission, 2024)</span></div>
+:::
+
+::: {.why-grid}
+```{=html}
+<div class="rf-grid">
+  <div class="rf-life early">
+    <div class="rf-life-label">Early life</div>
+    <div class="rf rf-5"><span class="rf-name">Less education</span><span class="rf-paf">5%</span></div>
+  </div>
+  <div class="rf-life mid">
+    <div class="rf-life-label">Midlife</div>
+    <div class="rf rf-7"><span class="rf-name">Hearing loss</span><span class="rf-paf">7%</span></div>
+    <div class="rf rf-7"><span class="rf-name">High LDL cholesterol</span><span class="rf-paf">7%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Depression</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Traumatic brain injury</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Physical inactivity</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Smoking</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Diabetes</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Hypertension</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-1"><span class="rf-name">Obesity</span><span class="rf-paf">1%</span></div>
+    <div class="rf rf-1"><span class="rf-name">Excessive alcohol</span><span class="rf-paf">1%</span></div>
+  </div>
+  <div class="rf-life late">
+    <div class="rf-life-label">Late life</div>
+    <div class="rf rf-5"><span class="rf-name">Social isolation</span><span class="rf-paf">5%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Air pollution</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Vision loss</span><span class="rf-paf">2%</span></div>
+  </div>
+</div>
+```
+:::
+
+::: {.why-bottom}
+
+::: {.next-block}
+### What's next at MBHC
+
+<ul class="next-list">
+<li>One-stop blood-first pathway live in clinic from <strong>Q3 2026</strong></li>
+<li>First UK site to deploy <strong>pTau217 Elecsys</strong> for routine NHS care</li>
+<li>Brain Health Advisors trained in <strong>motivational interviewing</strong>, embedded in pathway</li>
+<li>Five-year cohort study with <strong>GSK</strong>, ASL imaging endpoints for future trials</li>
+<li>Hub-and-spoke model across <strong>Greater Manchester</strong></li>
+</ul>
+:::
+
+::: {.matters-block}
+### Why it matters for psychology
+
+<ul class="matters-list">
+<li>Pathology starts <strong>20+ years</strong> before symptoms. Behaviour change has the most leverage when started early.</li>
+<li>Disease-modifying drugs (lecanemab, donanemab) are MHRA-licensed but <strong>not yet on the NHS</strong>. Eligibility depends on biomarkers.</li>
+<li>Most modifiable risk factors are <strong>psychological and behavioural</strong>: hearing aid use, exercise, sleep, social engagement, mood.</li>
+<li>This is where psychologists work, with clinicians, on the things that actually shift the curve.</li>
+</ul>
+:::
+
+:::
+
+:::
+
+::: footer
+Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca interim analysis · Brum et al., Nature Aging 2023 (two-step pTau217 workflow)
+:::
