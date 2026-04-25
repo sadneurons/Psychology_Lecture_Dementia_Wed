@@ -611,7 +611,7 @@ Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · 
 - Open question whether amyloid lowering alone is sufficient or whether combinations will be needed
 :::
 
-## Other approaches {.smaller}
+## Other approaches 
 
 - **Anti-tau antibodies**: E2814, JNJ-2056 (zagotenemab discontinued 2023) `Phase 2`
 - **Tau ASOs** `intrathecal antisense oligonucleotides, BIIB080`
@@ -622,12 +622,12 @@ Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · 
   - **AHEAD 3-45**: sporadic, plasma p-tau217 stratified
   - *A4 closed early; solanezumab failed*
 
-## Current state {.smaller}
+## Current state 
 
 ::: {.incremental}
 - The first disease-modifying drugs exist. Their effect size is modest. ARIA limits use. Access in the UK is restricted.
 - **Diagnosis**: plasma p-tau217 may make primary-care testing feasible.
-- **Prevention** may matter more than any antibody:
+- **Prevention** may matter more at a population level than any antibody:
   - *Lancet Commission 2024: 14 modifiable risk factors account for ~45% of dementia risk*
   - Hearing, education, BP, smoking, obesity, depression, physical inactivity, diabetes, alcohol, social isolation, air pollution, head injury, vision, cholesterol
 :::
