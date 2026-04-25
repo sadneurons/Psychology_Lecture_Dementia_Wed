@@ -24,6 +24,8 @@ format:
     excalidraw:
       button: true
       shortcut: "`"
+      useLocalStorage: true
+      theme: dark
     confetti:
       particleCount: 150
       angle: 90
@@ -1186,7 +1188,7 @@ over to you
 3. **Anti-amyloid antibodies are the first disease-modifying drugs.** Effect size is modest. ARIA limits use. NICE has rejected them for the NHS. Prevention may matter more.
 :::
 
-## References
+## References {data-stack-name="Vertical"}
 
 ::: {#refs}
 :::
