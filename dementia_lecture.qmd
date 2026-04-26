@@ -47,6 +47,12 @@ nocite: |
 revealjs-plugins:
   - confetti
   - excalidraw
+  - pointer
+pointer:
+  key: "q"
+  color: "#ff5555"
+  pointerSize: 18
+  alwaysVisible: false
 ---
 
 ```{=html}
@@ -134,7 +140,66 @@ revealjs-plugins:
 .reveal .trial-ref { text-align:center; color:#6272a4; font-size:0.42em; font-style:italic; margin-top:0.7em; border-top:1px solid #44475a; padding-top:0.55em; }
 .reveal .trial-chart { width:100%; height:auto; display:block; margin:0.4em 0 0.7em; }
 
+/* ── Spell-out: per-letter staggered pop-in ─────────────────────── */
+.reveal .spell-out { display: inline-block; }
+.reveal .spell-out > span {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.2) translateX(-0.4em);
+  transform-origin: 0% 50%;
+  will-change: opacity, transform;
+}
+.reveal .spell-out.running > span {
+  animation: spell-out-letter 380ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: calc(var(--i, 0) * var(--spell-stagger, 80ms));
+}
+@keyframes spell-out-letter {
+  0%   { opacity: 0; transform: scale(0.2) translateX(-0.4em); }
+  60%  { opacity: 1; transform: scale(1.08) translateX(0); }
+  100% { opacity: 1; transform: scale(1)    translateX(0); }
+}
+
 </style>
+<script>
+(function () {
+  function split(el) {
+    if (el.dataset.spellSplit === 'true') return;
+    el.dataset.spellSplit = 'true';
+    var text = el.textContent;
+    el.textContent = '';
+    var i = 0;
+    for (var ch of text) {
+      var s = document.createElement('span');
+      s.textContent = ch === ' ' ? ' ' : ch;
+      s.style.setProperty('--i', i);
+      el.appendChild(s);
+      i++;
+    }
+  }
+  function activate(slide) {
+    if (!slide) return;
+    slide.querySelectorAll('.spell-out').forEach(function (el) {
+      split(el);
+      el.classList.remove('running');
+      void el.offsetWidth;          // force reflow so the animation replays
+      el.classList.add('running');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.spell-out').forEach(split);
+  });
+  function hookReveal() {
+    if (typeof Reveal === 'undefined') { setTimeout(hookReveal, 100); return; }
+    if (Reveal.isReady && Reveal.isReady()) {
+      activate(Reveal.getCurrentSlide());
+    } else {
+      Reveal.on('ready', function (e) { activate(e.currentSlide); });
+    }
+    Reveal.on('slidechanged', function (e) { activate(e.currentSlide); });
+  }
+  hookReveal();
+})();
+</script>
 ```
 
 ## Outline :watch:
@@ -386,6 +451,11 @@ The clinician's expertise is crucial in the following situations:
 
 ::::
 
+##
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;"></iframe>
+
+:::
+
 ## Differential diagnosis 
 
 ::: {.panel-tabset}
@@ -433,6 +503,11 @@ The clinician's expertise is crucial in the following situations:
 - Alcohol misuse
 :::
 
+##
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;"></iframe>
+
+:::
+
 ## Assessment {.smaller}
 ::: {.panel-tabset}
 
@@ -469,6 +544,32 @@ A cognitive, functional, behavioural and mental state examination (preferably us
 ### Examination
 Physical examination, laboratory tests (to exclude comorbid conditions that may be impairing cognitive function), and review of medication (to identify drugs that may be impairing cognitive function)
 
+:::: {.columns}
+
+::: {.column width=33%}
+
+
+![Parkinson's signs](Pictures/PDExam.png)
+
+:::
+
+::: {.column width=6%}
+
+
+:::
+
+::: {.column width=60%}
+
+![Gait signs](Pictures/pdwalk.png)
+
+
+:::
+
+::::
+
+
+
+
 ### Neuroimaging
 
 - **Structural MRI** `first-line`: medial temporal atrophy (MTA score), parietal atrophy (Koedam), white-matter disease, microbleeds
@@ -490,6 +591,13 @@ Physical examination, laboratory tests (to exclude comorbid conditions that may 
 :::
 
 ## Part 2: Symptomatic treatments {background-color="#44475a"}
+
+
+### 
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;"></iframe>
+
+:::
+
 
 ## The cholinergic hypothesis (1976)
 
@@ -643,7 +751,13 @@ two cognitive-decline curves running in parallel, untreated vs on AChEi, **offse
 - They do not change underlying trajectory
 - A patient on AChEi 5 years from diagnosis has the same brain pathology as one untreated
 
-## 5 minute break {background-color="#44475a"}
+
+## What is important in clinical trials?
+
+<iframe src="https://wall.sli.do/event/edVDqsrhZmU8mVxZdQfbXV" width="1280" height="720" style="border:0;"></iframe>
+
+
+## 5 minute break :potable_water: :toilet:{background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
 
@@ -869,7 +983,7 @@ Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · 
 - **Drug cost**: £20–25k per patient per year (lecanemab list)
 - **Infrastructure**: infusion suite every 2 (lecanemab) or 4 (donanemab) weeks
 - **Surveillance MRI**: 4–7 scans per patient course
-- **Workforce**: trained nurses, neurologists, neuroradiologists
+- **Workforce**: trained nurses, dementia specialists, neuroradiologists, raters, pharmacists
 - **NICE August 2024**: rejected lecanemab for NHS commissioning; benefit too small at price
 - Currently available only privately in the UK; major equity concern
 - Open question whether amyloid lowering alone is sufficient or whether combinations will be needed
@@ -1251,7 +1365,7 @@ Confirm consent before introducing patient. Briefly orient students to respectfu
 
 ## Student questions (10 min) {background-color="#44475a"}
 
-::: {.r-fit-text style="color:#ffb86c;"}
+::: {.r-fit-text .spell-out style="color:#ffb86c;"}
 over to you
 :::
 
