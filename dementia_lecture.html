@@ -5,8 +5,7 @@
 <script src="dementia_lecture_files/libs/quarto-html/popper.min.js"></script>
 <script src="dementia_lecture_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="dementia_lecture_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="dementia_lecture_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="dementia_lecture_files/libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="dementia_lecture_files/libs/quarto-html/light-border.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Dr.&nbsp;Ross A. Dunne">
@@ -33,6 +32,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -169,7 +169,68 @@ Dr.&nbsp;Ross A. Dunne
 </section>
 <section class="slide level2">
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="chalk" x="-15%" y="-15%" width="130%" height="130%">
+      <feturbulence type="fractalNoise" basefrequency="0.62" numoctaves="3" seed="7"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" scale="2.4"></fedisplacementmap>
+    </filter>
+  </defs>
+</svg>
 <style>
+  /* ── Paper-style panel-tabset ───────────────────────────────────── */
+.reveal .panel-tabset > .nav-tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 0 0.4em;
+  gap: 0.25em;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link {
+  background: rgba(245, 240, 226, 0.05);
+  color: rgba(245, 240, 226, 0.62);
+  border: 1px solid rgba(245, 240, 226, 0.14);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 0.45em 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  top: 1px;
+  transition: background 180ms, color 180ms, transform 180ms;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link:hover {
+  background: rgba(245, 240, 226, 0.10);
+  color: rgba(245, 240, 226, 0.95);
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link.active {
+  background: rgba(245, 240, 226, 0.10);
+  color: #f8f8f2;
+  border-color: rgba(245, 240, 226, 0.24);
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.20);
+}
+
+.reveal .panel-tabset > .tab-content {
+  background:
+    linear-gradient(180deg,
+      rgba(245, 240, 226, 0.10) 0%,
+      rgba(245, 240, 226, 0.04) 35%,
+      rgba(245, 240, 226, 0.06) 100%),
+    radial-gradient(ellipse at top left,
+      rgba(245, 240, 226, 0.08) 0%, transparent 60%);
+  border: 1px solid rgba(245, 240, 226, 0.22);
+  border-radius: 0 12px 12px 12px;
+  padding: 1.1em 1.3em;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(245, 240, 226, 0.04),
+    inset 0 1px 0 rgba(245, 240, 226, 0.06);
+}
+
 .reveal .fragment.blur-reveal { opacity: 1 !important; visibility: visible !important; }
 .reveal .fragment.blur-reveal img { filter: blur(22px); transition: filter 600ms ease; }
 .reveal .fragment.blur-reveal.visible img { filter: blur(0); }
@@ -202,7 +263,7 @@ Dr.&nbsp;Ross A. Dunne
 <li>5 minute break</li>
 <li>20 minutes on “Disease modifying” treatments.</li>
 <li>5 minutes for questions for me on the material presented</li>
-<li>10-20 minutes Q and A patient with me</li>
+<li>10-20 minutes Q and A trial participant with me</li>
 <li>10 minutes Qs from students</li>
 </ul>
 </section>
@@ -351,7 +412,7 @@ Dr.&nbsp;Ross A. Dunne
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="Pictures/Fazekas%20scoring.jpeg"></p>
-<figcaption>Fazekas score</figcaption>
+<figcaption>Fazekas score, images from <em>https://radiologyassistant.nl</em></figcaption>
 </figure>
 </div>
 </div></div>
@@ -599,7 +660,7 @@ bar chart, global dementia prevalence 2020 (**55M**) vs 2050 projection (**139M*
 <div class="tab-content">
 <div id="tabset-4-1">
 <ul>
-<li>Once daily, oral; 5 mg → 10 mg after 4 weeks <code>most common UK first-line</code></li>
+<li>Once daily, oral; 5 mg increased to 10 mg after 6 weeks <code>most common UK first-line</code></li>
 <li>Long half-life</li>
 <li>Side effects: GI upset, vivid dreams, bradycardia</li>
 <li>Cardiac history → ECG before starting</li>
@@ -1395,8 +1456,8 @@ This is where psychologists work, with clinicians, on the things that actually s
 <p>?</p>
 </div>
 </section>
-<section id="qa-with-our-patient-1020-min" class="slide level2" data-background-color="#44475a">
-<h2>Q&amp;A with our patient (10–20 min)</h2>
+<section id="qa-with-trial-partiicpant-1020-min" class="slide level2" data-background-color="#44475a">
+<h2>Q&amp;A with trial partiicpant (10–20 min)</h2>
 <div class="r-fit-text" style="color:#50fa7b;">
 <p>Welcome</p>
 </div>
@@ -1428,10 +1489,33 @@ This is where psychologists work, with clinicians, on the things that actually s
 <li class="fragment"><p><strong>Anti-amyloid antibodies are the first disease-modifying drugs.</strong> Effect size is modest. ARIA limits use. NICE has rejected them for the NHS. Prevention may matter more.</p></li>
 </ol>
 </section>
-<section id="references" class="slide level2 smaller scrollable" data-stack-name="Vertical">
+<section id="references" class="slide level2 tiny smaller scrollable" data-stack-name="Vertical">
 <h2>References</h2>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bowen1976cholinergic" class="csl-entry" role="listitem">
+Bowen, David M., Charles B. Smith, Peter White, and Alan N. Davison. 1976. <span>“Neurotransmitter-Related Enzymes and Indices of Hypoxia in Senile Dementia and Other Abiotrophies.”</span> <em>Brain</em> 99 (3): 459–96.
+</div>
+<div id="ref-vandyck2023lecanemab" class="csl-entry" role="listitem">
+Dyck, Christopher H. van, Chad J. Swanson, Paul Aisen, Randall J. Bateman, Christopher Chen, Michelle Gee, Michio Kanekiyo, et al. 2023. <span>“Lecanemab in Early <span class="nocase">Alzheimer’s</span> Disease.”</span> <em>New England Journal of Medicine</em> 388 (1): 9–21.
+</div>
+<div id="ref-hardy1992amyloid" class="csl-entry" role="listitem">
+Hardy, John A., and Gerald A. Higgins. 1992. <span>“Alzheimer’s Disease: The Amyloid Cascade Hypothesis.”</span> <em>Science</em> 256 (5054): 184–85.
+</div>
+<div id="ref-jack2018nia" class="csl-entry" role="listitem">
+Jack, Clifford R., David A. Bennett, Kaj Blennow, Maria C. Carrillo, Billy Dunn, Samantha Budd Haeberlein, David M. Holtzman, et al. 2018. <span>“<span>NIA-AA</span> Research Framework: Toward a Biological Definition of Alzheimer’s Disease.”</span> <em>Alzheimer’s &amp; Dementia</em> 14 (4): 535–62.
+</div>
+<div id="ref-livingston2024lancet" class="csl-entry" role="listitem">
+Livingston, Gill, Jonathan Huntley, Kathy Y. Liu, Sergi G. Costafreda, Geir Selbæk, Suvarna Alladi, David Ames, et al. 2024. <span>“Dementia Prevention, Intervention, and Care: 2024 Report of the <span>Lancet</span> Standing Commission.”</span> <em>The Lancet</em> 404 (10452): 572–628.
+</div>
+<div id="ref-NiuAmyloid" class="csl-entry" role="listitem">
+Niu, Zheng, Xinrui Gui, Shuang Feng, and Bernd Reif. 2024. <span>“Aggregation Mechanisms and Molecular Structures of Amyloid-β in Alzheimer’s Disease.”</span> <em>Chemistry - A European Journal</em> 30 (August). <a href="https://doi.org/10.1002/chem.202400277">https://doi.org/10.1002/chem.202400277</a>.
+</div>
+<div id="ref-palmqvist2024ptau217" class="csl-entry" role="listitem">
+Palmqvist, Sebastian, Pontus Tideman, Niklas Mattsson-Carlgren, Suzanne E. Schindler, Ruben Smith, Rik Ossenkoppele, Shorena Janelidze, Erik Stomrud, Oskar Hansson, et al. 2024. <span>“Blood Biomarkers to Detect <span>Alzheimer</span> Disease in Primary Care and Secondary Care.”</span> <em>JAMA</em> 332 (15): 1245–57.
+</div>
+<div id="ref-sims2023donanemab" class="csl-entry" role="listitem">
+Sims, John R., Jennifer A. Zimmer, Cynthia D. Evans, Ming Lu, Paul Ardayfio, Jennifer Sparks, Alette M. Wessels, et al. 2023. <span>“Donanemab in Early Symptomatic <span class="nocase">Alzheimer’s</span> Disease: The <span>TRAILBLAZER-ALZ</span> 2 Randomized Clinical Trial.”</span> <em>JAMA</em> 330 (6): 512–27.
+</div>
 </div>
 <aside class="notes">
 <p>Key sources for the deck:</p>
@@ -1490,7 +1574,7 @@ This is where psychologists work, with clinicians, on the things that actually s
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -1504,7 +1588,7 @@ This is where psychologists work, with clinicians, on the things that actually s
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide

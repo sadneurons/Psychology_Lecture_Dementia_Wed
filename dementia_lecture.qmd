@@ -8,6 +8,7 @@ logo: GMDRClogo.jpg
 format:
   revealjs:
     theme: dracula
+    highlight-style: /home/tenebris/Desktop/RossQuartoThemes/blackboard.theme
     css: bhc-styles.css
     monofont: "Operator Mono Lig Book"
     slide-number: true
@@ -17,6 +18,9 @@ format:
     incremental: false
     overview: true
     transition: fade
+    controls: true
+    controlsLayout: edges
+    controlsBackArrows: faded
     controlsTutorial: true
     width: 1280
     height: 820
@@ -37,13 +41,76 @@ format:
       colors: ["#feba00", "#f54281", "#1fd14f"]
       scalar: 0.7
 bibliography: Sources/refs.bib
+nocite: |
+  @*
 revealjs-plugins:
   - confetti
   - excalidraw
 ---
 
 ```{=html}
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="chalk" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="3" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.4"/>
+    </filter>
+  </defs>
+</svg>
 <style>
+  /* ── Paper-style panel-tabset ───────────────────────────────────── */
+.reveal .panel-tabset > .nav-tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 0 0.4em;
+  gap: 0.25em;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link {
+  background: rgba(245, 240, 226, 0.05);
+  color: rgba(245, 240, 226, 0.62);
+  border: 1px solid rgba(245, 240, 226, 0.14);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 0.45em 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  top: 1px;
+  transition: background 180ms, color 180ms, transform 180ms;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link:hover {
+  background: rgba(245, 240, 226, 0.10);
+  color: rgba(245, 240, 226, 0.95);
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link.active {
+  background: rgba(245, 240, 226, 0.10);
+  color: #f8f8f2;
+  border-color: rgba(245, 240, 226, 0.24);
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.20);
+}
+
+.reveal .panel-tabset > .tab-content {
+  background:
+    linear-gradient(180deg,
+      rgba(245, 240, 226, 0.10) 0%,
+      rgba(245, 240, 226, 0.04) 35%,
+      rgba(245, 240, 226, 0.06) 100%),
+    radial-gradient(ellipse at top left,
+      rgba(245, 240, 226, 0.08) 0%, transparent 60%);
+  border: 1px solid rgba(245, 240, 226, 0.22);
+  border-radius: 0 12px 12px 12px;
+  padding: 1.1em 1.3em;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(245, 240, 226, 0.04),
+    inset 0 1px 0 rgba(245, 240, 226, 0.06);
+}
+
 .reveal .fragment.blur-reveal { opacity: 1 !important; visibility: visible !important; }
 .reveal .fragment.blur-reveal img { filter: blur(22px); transition: filter 600ms ease; }
 .reveal .fragment.blur-reveal.visible img { filter: blur(0); }
@@ -75,7 +142,7 @@ revealjs-plugins:
 - 5 minute break
 - 20 minutes on "Disease modifying" treatments.
 - 5 minutes for questions for me on the material presented
-- 10-20 minutes Q and A patient with me
+- 10-20 minutes Q and A trial participant with me
 - 10 minutes Qs from students
 
 ## Part 1: Dementia {background-color="#44475a"}
@@ -219,7 +286,7 @@ What it measures: vascular, inflammatory, synaptic axes added in 2024.
 :::
 
 ::: {.column width="45%"}
-![Fazekas score](Pictures/Fazekas%20scoring.jpeg)
+![Fazekas score, images from *https://radiologyassistant.nl*](Pictures/Fazekas%20scoring.jpeg)
 :::
 
 ::::
@@ -444,7 +511,7 @@ Physical examination, laboratory tests (to exclude comorbid conditions that may 
 
 ### Donepezil
 
-- Once daily, oral; 5 mg → 10 mg after 4 weeks `most common UK first-line`
+- Once daily, oral; 5 mg increased to 10 mg after 6 weeks `most common UK first-line`
 - Long half-life
 - Side effects: GI upset, vivid dreams, bradycardia
 - Cardiac history → ECG before starting
@@ -1162,7 +1229,7 @@ Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca i
 ?
 :::
 
-## Q&A with our patient (10–20 min) {background-color="#44475a"}
+## Q&A with trial partiicpant (10–20 min) {background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
 Welcome
@@ -1188,9 +1255,9 @@ over to you
 3. **Anti-amyloid antibodies are the first disease-modifying drugs.** Effect size is modest. ARIA limits use. NICE has rejected them for the NHS. Prevention may matter more.
 :::
 
-## References {data-stack-name="Vertical"}
+## References {data-stack-name="Vertical" .tiny}
 
-::: {#refs}
+::: {#refs} 
 :::
 
 ::: {.notes}
