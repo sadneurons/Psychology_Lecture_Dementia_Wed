@@ -35,7 +35,7 @@ format:
       angle: 90
       spread: 360
       startVelocity: 25
-      gravity: 0.8ccc5
+      gravity: 0.8
       drift: 0
       ticks: 400
       colors: ["#feba00", "#f54281", "#1fd14f"]
@@ -1229,10 +1229,10 @@ Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca i
 ?
 :::
 
-## Q&A with trial partiicpant (10–20 min) {background-color="#44475a"}
+## Q&A with trial participant (10–20 min) {data-confetti=true data-confetti-large=true data-confetti-duration="5" background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
-Welcome
+Welcome!
 :::
 
 ::: {.notes}
