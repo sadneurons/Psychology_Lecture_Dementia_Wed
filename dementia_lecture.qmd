@@ -946,7 +946,7 @@ Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · 
 :::
 
 ##
-<iframe src="/Widgets/apoe_risk.html" width="130%" height="100%" style="border:0;"></iframe>
+<iframe src="Widgets/apoe_risk.html" width="130%" height="100%" style="border:0;"></iframe>
 
 ## ARIA {.smaller}
 
