@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APOE Genotype and Alzheimer's Risk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* =========================================================
+   Light theme (default)
+   ========================================================= */
+:root, [data-theme="light"] {
+  --bg:           #f7f6f3;
+  --bg-soft:      #eef0f2;
+  --card:         #ffffff;
+  --card-soft:    #fafbfc;
+  --ink:          #1a1f2b;
+  --ink-soft:     #4a5260;
+  --ink-dim:      #717c8c;
+  --ink-faint:    #a4adbb;
+  --border:       #e6e8ed;
+  --border-soft:  #eef0f3;
+
+  --accent:       #0891a8;
+  --accent-bg:    #e6f4f6;
+
+  --c-e2:         #2d9d7f;
+  --c-e2-bg:      #e0f1ec;
+  --c-e3:         #6b7889;
+  --c-e3-bg:      #ecf0f4;
+  --c-e4:         #d96a5a;
+  --c-e4-bg:      #fbe9e6;
+
+  --warn:         #d97706;
+  --warn-bg:      #fef4e6;
+  --warn-border:  #f3d9b2;
+
+  --shadow-sm:    0 1px 2px rgba(20, 28, 45, 0.04), 0 1px 3px rgba(20, 28, 45, 0.06);
+  --shadow-md:    0 2px 4px rgba(20, 28, 45, 0.04), 0 4px 8px rgba(20, 28, 45, 0.06);
+  --shadow-drag:  0 8px 16px rgba(20, 28, 45, 0.12), 0 16px 32px rgba(20, 28, 45, 0.10);
+
+  --on-color:     white;            /* text on filled coloured backgrounds */
+  --seg-hover-bg: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================
+   Dark theme
+   ========================================================= */
+[data-theme="dark"] {
+  --bg:           #0d1017;
+  --bg-soft:      #181d27;
+  --card:         #1a202b;
+  --card-soft:    #1f2531;
+  --ink:          #e8ecf2;
+  --ink-soft:     #b8c0cd;
+  --ink-dim:      #8590a3;
+  --ink-faint:    #5a6273;
+  --border:       #2d3340;
+  --border-soft:  #232834;
+
+  --accent:       #4ec0d4;
+  --accent-bg:    rgba(78, 192, 212, 0.13);
+
+  --c-e2:         #4cb799;
+  --c-e2-bg:      rgba(76, 183, 153, 0.16);
+  --c-e3:         #9ba8be;
+  --c-e3-bg:      rgba(155, 168, 190, 0.13);
+  --c-e4:         #e88575;
+  --c-e4-bg:      rgba(232, 133, 117, 0.17);
+
+  --warn:         #f5a524;
+  --warn-bg:      rgba(245, 165, 36, 0.13);
+  --warn-border:  rgba(245, 165, 36, 0.35);
+
+  --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md:    0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-drag:  0 8px 16px rgba(0, 0, 0, 0.5), 0 16px 32px rgba(0, 0, 0, 0.6);
+
+  --on-color:     #0d1017;
+  --seg-hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+:root {
+  --sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --serif:   'Source Serif 4', Georgia, serif;
+  --mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 200ms ease;
+}
+
+body {
+  display: flex; flex-direction: column; min-height: 100vh;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* =========================================================
+   Masthead
+   ========================================================= */
+.masthead {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.55rem 1rem;
+  flex-shrink: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem;
+}
+.masthead-text { display: flex; align-items: baseline; gap: 0.7rem; min-width: 0; }
+.masthead .eyebrow {
+  font-family: var(--mono);
+  font-size: 0.62rem; font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.18rem;
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.masthead-right {
+  display: flex; align-items: center; gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.verify-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  color: var(--warn);
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+}
+.verify-pill::before {
+  content: ''; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--warn);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 1.85rem; height: 1.85rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: var(--ink-soft);
+  transition: all 150ms ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.theme-toggle svg {
+  width: 0.95rem; height: 0.95rem;
+  stroke: currentColor; fill: none;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.theme-toggle .icon-sun  { display: none; }
+.theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* =========================================================
+   Top control bar
+   ========================================================= */
+.top-controls {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.tc-group {
+  display: flex; align-items: center; gap: 0.5rem;
+  min-width: 0;
+}
+.tc-label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.warn-icon {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 0.85rem; height: 0.85rem;
+  border-radius: 50%;
+  background: var(--warn);
+  color: var(--on-color);
+  font-size: 0.55rem; font-weight: 700;
+}
+
+.seg {
+  display: inline-flex;
+  background: var(--bg-soft);
+  border-radius: 6px;
+  padding: 2px;
+  gap: 1px;
+}
+.seg label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 0.32rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 180ms ease;
+  user-select: none;
+  white-space: nowrap;
+}
+.seg input[type="radio"] { display: none; }
+.seg label:hover {
+  color: var(--ink);
+  background: var(--seg-hover-bg);
+}
+.seg label:has(input:checked) {
+  background: var(--card);
+  color: var(--accent);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+.seg label.disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Source-info strip
+   ========================================================= */
+.source-info {
+  background: var(--card);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  color: var(--ink-dim);
+  line-height: 1.45;
+  flex-shrink: 0;
+}
+.source-info b { color: var(--ink-soft); font-weight: 600; }
+.source-info .warn-text { color: var(--warn); font-weight: 500; }
+
+/* =========================================================
+   Stage — 3-column
+   ========================================================= */
+.stage {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  min-height: 0;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.step-num {
+  width: 1.4rem; height: 1.4rem;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.72rem; font-weight: 600;
+  flex-shrink: 0;
+}
+.card h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.card .lede {
+  font-size: 0.82rem;
+  color: var(--ink-dim);
+  line-height: 1.45;
+  margin-bottom: 0.7rem;
+}
+
+/* =========================================================
+   PANEL 1: Parent pickers — one allele from each parent
+   ========================================================= */
+.parent-pickers {
+  display: flex; flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 0.7rem;
+}
+
+.parent-picker {
+  display: flex; align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.6rem;
+  background: var(--bg-soft);
+  border-radius: 8px;
+}
+
+.parent-pid {
+  display: flex; align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  min-width: 3.7rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.parent-icon {
+  width: 1.1rem; height: 1.1rem;
+  color: var(--ink-dim);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.parent-pchips {
+  display: flex; gap: 0.25rem;
+  flex-shrink: 0;
+}
+.parent-arrow {
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  flex-shrink: 0;
+  margin: 0 0.1rem;
+}
+.parent-picker .slot { flex-shrink: 0; }
+
+/* Chips inside parent picker — smaller than the original */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem; height: 2rem;
+  border-radius: 6px;
+  background: var(--card);
+  border: 1.5px solid var(--c);
+  color: var(--c);
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 500;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 200ms ease;
+  box-shadow: var(--shadow-sm);
+}
+.chip[data-allele="2"] { --c: var(--c-e2); background: var(--c-e2-bg); }
+.chip[data-allele="3"] { --c: var(--c-e3); background: var(--c-e3-bg); }
+.chip[data-allele="4"] { --c: var(--c-e4); background: var(--c-e4-bg); }
+.chip:hover { transform: translateY(-1.5px); box-shadow: var(--shadow-md); }
+.chip:active { cursor: grabbing; }
+.chip .epsilon {
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-right: 0.05rem;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+/* Selected source-chip subtle indicator */
+.chip.is-selected {
+  outline: 2px solid var(--accent);
+  outline-offset: 1.5px;
+}
+
+.slot {
+  width: 2.3rem; height: 2.1rem;
+  border: 1.5px dashed var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 180ms ease;
+}
+.slot.over {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  border-style: solid;
+  transform: scale(1.06);
+}
+.slot.over-reject {
+  border-color: var(--c-e4);
+  border-style: solid;
+}
+.slot.filled { border-style: solid; border-color: transparent; background: transparent; }
+.slot .chip { transform: scale(0.92); }
+.slot .chip:hover { transform: scale(0.92) translateY(-1.5px); }
+
+.genotype-display {
+  text-align: center;
+  margin: 0.1rem 0 0.55rem;
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--ink);
+  min-height: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.genotype-display .label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  color: var(--ink-dim);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+  font-weight: 600;
+  font-style: normal;
+}
+.genotype-display em { font-style: italic; font-weight: 400; opacity: 0.75; }
+.genotype-display.empty { color: var(--ink-faint); font-style: italic; font-weight: 400; }
+.genotype-display.empty .label { color: var(--ink-faint); }
+
+.genotype-actions {
+  display: flex; gap: 0.4rem; justify-content: center;
+}
+.btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  padding: 0.32rem 0.65rem;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.7rem; font-weight: 500;
+  border-radius: 6px;
+  transition: all 150ms ease;
+}
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+/* =========================================================
+   PANEL 2: Punnett
+   ========================================================= */
+.parents-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+  margin-bottom: 0.65rem;
+}
+.parent-card {
+  background: var(--bg-soft);
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+}
+.parent-card .label {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.parent-card .label .parent-icon { width: 0.9rem; height: 0.9rem; }
+.parent-alleles {
+  display: flex; gap: 0.35rem; align-items: center; justify-content: center;
+}
+.parent-allele {
+  width: 2.2rem; height: 2rem;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 0.95rem; font-weight: 500;
+  cursor: pointer; user-select: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  border: 1.5px solid var(--c); color: var(--c);
+}
+.parent-allele[data-allele="2"] { --c: var(--c-e2); background: var(--c-e2-bg); }
+.parent-allele[data-allele="3"] { --c: var(--c-e3); background: var(--c-e3-bg); }
+.parent-allele[data-allele="4"] { --c: var(--c-e4); background: var(--c-e4-bg); }
+.parent-allele:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.parent-allele .epsilon {
+  font-style: italic; font-size: 0.7rem;
+  margin-right: 0.05rem; opacity: 0.8; font-weight: 400;
+}
+.parent-card .helper {
+  font-size: 0.55rem;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.punnett {
+  display: grid;
+  grid-template-columns: 1.6rem repeat(2, 1fr);
+  grid-template-rows: 1.6rem repeat(2, 1fr);
+  gap: 4px;
+  margin-bottom: 0.55rem;
+}
+.punnett-cell {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  min-height: 2.7rem;
+}
+.punnett-corner { background: transparent; min-height: 0; }
+.punnett-header {
+  background: var(--bg-soft);
+  font-family: var(--serif);
+  font-size: 0.92rem; font-weight: 500;
+  color: var(--ink);
+  min-height: 0;
+}
+.punnett-result {
+  flex-direction: column;
+  gap: 0.1rem;
+  background: var(--card-soft);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.punnett-result:hover { border-color: var(--accent); background: var(--accent-bg); }
+.punnett-result.match {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  box-shadow: 0 0 0 2px rgba(8, 145, 168, 0.15);
+}
+.punnett-result .geno {
+  font-family: var(--serif);
+  font-size: 0.92rem; font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+}
+.punnett-result .prob {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--ink-dim);
+  font-weight: 500;
+}
+
+.punnett-summary {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  background: var(--accent-bg);
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 0.65rem;
+  border-radius: 0 6px 6px 0;
+}
+.punnett-summary strong { color: var(--ink); font-weight: 600; }
+
+/* =========================================================
+   PANEL 3: Risk
+   ========================================================= */
+.risk-grid {
+  display: flex; flex-direction: column;
+  gap: 0.7rem;
+}
+
+.risk-section {
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+.risk-section:last-child {
+  border-bottom: none; padding-bottom: 0;
+}
+
+.risk-section h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.005em;
+}
+
+/* Frequency */
+.freq-bar {
+  display: flex;
+  height: 1.4rem;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+  background: var(--bg-soft);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.03);
+}
+.freq-segment {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.6rem; font-weight: 600;
+  color: var(--on-color);
+  position: relative;
+  border-right: 2px solid var(--card);
+}
+.freq-segment:last-child { border-right: none; }
+.freq-segment[data-current="true"] {
+  outline: 2.5px solid var(--ink);
+  outline-offset: -2.5px;
+  z-index: 2;
+}
+.freq-legend {
+  display: flex; flex-wrap: wrap; gap: 0.25rem 0.65rem;
+  margin-top: 0.35rem;
+}
+.freq-legend .item {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.66rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.freq-legend .item .swatch {
+  width: 0.5rem; height: 0.5rem; border-radius: 2px;
+}
+
+/* Relative risk */
+.rr-list {
+  display: flex; flex-direction: column;
+  gap: 0.32rem;
+}
+.rr-row {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr 3rem;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.78rem;
+}
+.rr-label {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.rr-row.current .rr-label { color: var(--accent); font-weight: 600; }
+.rr-row.dim { opacity: 0.32; }
+.rr-row.unavailable .rr-bar-track::after {
+  content: 'n/a';
+  position: absolute;
+  left: 0.4rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.58rem;
+  color: var(--ink-faint);
+  font-style: italic;
+  font-family: var(--sans);
+}
+.rr-bar-track {
+  height: 0.55rem;
+  background: var(--bg-soft);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.rr-bar-fill {
+  height: 100%;
+  background: var(--c, var(--ink-dim));
+  border-radius: 3px;
+  transition: width 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.rr-row.current .rr-bar-track {
+  box-shadow: 0 0 0 2px var(--c, var(--accent));
+}
+.rr-value {
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 0.7rem; font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+.rr-row.current .rr-value { color: var(--ink); font-weight: 600; }
+.rr-value.dim { color: var(--ink-faint); }
+.rr-axis {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr 3rem;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+.rr-axis-track {
+  position: relative;
+  height: 0.65rem;
+  border-top: 1px solid var(--border);
+}
+.rr-axis-tick {
+  position: absolute;
+  top: -1px; height: 0.22rem; width: 1px;
+  background: var(--border);
+}
+.rr-axis-tick span {
+  position: absolute; top: 0.32rem; left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+/* Absolute risk */
+.waffle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.waffle {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  width: 7rem;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}
+.waffle-cell {
+  aspect-ratio: 1;
+  background: var(--bg-soft);
+  border-radius: 2px;
+  transition: background 350ms ease;
+}
+.waffle-cell.affected { background: var(--c-e4); }
+.waffle-cell.affected[data-protected="true"] { background: var(--c-e2); }
+
+.waffle-readout {
+  display: flex; flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+.waffle-big-num {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.95rem;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.waffle-big-num em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+.waffle-big-num .of {
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  font-weight: 400;
+  margin-left: 0.1rem;
+}
+.waffle-caption {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.waffle-caption strong { color: var(--ink); font-weight: 600; }
+
+.waffle-empty {
+  width: 100%;
+  background: var(--bg-soft);
+  border-radius: 8px;
+  padding: 0.85rem 0.85rem;
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+/* =========================================================
+   Bottom strips
+   ========================================================= */
+.fortea-note {
+  background: var(--warn-bg);
+  border-left: 3px solid var(--warn);
+  padding: 0.5rem 0.9rem 0.5rem 1.2rem;
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  flex-shrink: 0;
+}
+.fortea-note strong { color: var(--ink); font-weight: 600; }
+
+.caveats {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 0.55rem 1rem;
+  font-size: 0.72rem;
+  color: var(--ink-dim);
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+.caveats strong { color: var(--ink-soft); font-weight: 600; }
+
+.colophon {
+  flex-shrink: 0;
+  padding: 0.4rem 1rem;
+  background: var(--card);
+  border-top: 1px solid var(--border-soft);
+  display: flex; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+}
+
+/* Drag ghost */
+.ghost-chip {
+  position: fixed; pointer-events: none; z-index: 1000;
+  width: 2.2rem; height: 2rem;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 0.98rem; font-weight: 500;
+  border: 1.5px solid var(--c); color: var(--c);
+  background: var(--c-bg, var(--card));
+  box-shadow: var(--shadow-drag);
+  transform: translate(-50%, -50%) scale(1.15) rotate(-2deg);
+  opacity: 0.96;
+}
+.ghost-chip .epsilon {
+  font-style: italic; font-size: 0.7rem;
+  margin-right: 0.05rem; opacity: 0.85; font-weight: 400;
+}
+
+/* Narrow viewports */
+@media (max-width: 1100px) {
+  .stage { grid-template-columns: 1fr; padding: 0.6rem; }
+  .top-controls { padding: 0.5rem 0.6rem; }
+  .masthead { padding: 0.5rem 0.6rem; flex-wrap: wrap; }
+  .source-info, .caveats, .fortea-note, .colophon { padding-left: 0.6rem; padding-right: 0.6rem; }
+  .fortea-note { padding-left: 0.9rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-text">
+    <div class="eyebrow">APOE Risk Tool</div>
+    <h1>APOE Genotype and Alzheimer's Disease Risk</h1>
+  </div>
+  <div class="masthead-right">
+    <div class="verify-pill">Verify against source PDFs</div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun"  viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4.5"/>
+        <line x1="12" y1="2"  x2="12" y2="4"/>
+        <line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="2"  y1="12" x2="4"  y2="12"/>
+        <line x1="20" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93"  x2="6.34" y2="6.34"/>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/>
+        <line x1="17.66" y1="6.34"  x2="19.07" y2="4.93"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="top-controls">
+  <div class="tc-group">
+    <div class="tc-label">
+      Source
+      <span class="warn-icon" id="source-warning-icon" style="display:none;" title="Some values approximate">!</span>
+    </div>
+    <div class="seg" id="source-row">
+      <label><input type="radio" name="source" value="farrer" checked><span>Farrer 1997</span></label>
+      <label><input type="radio" name="source" value="genin"><span>Genin 2011</span></label>
+      <label><input type="radio" name="source" value="reiman"><span>Reiman 2020</span></label>
+      <label><input type="radio" name="source" value="fortea"><span>Fortea 2024</span></label>
+    </div>
+  </div>
+
+  <div class="tc-group">
+    <div class="tc-label">Sex</div>
+    <div class="seg" id="sex-row">
+      <label><input type="radio" name="sex" value="combined" checked><span>All</span></label>
+      <label><input type="radio" name="sex" value="female"><span>F</span></label>
+      <label><input type="radio" name="sex" value="male"><span>M</span></label>
+    </div>
+  </div>
+
+  <div class="tc-group">
+    <div class="tc-label">Age</div>
+    <div class="seg" id="age-row">
+      <label><input type="radio" name="age" value="65"><span>65</span></label>
+      <label><input type="radio" name="age" value="70"><span>70</span></label>
+      <label><input type="radio" name="age" value="75"><span>75</span></label>
+      <label><input type="radio" name="age" value="80"><span>80</span></label>
+      <label><input type="radio" name="age" value="85" checked><span>85</span></label>
+    </div>
+  </div>
+
+  <div class="tc-group">
+    <div class="tc-label">Tone</div>
+    <div class="seg" id="tone-row">
+      <label><input type="radio" name="tone" value="clinical" checked><span>Clinical</span></label>
+      <label><input type="radio" name="tone" value="patient"><span>Patient</span></label>
+    </div>
+  </div>
+</div>
+
+<div class="source-info" id="source-info"></div>
+
+<main class="stage">
+
+  <section class="card">
+    <div class="card-head">
+      <span class="step-num">1</span>
+      <h3>Build a genotype</h3>
+    </div>
+    <p class="lede">One allele from each biological parent. Drag (or click) one allele from each row.</p>
+
+    <div class="parent-pickers">
+      <div class="parent-picker">
+        <div class="parent-pid">
+          <svg class="parent-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+          </svg>
+          <span>P1</span>
+        </div>
+        <div class="parent-pchips">
+          <div class="chip" data-allele="2" data-parent="0"><span class="epsilon">ε</span>2</div>
+          <div class="chip" data-allele="3" data-parent="0"><span class="epsilon">ε</span>3</div>
+          <div class="chip" data-allele="4" data-parent="0"><span class="epsilon">ε</span>4</div>
+        </div>
+        <div class="parent-arrow">→</div>
+        <div class="slot" data-slot="0" data-parent="0" id="slot-0"></div>
+      </div>
+      <div class="parent-picker">
+        <div class="parent-pid">
+          <svg class="parent-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+          </svg>
+          <span>P2</span>
+        </div>
+        <div class="parent-pchips">
+          <div class="chip" data-allele="2" data-parent="1"><span class="epsilon">ε</span>2</div>
+          <div class="chip" data-allele="3" data-parent="1"><span class="epsilon">ε</span>3</div>
+          <div class="chip" data-allele="4" data-parent="1"><span class="epsilon">ε</span>4</div>
+        </div>
+        <div class="parent-arrow">→</div>
+        <div class="slot" data-slot="1" data-parent="1" id="slot-1"></div>
+      </div>
+    </div>
+
+    <div class="genotype-display empty" id="genotype-display">
+      <span class="label">Your genotype</span>
+      — pick one from each parent —
+    </div>
+
+    <div class="genotype-actions">
+      <button class="btn" id="btn-clear">Clear</button>
+      <button class="btn" id="btn-canonical">Canonical order</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <span class="step-num">2</span>
+      <h3>How it is inherited</h3>
+    </div>
+    <p class="lede">Set each parent's genotype. The four cells show the possible genotypes of any one child.</p>
+
+    <div class="parents-row">
+      <div class="parent-card">
+        <div class="label">
+          <svg class="parent-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+          </svg>
+          Parent 1
+        </div>
+        <div class="parent-alleles">
+          <div class="parent-allele" data-parent="0" data-pos="0" data-allele="3"><span class="epsilon">ε</span>3</div>
+          <div class="parent-allele" data-parent="0" data-pos="1" data-allele="4"><span class="epsilon">ε</span>4</div>
+        </div>
+        <div class="helper">tap to change</div>
+      </div>
+      <div class="parent-card">
+        <div class="label">
+          <svg class="parent-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2"/>
+          </svg>
+          Parent 2
+        </div>
+        <div class="parent-alleles">
+          <div class="parent-allele" data-parent="1" data-pos="0" data-allele="3"><span class="epsilon">ε</span>3</div>
+          <div class="parent-allele" data-parent="1" data-pos="1" data-allele="3"><span class="epsilon">ε</span>3</div>
+        </div>
+        <div class="helper">tap to change</div>
+      </div>
+    </div>
+
+    <div class="punnett" id="punnett">
+      <div class="punnett-cell punnett-corner"></div>
+      <div class="punnett-cell punnett-header" id="p2-h0"></div>
+      <div class="punnett-cell punnett-header" id="p2-h1"></div>
+      <div class="punnett-cell punnett-header" id="p1-h0"></div>
+      <div class="punnett-cell punnett-result" id="cell-00"></div>
+      <div class="punnett-cell punnett-result" id="cell-01"></div>
+      <div class="punnett-cell punnett-header" id="p1-h1"></div>
+      <div class="punnett-cell punnett-result" id="cell-10"></div>
+      <div class="punnett-cell punnett-result" id="cell-11"></div>
+    </div>
+
+    <p class="punnett-summary" id="punnett-summary"></p>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <span class="step-num">3</span>
+      <h3>What this means for risk</h3>
+    </div>
+
+    <div class="risk-grid">
+
+      <div class="risk-section">
+        <h4>Population frequency</h4>
+        <div class="freq-bar" id="freq-bar"></div>
+        <div class="freq-legend" id="freq-legend"></div>
+      </div>
+
+      <div class="risk-section">
+        <h4>Relative risk vs ε3/ε3</h4>
+        <div class="rr-list" id="rr-list"></div>
+        <div class="rr-axis">
+          <div></div>
+          <div class="rr-axis-track" id="rr-axis-track"></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="risk-section">
+        <h4>Absolute lifetime risk</h4>
+        <div class="waffle-wrap" id="waffle-wrap"></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="fortea-note" id="fortea-note" style="display: none;">
+  <strong>Fortea 2024.</strong> Argues ε4/ε4 represents a distinct genetic form of AD with biomarker abnormality from age 55 and near-complete penetrance by 85. Framing is contested; NACC cohort over-represents symptomatic patients.
+</div>
+
+<div class="caveats">
+  <strong>Context.</strong> Figures derive from cohorts of predominantly European ancestry. Risk is age-dependent. APOE is one of many genetic and environmental contributors; modifiable factors (hypertension, hearing loss, smoking, diabetes, social isolation) also shape lifetime risk. Genotype is probabilistic, not diagnostic.
+</div>
+
+<footer class="colophon">
+  <div>APOE Education Tool</div>
+  <div>Farrer 1997 · Genin 2011 · Reiman 2020 · Fortea 2024</div>
+</footer>
+
+<script>
+"use strict";
+
+/* =========================================================
+   Theme toggle
+   ========================================================= */
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+  const cur = document.documentElement.dataset.theme || 'light';
+  document.documentElement.dataset.theme = cur === 'dark' ? 'light' : 'dark';
+});
+// Initial: respect prefers-color-scheme if no explicit setting
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    && !document.documentElement.dataset.theme) {
+  document.documentElement.dataset.theme = 'dark';
+}
+
+/* =========================================================
+   Source data
+   ========================================================= */
+const SOURCES = {
+  farrer: {
+    label: "Farrer 1997",
+    fullCitation: "Farrer LA et al., JAMA 1997;278:1349–56",
+    note: "Meta-analysis, Caucasian clinic/autopsy cohorts. ORs vs ε3/ε3, age- and study-adjusted.",
+    sexAvailable: { combined: true, female: false, male: false },
+    ageAvailable: { 65: false, 70: false, 75: false, 80: false, 85: false },
+    absoluteRiskAvailable: false,
+    rr: { combined: { '2/2': 0.6, '2/3': 0.6, '2/4': 2.6, '3/3': 1.0, '3/4': 3.2, '4/4': 14.9 } }
+  },
+  genin: {
+    label: "Genin 2011",
+    fullCitation: "Genin E et al., Mol Psychiatry 2011;16:903–7",
+    note: "Lifetime risk from Rochester (USA) incidence data, Caucasian. ε2-containing genotypes pending verification.",
+    sexAvailable: { combined: false, female: true, male: true },
+    ageAvailable: { 65: false, 70: false, 75: false, 80: false, 85: true },
+    absoluteRiskAvailable: true,
+    ltr: {
+      85: {
+        male:   { '2/2': null, '2/3': null, '2/4': null, '3/3': 11, '3/4': 23, '4/4': 51 },
+        female: { '2/2': null, '2/3': null, '2/4': null, '3/3': 14, '3/4': 30, '4/4': 60 }
+      }
+    },
+    rrFromLtr: true
+  },
+  reiman: {
+    label: "Reiman 2020",
+    fullCitation: "Reiman EM et al., Nat Commun 2020;11:667",
+    note: "Neuropathologically confirmed cases. ORs vs ε3/ε3. Demonstrates exceptionally low risk in ε2/ε2 and substantially higher OR for ε4/ε4 than seen in unconfirmed cohorts.",
+    sexAvailable: { combined: true, female: false, male: false },
+    ageAvailable: { 65: false, 70: false, 75: false, 80: false, 85: false },
+    absoluteRiskAvailable: false,
+    rr: { combined: { '2/2': 0.13, '2/3': 0.39, '2/4': 2.68, '3/3': 1.0, '3/4': 6.13, '4/4': 31.22 } },
+    ci:  { combined: { '2/2': [0.05, 0.36], '2/3': [0.30, 0.50], '2/4': [1.65, 4.36], '3/3': [1, 1], '3/4': [5.08, 7.41], '4/4': [16.59, 58.75] } }
+  },
+  fortea: {
+    label: "Fortea 2024",
+    fullCitation: "Fortea J et al., Nat Med 2024;30:1284–91",
+    note: "ε4/ε4 specifically. Cumulative incidence values are reconstructions from reported median onset ages and require verification.",
+    sexAvailable: { combined: true, female: false, male: false },
+    ageAvailable: { 65: true, 70: true, 75: true, 80: true, 85: true },
+    absoluteRiskAvailable: true,
+    onlyGenotype: '4/4',
+    cumIncidence: {
+      combined: {
+        '2/2': null, '2/3': null, '2/4': null, '3/3': null, '3/4': null,
+        '4/4': { 65: 5, 70: 25, 75: 55, 80: 75, 85: 95 }
+      }
+    },
+    flagApprox: true
+  }
+};
+
+const FREQ_EUROPEAN = {
+  '2/2': 0.5, '2/3': 11.1, '2/4': 2.0,
+  '3/3': 62.4, '3/4': 22.1, '4/4': 2.0
+};
+
+const GENOTYPES = ['2/2', '2/3', '2/4', '3/3', '3/4', '4/4'];
+
+const ALLELE_COLORS = { '2': 'var(--c-e2)', '3': 'var(--c-e3)', '4': 'var(--c-e4)' };
+const ALLELE_BGS    = { '2': 'var(--c-e2-bg)', '3': 'var(--c-e3-bg)', '4': 'var(--c-e4-bg)' };
+
+const state = {
+  alleles: [null, null],   // [from parent 1, from parent 2]
+  parent1: ['3', '4'],
+  parent2: ['3', '3'],
+  source: 'farrer',
+  sex: 'combined',
+  age: 85,
+  tone: 'clinical'
+};
+
+/* =========================================================
+   Drag-drop with parent constraint
+   ========================================================= */
+let activeDrag = null;
+
+function makeGhost(allele, x, y) {
+  const g = document.createElement('div');
+  g.className = 'ghost-chip';
+  g.style.setProperty('--c', ALLELE_COLORS[allele]);
+  g.style.setProperty('--c-bg', ALLELE_BGS[allele]);
+  g.style.background = ALLELE_BGS[allele];
+  g.innerHTML = `<span class="epsilon">ε</span>${allele}`;
+  g.style.left = x + 'px';
+  g.style.top  = y + 'px';
+  document.body.appendChild(g);
+  return g;
+}
+
+function startDrag(e, allele, fromSlotIdx, parent) {
+  e.preventDefault();
+  if (activeDrag) endDrag(false);
+  activeDrag = {
+    allele, fromSlot: fromSlotIdx, parent,
+    ghost: makeGhost(allele, e.clientX, e.clientY),
+    pointerId: e.pointerId
+  };
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup',   onPointerUp);
+  document.addEventListener('pointercancel', () => endDrag(false));
+}
+
+function onPointerMove(e) {
+  if (!activeDrag) return;
+  activeDrag.ghost.style.left = e.clientX + 'px';
+  activeDrag.ghost.style.top  = e.clientY + 'px';
+  document.querySelectorAll('.slot').forEach(s => {
+    s.classList.remove('over');
+    s.classList.remove('over-reject');
+  });
+  const target = document.elementFromPoint(e.clientX, e.clientY);
+  const slot = target ? target.closest('.slot') : null;
+  if (slot) {
+    if (slot.dataset.parent === String(activeDrag.parent)) {
+      slot.classList.add('over');
+    } else {
+      slot.classList.add('over-reject');
+    }
+  }
+}
+
+function onPointerUp(e) {
+  if (!activeDrag) return;
+  const target = document.elementFromPoint(e.clientX, e.clientY);
+  const slot = target ? target.closest('.slot') : null;
+  if (slot && slot.dataset.parent === String(activeDrag.parent)) {
+    state.alleles[parseInt(slot.dataset.slot, 10)] = activeDrag.allele;
+  } else if (activeDrag.fromSlot != null && !slot) {
+    // dragged out of a slot to nowhere → remove
+    state.alleles[activeDrag.fromSlot] = null;
+  }
+  endDrag(true);
+}
+
+function endDrag(rerender) {
+  if (!activeDrag) return;
+  activeDrag.ghost.remove();
+  document.removeEventListener('pointermove', onPointerMove);
+  document.removeEventListener('pointerup',   onPointerUp);
+  document.querySelectorAll('.slot').forEach(s => {
+    s.classList.remove('over');
+    s.classList.remove('over-reject');
+  });
+  activeDrag = null;
+  if (rerender) { renderSlots(); update(); }
+}
+
+// Wire up source chips (the ones inside parent-pchips)
+document.querySelectorAll('.parent-pchips .chip').forEach(chip => {
+  const parent = parseInt(chip.dataset.parent, 10);
+  const allele = chip.dataset.allele;
+  chip.addEventListener('pointerdown', e => startDrag(e, allele, null, parent));
+  chip.addEventListener('click', () => {
+    if (activeDrag) return;
+    state.alleles[parent] = allele;
+    renderSlots(); update();
+  });
+});
+
+document.getElementById('btn-clear').addEventListener('click', () => {
+  state.alleles = [null, null]; renderSlots(); update();
+});
+document.getElementById('btn-canonical').addEventListener('click', () => {
+  if (!state.alleles[0] || !state.alleles[1]) return;
+  state.alleles = [...state.alleles].sort();
+  renderSlots(); update();
+});
+
+function renderSlots() {
+  for (let i = 0; i < 2; i++) {
+    const slot = document.getElementById('slot-' + i);
+    slot.innerHTML = '';
+    slot.classList.remove('filled');
+    const a = state.alleles[i];
+    if (a) {
+      slot.classList.add('filled');
+      const chip = document.createElement('div');
+      chip.className = 'chip';
+      chip.dataset.allele = a;
+      chip.dataset.parent = i;
+      chip.innerHTML = `<span class="epsilon">ε</span>${a}`;
+      chip.addEventListener('pointerdown', e => startDrag(e, a, i, i));
+      slot.appendChild(chip);
+    }
+  }
+  // Highlight selected source chips
+  document.querySelectorAll('.parent-pchips .chip').forEach(chip => {
+    const p = parseInt(chip.dataset.parent, 10);
+    chip.classList.toggle('is-selected', state.alleles[p] === chip.dataset.allele);
+  });
+
+  const display = document.getElementById('genotype-display');
+  if (state.alleles[0] && state.alleles[1]) {
+    display.classList.remove('empty');
+    display.innerHTML = `
+      <span class="label">Your genotype</span>
+      <em>ε</em>${state.alleles[0]} / <em>ε</em>${state.alleles[1]}
+    `;
+  } else {
+    display.classList.add('empty');
+    display.innerHTML = `
+      <span class="label">Your genotype</span>
+      — pick one from each parent —
+    `;
+  }
+}
+
+/* =========================================================
+   Panel 2: Punnett parents
+   ========================================================= */
+document.querySelectorAll('.parent-allele').forEach(elx => {
+  elx.addEventListener('click', () => {
+    const p = parseInt(elx.dataset.parent, 10);
+    const pos = parseInt(elx.dataset.pos, 10);
+    const cur = elx.dataset.allele;
+    const next = cur === '2' ? '3' : cur === '3' ? '4' : '2';
+    elx.dataset.allele = next;
+    elx.innerHTML = `<span class="epsilon">ε</span>${next}`;
+    if (p === 0) state.parent1[pos] = next;
+    else         state.parent2[pos] = next;
+    update();
+  });
+});
+
+document.querySelectorAll('input[name="source"]').forEach(r => r.addEventListener('change', () => { state.source = r.value; update(); }));
+document.querySelectorAll('input[name="sex"]').forEach(r => r.addEventListener('change', () => { state.sex = r.value; update(); }));
+document.querySelectorAll('input[name="age"]').forEach(r => r.addEventListener('change', () => { state.age = parseInt(r.value, 10); update(); }));
+document.querySelectorAll('input[name="tone"]').forEach(r => r.addEventListener('change', () => { state.tone = r.value; update(); }));
+
+/* =========================================================
+   Helpers
+   ========================================================= */
+function currentGenotype() {
+  if (!state.alleles[0] || !state.alleles[1]) return null;
+  return [...state.alleles].sort().join('/');
+}
+function getSrc() { return SOURCES[state.source]; }
+
+function getRR(geno) {
+  const src = getSrc();
+  if (src.rr) {
+    const sx = src.rr[state.sex] || src.rr.combined;
+    return sx ? sx[geno] : null;
+  }
+  if (src.rrFromLtr && src.ltr && src.ltr[state.age]) {
+    const sx = src.ltr[state.age][state.sex];
+    if (!sx) return null;
+    const ref = sx['3/3'], v = sx[geno];
+    if (ref == null || v == null) return null;
+    return v / ref;
+  }
+  return null;
+}
+
+function getAbsRisk(geno) {
+  const src = getSrc();
+  if (!src.absoluteRiskAvailable) return null;
+  if (src.ltr && src.ltr[state.age]) {
+    const sx = src.ltr[state.age][state.sex];
+    if (sx && sx[geno] != null) return sx[geno];
+  }
+  if (src.cumIncidence) {
+    const sx = src.cumIncidence[state.sex] || src.cumIncidence.combined;
+    if (sx && sx[geno] && sx[geno][state.age] != null) return sx[geno][state.age];
+  }
+  return null;
+}
+
+function colorForGenotype(g) {
+  const map = {
+    '2/2': 'var(--c-e2)',
+    '2/3': 'color-mix(in oklab, var(--c-e2) 55%, var(--c-e3) 45%)',
+    '2/4': 'color-mix(in oklab, var(--c-e2) 50%, var(--c-e4) 50%)',
+    '3/3': 'var(--c-e3)',
+    '3/4': 'color-mix(in oklab, var(--c-e3) 50%, var(--c-e4) 50%)',
+    '4/4': 'var(--c-e4)'
+  };
+  return map[g];
+}
+
+/* =========================================================
+   Update orchestrator
+   ========================================================= */
+function update() {
+  updateControls();
+  updatePunnett();
+  updateFreq();
+  updateRR();
+  updateAbsRisk();
+  updateSourceInfo();
+}
+
+function updateControls() {
+  const src = getSrc();
+
+  document.querySelectorAll('input[name="sex"]').forEach(r => {
+    const allowed = src.sexAvailable[r.value];
+    r.parentElement.classList.toggle('disabled', !allowed);
+    r.disabled = !allowed;
+    if (!allowed && r.checked) {
+      const fb = Object.keys(src.sexAvailable).find(k => src.sexAvailable[k]);
+      if (fb) {
+        document.querySelector(`input[name="sex"][value="${fb}"]`).checked = true;
+        state.sex = fb;
+      }
+    }
+  });
+
+  document.querySelectorAll('input[name="age"]').forEach(r => {
+    const v = parseInt(r.value, 10);
+    const allowed = src.ageAvailable[v];
+    r.parentElement.classList.toggle('disabled', !allowed);
+    r.disabled = !allowed;
+    if (!allowed && r.checked) {
+      const fb = Object.keys(src.ageAvailable).find(k => src.ageAvailable[k]);
+      if (fb) {
+        document.querySelector(`input[name="age"][value="${fb}"]`).checked = true;
+        state.age = parseInt(fb, 10);
+      }
+    }
+  });
+
+  document.getElementById('fortea-note').style.display =
+    state.source === 'fortea' ? 'block' : 'none';
+}
+
+function updateSourceInfo() {
+  const src = getSrc();
+  const elx = document.getElementById('source-info');
+  const warn = src.flagApprox ? `<span class="warn-text">Some values approximate.</span> ` : '';
+  elx.innerHTML = `${warn}<b>${src.fullCitation}.</b> ${src.note}`;
+  document.getElementById('source-warning-icon').style.display =
+    src.flagApprox ? 'inline-flex' : 'none';
+}
+
+function updatePunnett() {
+  const p1 = state.parent1, p2 = state.parent2;
+  document.getElementById('p1-h0').innerHTML = `<span style="font-style:italic;font-weight:400">ε</span>${p1[0]}`;
+  document.getElementById('p1-h1').innerHTML = `<span style="font-style:italic;font-weight:400">ε</span>${p1[1]}`;
+  document.getElementById('p2-h0').innerHTML = `<span style="font-style:italic;font-weight:400">ε</span>${p2[0]}`;
+  document.getElementById('p2-h1').innerHTML = `<span style="font-style:italic;font-weight:400">ε</span>${p2[1]}`;
+
+  const cells = [
+    { id: 'cell-00', a: p1[0], b: p2[0] },
+    { id: 'cell-01', a: p1[0], b: p2[1] },
+    { id: 'cell-10', a: p1[1], b: p2[0] },
+    { id: 'cell-11', a: p1[1], b: p2[1] }
+  ];
+
+  const tally = {};
+  cells.forEach(c => {
+    const g = [c.a, c.b].sort().join('/');
+    tally[g] = (tally[g] || 0) + 25;
+  });
+
+  const childGeno = currentGenotype();
+
+  cells.forEach(c => {
+    const g = [c.a, c.b].sort().join('/');
+    const cell = document.getElementById(c.id);
+    cell.innerHTML = `
+      <div class="geno"><span style="font-style:italic;font-weight:400">ε</span>${g.replace('/', ' / ε')}</div>
+      <div class="prob">25%</div>
+    `;
+    cell.classList.toggle('match', g === childGeno);
+  });
+
+  const totals = Object.entries(tally).sort((a, b) => b[1] - a[1]);
+  const summary = document.getElementById('punnett-summary');
+  if (totals.length === 1) {
+    summary.innerHTML = `Both parents homozygous: every child is <strong>ε${totals[0][0].replace('/', '/ε')}</strong>.`;
+  } else {
+    const parts = totals.map(([g, p]) => `${p}% <strong>ε${g.replace('/', '/ε')}</strong>`);
+    summary.innerHTML = `Each child: ${parts.join(', ')}.`;
+  }
+}
+
+function updateFreq() {
+  const bar = document.getElementById('freq-bar');
+  const legend = document.getElementById('freq-legend');
+  bar.innerHTML = ''; legend.innerHTML = '';
+  const cur = currentGenotype();
+
+  GENOTYPES.forEach(g => {
+    const pct = FREQ_EUROPEAN[g];
+    const seg = document.createElement('div');
+    seg.className = 'freq-segment';
+    seg.style.flex = pct;
+    seg.style.background = colorForGenotype(g);
+    seg.dataset.current = (g === cur) ? 'true' : 'false';
+    if (pct >= 8) seg.textContent = pct.toFixed(0) + '%';
+    seg.title = `ε${g.replace('/', '/ε')}: ${pct.toFixed(1)}%`;
+    bar.appendChild(seg);
+
+    const item = document.createElement('div');
+    item.className = 'item';
+    item.innerHTML = `<div class="swatch" style="background:${colorForGenotype(g)}"></div>ε${g.replace('/', '/ε')} ${pct.toFixed(1)}%`;
+    legend.appendChild(item);
+  });
+}
+
+function updateRR() {
+  const list = document.getElementById('rr-list');
+  list.innerHTML = '';
+  const src = getSrc();
+  const cur = currentGenotype();
+
+  let maxRR = 1;
+  GENOTYPES.forEach(g => {
+    const r = getRR(g);
+    if (r != null && r > maxRR) maxRR = r;
+  });
+
+  let axisMax;
+  if      (maxRR <= 5)  axisMax = 5;
+  else if (maxRR <= 10) axisMax = 10;
+  else if (maxRR <= 16) axisMax = 16;
+  else if (maxRR <= 35) axisMax = 35;
+  else                  axisMax = Math.ceil(maxRR / 10) * 10;
+
+  const axisTrack = document.getElementById('rr-axis-track');
+  axisTrack.innerHTML = '';
+  let ticks;
+  if (axisMax <= 5) ticks = [0, 1, 3, 5];
+  else if (axisMax <= 10) ticks = [0, 1, 5, 10];
+  else if (axisMax <= 16) ticks = [0, 1, 8, 16];
+  else if (axisMax <= 35) ticks = [0, 1, 15, 35];
+  else ticks = [0, 1, axisMax/2, axisMax];
+  ticks.forEach(t => {
+    const tick = document.createElement('div');
+    tick.className = 'rr-axis-tick';
+    tick.style.left = (t / axisMax * 100) + '%';
+    tick.innerHTML = `<span>${Number.isInteger(t) ? t : t.toFixed(1)}</span>`;
+    axisTrack.appendChild(tick);
+  });
+
+  GENOTYPES.forEach(g => {
+    const r = getRR(g);
+    const row = document.createElement('div');
+    row.className = 'rr-row';
+    if (g === cur) row.classList.add('current');
+    if (src.onlyGenotype && g !== src.onlyGenotype && g !== '3/3') row.classList.add('dim');
+
+    let valueStr, fillPct, fillColor;
+    if (r == null) {
+      row.classList.add('unavailable');
+      valueStr = '—'; fillPct = 0; fillColor = 'var(--ink-faint)';
+    } else {
+      valueStr = r === 1.0 ? '1.00 ref' : r.toFixed(2);
+      fillPct = Math.min(100, (r / axisMax) * 100);
+      fillColor = colorForGenotype(g);
+    }
+
+    row.innerHTML = `
+      <div class="rr-label"><span style="font-style:italic;font-weight:400">ε</span>${g.replace('/', '/ε')}</div>
+      <div class="rr-bar-track" style="--c:${fillColor}">
+        ${r != null ? `<div class="rr-bar-fill" style="width:${fillPct}%; background:${fillColor}"></div>` : ''}
+      </div>
+      <div class="rr-value ${r == null ? 'dim' : ''}">${valueStr}</div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+function updateAbsRisk() {
+  const wrap = document.getElementById('waffle-wrap');
+  wrap.innerHTML = '';
+  const cur = currentGenotype();
+  const src = getSrc();
+
+  if (!cur) {
+    wrap.innerHTML = `<div class="waffle-empty">Build a genotype to see absolute lifetime risk.</div>`;
+    return;
+  }
+  if (!src.absoluteRiskAvailable) {
+    wrap.innerHTML = `<div class="waffle-empty">${src.label} reports relative risks only. Switch to Genin or Fortea for absolute risk.</div>`;
+    return;
+  }
+
+  const pct = getAbsRisk(cur);
+  if (pct == null) {
+    let msg = src.onlyGenotype && cur !== src.onlyGenotype
+      ? `${src.label} reports for ε${src.onlyGenotype.replace('/', '/ε')} only.`
+      : `${src.label} did not report this genotype/age/sex combination.`;
+    wrap.innerHTML = `<div class="waffle-empty">${msg}</div>`;
+    return;
+  }
+
+  const waffle = document.createElement('div');
+  waffle.className = 'waffle';
+  const n = Math.round(pct);
+  const isProtective = (cur === '2/2' || cur === '2/3');
+  for (let i = 0; i < 100; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'waffle-cell';
+    if (i < n) {
+      cell.classList.add('affected');
+      if (isProtective) cell.dataset.protected = 'true';
+    }
+    waffle.appendChild(cell);
+  }
+  wrap.appendChild(waffle);
+
+  const readout = document.createElement('div');
+  readout.className = 'waffle-readout';
+  const sexWord = state.sex === 'combined' ? '' : ` ${state.sex}`;
+  let caption;
+  if (state.tone === 'patient') {
+    caption = `Of every 100${sexWord} people with ε${cur.replace('/', '/ε')}, about <strong>${n}</strong> develop AD by age ${state.age}.`;
+  } else {
+    caption = `Cumulative AD risk by age ${state.age}: <strong>${pct}%</strong> (${src.label}${state.sex !== 'combined' ? ', ' + state.sex : ''}).`;
+  }
+  readout.innerHTML = `
+    <div class="waffle-big-num"><em>${n}</em><span class="of">/100</span></div>
+    <div class="waffle-caption">${caption}</div>
+  `;
+  wrap.appendChild(readout);
+}
+
+renderSlots();
+update();
+</script>
+
+</body>
+</html>

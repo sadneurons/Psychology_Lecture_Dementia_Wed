@@ -201,6 +201,17 @@ pointer:
 })();
 </script>
 ```
+## Slido - navigate to the page on your :iphone: :camera:
+
+
+::: {.callout-warning}
+
+### Q & A is open now - submit questions for me or for our guest
+
+:::
+
+![Slido Link](/slido_session.svg)
+
 
 ## Outline :watch:
 - 20 minutes on "Dementia", to give a modern framework for understanding
@@ -933,6 +944,9 @@ Aβ aggregation pathway, **monomer → oligomer → protofibril → plaque** · 
 - **Capable of attending infusions** every 2–4 weeks for 18+ months
 - **Capacity** to consent
 :::
+
+##
+<iframe src="/Widgets/apoe_risk.html" width="130%" height="100%" style="border:0;"></iframe>
 
 ## ARIA {.smaller}
 
