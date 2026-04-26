@@ -5,6 +5,7 @@ author: "Dr. Ross A. Dunne"
 date: today
 institute: GMDRC
 logo: GMDRClogo.jpg
+from: markdown+emoji
 format:
   revealjs:
     theme: dracula
@@ -136,7 +137,7 @@ revealjs-plugins:
 </style>
 ```
 
-## Outline
+## Outline :watch:
 - 20 minutes on "Dementia", to give a modern framework for understanding
 - 20 minutes on the development of symptomatic treatments
 - 5 minute break
@@ -165,6 +166,15 @@ The most common ones are:
 4. Frontotemporal dementia `anatomical definition`
 :::
 
+## Nature Neuroscience overview
+
+<iframe width="1280" height="720"
+        src="https://www.youtube-nocookie.com/embed/zTd0-A5yDZI?rel=0&modestbranding=1"
+        title="Nature Neuroscience overview"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="border:0;"></iframe>
 
 ## Question 1
 
@@ -250,7 +260,7 @@ What it measures: tau pathology.
 :::
 
 ::: {.column width="45%"}
-![[11C]PBB3 PET images. [11C]PBB3 parametric standardised uptake value ratio (SUVR) images compared with [11C]PiB. [11C]PBB3 shows tracer uptake in cortical areas in advanced AD patient. This research was originally published in JNM. Shah M, Catafau AM. Molecular Imaging Insights into Neurodegeneration: Focus on Tau PET Radiotracers. J. Nucl. Med. 2014;55:871–874.](Pictures/tauPET.webp)
+![This work is from ‘Biomarker modeling of Alzheimer’s disease using PET-based Braak staging’ by Therriault et al., used under CC BY 4.0 DEED. This work is licensed under Creative Commons license CC-BY-SA by The Lundbeck Foundation.](Pictures/tauPET.png)
 :::
 
 ::::
@@ -1232,7 +1242,7 @@ Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca i
 ## Q&A with trial participant (10–20 min) {data-confetti=true data-confetti-large=true data-confetti-duration="5" background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
-Welcome!
+Welcome! :wave:
 :::
 
 ::: {.notes}
