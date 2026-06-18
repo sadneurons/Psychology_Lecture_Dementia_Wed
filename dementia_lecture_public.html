@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+<script src="dementia_lecture_public_files/libs/clipboard/clipboard.min.js"></script>
+<script src="dementia_lecture_public_files/libs/quarto-html/tabby.min.js"></script>
+<script src="dementia_lecture_public_files/libs/quarto-html/popper.min.js"></script>
+<script src="dementia_lecture_public_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="dementia_lecture_public_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="dementia_lecture_public_files/libs/quarto-html/light-border.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
+
+  <meta name="author" content="Dr.&nbsp;Ross A. Dunne">
+  <meta name="dcterms.date" content="2026-06-18">
+  <title>Dementia and its treatments</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="dementia_lecture_public_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="dementia_lecture_public_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="dementia_lecture_public_files/libs/revealjs/dist/theme/quarto-a1d3734469117662d4af4794742e8c15.css">
+  <link rel="stylesheet" href="bhc-styles.css">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
+  <link href="dementia_lecture_public_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Dementia and its treatments</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Ross A. Dunne 
+</div>
+        <p class="quarto-title-affiliation">
+            GMDRC
+          </p>
+    </div>
+</div>
+
+  <p class="date">2026-06-18</p>
+</section>
+<section class="slide level2">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="chalk" x="-15%" y="-15%" width="130%" height="130%">
+      <feturbulence type="fractalNoise" basefrequency="0.62" numoctaves="3" seed="7"></feturbulence>
+      <fedisplacementmap in="SourceGraphic" scale="2.4"></fedisplacementmap>
+    </filter>
+  </defs>
+</svg>
+<style>
+  /* ── Paper-style panel-tabset ───────────────────────────────────── */
+.reveal .panel-tabset > .nav-tabs {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 0 0.4em;
+  gap: 0.25em;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link {
+  background: rgba(245, 240, 226, 0.05);
+  color: rgba(245, 240, 226, 0.62);
+  border: 1px solid rgba(245, 240, 226, 0.14);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 0.45em 1.1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  top: 1px;
+  transition: background 180ms, color 180ms, transform 180ms;
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link:hover {
+  background: rgba(245, 240, 226, 0.10);
+  color: rgba(245, 240, 226, 0.95);
+}
+
+.reveal .panel-tabset > .nav-tabs .nav-link.active {
+  background: rgba(245, 240, 226, 0.10);
+  color: #f8f8f2;
+  border-color: rgba(245, 240, 226, 0.24);
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.20);
+}
+
+.reveal .panel-tabset > .tab-content {
+  background:
+    linear-gradient(180deg,
+      rgba(245, 240, 226, 0.10) 0%,
+      rgba(245, 240, 226, 0.04) 35%,
+      rgba(245, 240, 226, 0.06) 100%),
+    radial-gradient(ellipse at top left,
+      rgba(245, 240, 226, 0.08) 0%, transparent 60%);
+  border: 1px solid rgba(245, 240, 226, 0.22);
+  border-radius: 0 12px 12px 12px;
+  padding: 1.1em 1.3em;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(245, 240, 226, 0.04),
+    inset 0 1px 0 rgba(245, 240, 226, 0.06);
+}
+
+.reveal .fragment.blur-reveal { opacity: 1 !important; visibility: visible !important; }
+.reveal .fragment.blur-reveal img { filter: blur(22px); transition: filter 600ms ease; }
+.reveal .fragment.blur-reveal.visible img { filter: blur(0); }
+.reveal .fragment.blur-reveal figcaption { color: #6272a4; font-style: italic; }
+
+.reveal .trial-meta { text-align:center; color:#7d8ab0; font-size:0.55em; font-style:italic; margin:0 0 0.6em; }
+.reveal .trial-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.7em; }
+.reveal .trial-block { background:rgba(68,71,90,0.35); border:1px solid #44475a; border-radius:8px; padding:0.75em 0.9em; }
+.reveal .trial-cat { font-size:0.42em; letter-spacing:0.18em; text-transform:uppercase; color:#bd93f9; margin-bottom:0.75em; font-weight:600; }
+.reveal .trial-block.efficacy .trial-cat { color:#50fa7b; }
+.reveal .trial-block.safety   .trial-cat { color:#ff79c6; }
+.reveal .trial-block.context  .trial-cat { color:#8be9fd; }
+.reveal .trial-stat { margin-bottom:0.6em; line-height:1.05; }
+.reveal .trial-stat:last-child { margin-bottom:0; }
+.reveal .trial-num { font-size:0.95em; font-weight:700; color:#f8f8f2; display:block; }
+.reveal .trial-block.efficacy .trial-num { color:#50fa7b; }
+.reveal .trial-block.safety   .trial-num { color:#ff79c6; }
+.reveal .trial-block.context  .trial-num { color:#8be9fd; }
+.reveal .trial-lab { display:block; font-size:0.4em; color:#7d8ab0; letter-spacing:0.04em; margin-top:0.1em; line-height:1.25; }
+.reveal .trial-ref { text-align:center; color:#7d8ab0; font-size:0.42em; font-style:italic; margin-top:0.7em; border-top:1px solid #44475a; padding-top:0.55em; }
+.reveal .trial-chart { width:100%; height:auto; display:block; margin:0.4em 0 0.7em; }
+
+/* ── Spell-out: per-letter staggered pop-in ─────────────────────── */
+.reveal .spell-out { display: inline-block; }
+.reveal .spell-out > span {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.2) translateX(-0.4em);
+  transform-origin: 0% 50%;
+  will-change: opacity, transform;
+}
+.reveal .spell-out.running > span {
+  animation: spell-out-letter 380ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: calc(var(--i, 0) * var(--spell-stagger, 80ms));
+}
+@keyframes spell-out-letter {
+  0%   { opacity: 0; transform: scale(0.2) translateX(-0.4em); }
+  60%  { opacity: 1; transform: scale(1.08) translateX(0); }
+  100% { opacity: 1; transform: scale(1)    translateX(0); }
+}
+
+</style>
+<script>
+(function () {
+  function split(el) {
+    if (el.dataset.spellSplit === 'true') return;
+    el.dataset.spellSplit = 'true';
+    var text = el.textContent;
+    el.textContent = '';
+    var i = 0;
+    for (var ch of text) {
+      var s = document.createElement('span');
+      s.textContent = ch === ' ' ? ' ' : ch;
+      s.style.setProperty('--i', i);
+      el.appendChild(s);
+      i++;
+    }
+  }
+  function activate(slide) {
+    if (!slide) return;
+    slide.querySelectorAll('.spell-out').forEach(function (el) {
+      split(el);
+      el.classList.remove('running');
+      void el.offsetWidth;          // force reflow so the animation replays
+      el.classList.add('running');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.spell-out').forEach(split);
+  });
+  function hookReveal() {
+    if (typeof Reveal === 'undefined') { setTimeout(hookReveal, 100); return; }
+    if (Reveal.isReady && Reveal.isReady()) {
+      activate(Reveal.getCurrentSlide());
+    } else {
+      Reveal.on('ready', function (e) { activate(e.currentSlide); });
+    }
+    Reveal.on('slidechanged', function (e) { activate(e.currentSlide); });
+  }
+  hookReveal();
+})();
+</script>
+</section>
+<section id="welcome" class="slide level2">
+<h2>Welcome <span class="emoji" data-emoji="wave">👋</span></h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Thank you for having me this evening</strong></p>
+</div>
+<div class="callout-content">
+<p>A talk about where dementia care is right now — what’s changed, what’s genuinely new, and what we can all do about it. Questions very welcome at the end.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-well-cover-tonight" class="slide level2">
+<h2>What we’ll cover tonight <span class="emoji" data-emoji="watch">⌚</span></h2>
+<ul>
+<li><strong>What dementia actually is</strong> — and why “Alzheimer’s” isn’t the whole story</li>
+<li><strong>Getting the diagnosis right</strong> — the different types, and the treatable mimics</li>
+<li><strong>The treatments we already have</strong> — what they do, and what they honestly don’t</li>
+<li><strong>The new disease-modifying drugs</strong> — the first that touch the disease itself</li>
+<li><strong>Hope, and what we can do</strong> — prevention, brain health, and joining the research</li>
+</ul>
+<p><em>Plenty of time for your questions at the end.</em></p>
+</section>
+<section id="part-1-dementia" class="slide level2" data-background-color="#44475a">
+<h2>Part 1: Dementia</h2>
+<div class="r-fit-text" style="color:#bd93f9;">
+<p>A modern framework</p>
+</div>
+</section>
+<section id="dementia-and-alzheimers-are-not-the-same-thing" class="slide level2 smaller">
+<h2>“Dementia” and “Alzheimer’s” are not the same thing</h2>
+<p><strong>Dementia</strong> is an umbrella term. It describes a point where someone can no longer manage daily life on their own, because of problems with memory and thinking.</p>
+<p>It is not one disease. There are many different causes — and each is defined in a different way:</p>
+<ol type="1">
+<li class="fragment">Alzheimer’s disease <code>defined by the proteins that build up in the brain</code></li>
+<li class="fragment">Vascular dementia <code>defined by its cause — the brain's blood supply</code></li>
+<li class="fragment">Dementia with Lewy bodies <code>defined by a particular protein deposit</code></li>
+<li class="fragment">Frontotemporal dementia <code>defined by where in the brain it strikes</code></li>
+</ol>
+</section>
+<section id="nature-neuroscience-overview" class="slide level2">
+<h2>Nature Neuroscience overview</h2>
+<iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/zTd0-A5yDZI?rel=0&amp;modestbranding=1&amp;cc_load_policy=1&amp;hl=en" title="Nature Neuroscience overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="border:0;">
+</iframe>
+</section>
+<section id="alzheimers-is-a-disease-like-any-other-disease" class="slide level2">
+<h2>Alzheimer’s is a disease, like any other disease</h2>
+<ul>
+<li><p>Alzheimer’s is defined by two proteins building up in the brain: <strong>amyloid</strong> (which forms plaques) and <strong>tau</strong> (which forms tangles).</p></li>
+<li><p>It’s the brain changes that make it Alzheimer’s — not just the symptoms. Someone can have dementia <em>without</em> these proteins, and a few people have the proteins <em>without</em> any symptoms at all.</p></li>
+<li><p>That distinction matters, because it’s now something we can actually measure in a living person.</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<iframe src="Widgets/alzheimer_timeline.html" width="1480" height="840" style="border:0;" title="Interactive timeline of Alzheimer's disease pathology and clinical milestones">
+</iframe>
+<aside class="notes">
+<p>This slide is an interactive timeline showing the historical and biological development of Alzheimer’s disease. It walks through the original 1907 case description by Alois Alzheimer, the cholinergic hypothesis of the 1970s, the amyloid cascade hypothesis of 1992, the discovery of presenilin and APP mutations, the introduction of PET amyloid imaging in the 2000s, the 2018 NIA-AA biological framework, and the 2023 to 2024 disease-modifying antibody approvals. Each milestone has a date and short description.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-we-define-alzheimers-has-completely-changed" class="slide level2 small">
+<h2>How we define Alzheimer’s has completely changed</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>The old way</strong> <code>until about 2010</code></p>
+<ul>
+<li>Diagnosis from symptoms alone → “probable Alzheimer’s”</li>
+<li>The proteins could only be confirmed <em>after death</em>, at post-mortem</li>
+<li>So we were never quite certain in life</li>
+<li>Often just called <em>“dementia of the Alzheimer type”</em></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p><strong>The modern way</strong> <code>2018, updated 2024</code></p>
+<ul>
+<li>The <strong>biology</strong> defines the disease — the amyloid and tau themselves</li>
+<li>How advanced it is, is described separately</li>
+<li>We can now measure those proteins <em>in life</em> — through a blood test, a spinal-fluid sample, or a brain scan</li>
+<li>Which means we can spot it <em>before</em> symptoms appear</li>
+</ul>
+</div></div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<iframe src="Widgets/biomarker_cascade.html" width="1480" height="800" style="border:0;" title="Interactive Jack 2010/2013 biomarker cascade model: drag the cursor across the AD continuum to see Aβ, tau, neurodegeneration, cognition and function curves">
+</iframe>
+<aside class="notes">
+<p>This is an interactive figure based on Jack and colleagues, Lancet Neurology 2010 and 2013. The horizontal axis represents the Alzheimer’s disease continuum from cognitively normal through preclinical AD, subjective cognitive decline, mild cognitive impairment, mild dementia, to moderate-severe dementia. Five sigmoid curves rise across the axis showing biomarker abnormality: amyloid beta becomes abnormal earliest, then phosphorylated tau, then neurodegeneration on MRI and FDG-PET, then cognition on neuropsychological testing, and finally function on activities of daily living. The point I want to land is that pathology precedes clinical symptoms by 15 to 20 years, which is the rationale for early biomarker-based diagnosis and for prevention efforts. The interactive cursor lets us read off ATN status at any point on the continuum and see which biomarkers are above the diagnostic threshold.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-we-can-now-measure" class="slide level2 smaller">
+<h2>What we can now measure</h2>
+<p><em>The same four ingredients clinicians use — in plain terms. Click each tab.</em></p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Amyloid</a></li><li><a href="#tabset-1-2">Tau</a></li><li><a href="#tabset-1-3">Damage</a></li><li><a href="#tabset-1-4">Other factors</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>The plaque protein</strong> — the earliest sign.</p>
+<ul>
+<li>A <strong>blood test</strong> can now pick it up</li>
+<li>A sample of <strong>spinal fluid</strong> (a lumbar puncture — uncomfortable, but safe and quick)</li>
+<li>A <strong>brain scan</strong> (amyloid-PET) that lights up the plaques</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="fragment blur-reveal">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/BHC_LP.jpeg"></p>
+<figcaption>click to reveal: a lumbar puncture — not as bad as people fear</figcaption>
+</figure>
+</div>
+</div>
+</div></div>
+</div>
+<div id="tabset-1-2">
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>The tangle protein</strong> — tracks more closely with symptoms.</p>
+<ul>
+<li>A spinal-fluid test</li>
+<li><strong>A blood test, “p-tau217”</strong> — the breakthrough that makes testing in everyday clinics possible</li>
+<li>A tau brain scan, mostly used in research</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/tauPET.png"></p>
+<figcaption>A tau-PET scan: red shows where the tangle protein has spread. <em>Therriault et al., CC BY 4.0; Lundbeck Foundation.</em></figcaption>
+</figure>
+</div>
+</div></div>
+</div>
+<div id="tabset-1-3">
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>The wear-and-tear signal</strong> — shows the brain is being injured, but not <em>what</em> is doing it.</p>
+<ul>
+<li>An <strong>MRI scan</strong> showing shrinkage in memory areas</li>
+<li>A scan showing where the brain has slowed down</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/MTAScore.jpg"></p>
+<figcaption>Memory-area shrinkage graded on MRI</figcaption>
+</figure>
+</div>
+</div></div>
+</div>
+<div id="tabset-1-4">
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>Everything else that adds up</strong> — added to the picture in 2024.</p>
+<ul>
+<li><strong>Blood-vessel damage</strong> in the brain</li>
+<li><strong>Inflammation</strong></li>
+<li>Loss of the <strong>connections</strong> between brain cells</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/Fazekas%20scoring.jpeg"></p>
+<figcaption>Blood-vessel changes graded on MRI. <em>radiologyassistant.nl</em></figcaption>
+</figure>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-number-of-people-with-dementia-is-rising-fast" class="slide level2 smaller">
+<h2>The number of people with dementia is rising fast</h2>
+<ul>
+<li class="fragment"><p>Alzheimer’s is the most common cause of dementia in people over 65 — but it’s far from the only one.</p></li>
+<li class="fragment"><p>In 2020, more than <strong>55 million</strong> people worldwide were living with dementia.</p></li>
+<li class="fragment"><p>That’s set to nearly <strong>triple to over 150 million</strong> by 2050 — with the fastest rise in lower- and middle-income countries.</p></li>
+<li class="fragment"><p>And these are almost certainly <em>under</em>-counts: dementia is often missed or misdiagnosed.</p></li>
+<li class="fragment"><p>Worldwide, up to <strong>three in four</strong> people with dementia have never had a diagnosis at all.</p></li>
+</ul>
+</section>
+<section id="from-55-million-to-over-150-million" class="slide level2">
+<h2>From 55 million to over 150 million</h2>
+
+<img data-src="Pictures/global-prevalence-of-dementia.jpg" class="r-stretch quarto-figure-center"><p class="caption">Where the growth comes from, by world region. <em>Lancet Public Health, 2022.</em></p></section>
+<section id="where-the-increase-will-be-greatest" class="slide level2">
+<h2>Where the increase will be greatest</h2>
+
+<img data-src="Pictures/gr3_lrg.jpg" class="r-stretch quarto-figure-center"><p class="caption">Estimated change per region. <em>Lancet Public Health, 2022.</em></p></section>
+<section id="a-test-result-is-not-a-diagnosis" class="slide level2 smaller">
+<h2>A test result is not a diagnosis</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>The new tests are powerful — but they don’t replace the clinician. They’re one piece of the picture.</p>
+<ul>
+<li>Only tests that have been <strong>properly validated</strong> should be used to diagnose</li>
+<li>A result always has to be read <strong>alongside the person</strong> in front of you</li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<p>A doctor’s judgement matters most when:</p>
+<ol type="1">
+<li>The test result <strong>doesn’t match</strong> what the person is experiencing</li>
+<li>There may be <strong>more than one thing</strong> going on at once</li>
+<li><strong>Other health conditions</strong> could be throwing the test off</li>
+</ol>
+</div></div>
+</section>
+<section id="the-four-main-types-tell-themselves-apart" class="slide level2 smaller">
+<h2>The four main types tell themselves apart</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Alzheimer’s</a></li><li><a href="#tabset-2-2">Lewy body</a></li><li><a href="#tabset-2-3">Frontotemporal</a></li><li><a href="#tabset-2-4">Vascular</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<ul>
+<li><strong>How it starts</strong>: slowly, with <strong>memory</strong> first — recent events slip away</li>
+<li><strong>Hallmark</strong>: forgetting, losing words, getting lost in familiar places</li>
+<li><strong>On a scan</strong>: shrinkage in the memory and reasoning areas</li>
+<li><strong>Treatment</strong>: the standard tablets — and now, possibly, the new drugs</li>
+</ul>
+</div>
+<div id="tabset-2-2">
+<ul>
+<li><strong>How it starts</strong>: alertness that <strong>comes and goes</strong>, vivid <strong>visual hallucinations</strong>, acting out dreams, and stiffness like Parkinson’s</li>
+<li><strong>Hallmark</strong>: attention and visual problems early, <em>more</em> than memory</li>
+<li><strong>Watch out</strong>: very sensitive to antipsychotic drugs</li>
+<li><strong>Treatment</strong>: one of the standard tablets often helps a lot — but <strong>avoid antipsychotics</strong></li>
+</ul>
+</div>
+<div id="tabset-2-3">
+<ul>
+<li><strong>How it starts</strong>: often <strong>younger</strong> (under 65), as <strong>changes in personality</strong> or in language</li>
+<li><strong>Hallmark</strong>: loss of inhibition, apathy, loss of empathy, changes in eating</li>
+<li><strong>On a scan</strong>: shrinkage at the front of the brain</li>
+<li><strong>Treatment</strong>: the standard tablets don’t help — support and environment matter more</li>
+</ul>
+</div>
+<div id="tabset-2-4">
+<ul>
+<li><strong>How it starts</strong>: in <strong>steps</strong>, often after a stroke or mini-strokes</li>
+<li><strong>Hallmark</strong>: slowed thinking and planning more than forgetting</li>
+<li><strong>On a scan</strong>: evidence of damage to the brain’s blood supply</li>
+<li><strong>Treatment</strong>: above all, <strong>protect the blood vessels</strong> — blood pressure, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="some-dementias-can-be-reversed" class="slide level2 smaller">
+<h2>Some “dementias” can be reversed</h2>
+<div title="Treatable things that can look like dementia">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Treatable things that can look like dementia</strong></p>
+</div>
+<div class="callout-content">
+<p>Before anyone concludes it’s dementia, these have to be ruled out — because they can be <strong>fixed</strong>:</p>
+<ul>
+<li>Low vitamin B12 or folate</li>
+<li>An underactive thyroid</li>
+<li>Depression <code>which can mimic dementia closely</code></li>
+<li>Fluid build-up on the brain <code>unsteadiness, bladder problems, confusion</code></li>
+<li>Side-effects of medication <code>some are surprisingly common culprits</code></li>
+<li>Delirium <code>a sudden confusion, often from infection</code></li>
+<li>Untreated sleep apnoea · a slow bleed on the brain · heavy alcohol use</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-a-good-assessment-actually-involves" class="slide level2 smaller">
+<h2>What a good assessment actually involves</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">The story</a></li><li><a href="#tabset-3-2">Memory tests</a></li><li><a href="#tabset-3-3">Physical exam</a></li><li><a href="#tabset-3-4">Brain scans</a></li><li><a href="#tabset-3-5">The new tests</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>The history — from the person, <strong>and</strong> from someone who knows them well. Background that shapes risk:</p>
+<ul>
+<li>Education and the kind of work they did</li>
+<li>Head injuries / contact sports <code>boxing, rugby</code></li>
+<li>Lifetime alcohol and drug use</li>
+<li>Smoking</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p>The changes families notice first:</p>
+<ul>
+<li>Forgetfulness, asking the same question again</li>
+<li>Losing <strong>recent</strong> memories while older ones stay</li>
+<li>Struggling with everyday tasks <code>bills and cooking before washing and dressing</code></li>
+<li>Changes in mood, sleep, or behaviour</li>
+</ul>
+</div></div>
+</div>
+<div id="tabset-3-2">
+<p>Pen-and-paper tests that measure memory and thinking. Different tests suit different jobs:</p>
+<ul>
+<li><strong>RBANS</strong> <code>picks up different kinds of decline</code></li>
+<li><strong>ACE-III</strong> <code>used in ~90% of UK memory clinics</code></li>
+<li><strong>MMSE</strong> <code>quick, but misses early changes</code></li>
+<li><strong>MoCA</strong> <code>more sensitive than the MMSE</code></li>
+</ul>
+</div>
+<div id="tabset-3-3">
+<p>A physical examination, blood tests, and a careful look at current medications — partly to catch the <strong>treatable</strong> causes from a few slides ago.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/PDExam.png"></p>
+<figcaption>Looking for Parkinson’s-type signs</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:6%;">
+
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/pdwalk.png"></p>
+<figcaption>…and signs in how someone walks</figcaption>
+</figure>
+</div>
+</div></div>
+</div>
+<div id="tabset-3-4">
+<ul>
+<li><strong>MRI</strong> <code>the usual first scan</code>: shows shrinkage, and damage to blood vessels</li>
+<li><strong>PET scans</strong>: can show where the brain has slowed down, or light up the amyloid plaques directly</li>
+<li><strong>DAT scan</strong>: helps confirm the Lewy body type when it’s unclear</li>
+</ul>
+</div>
+<div id="tabset-3-5">
+<ul>
+<li><strong>Spinal fluid</strong>: measures amyloid and tau directly <code>needs a lumbar puncture</code></li>
+<li><strong>Blood test (p-tau217)</strong>: nearly as good — and simple enough for an ordinary clinic</li>
+<li><strong>APOE gene test</strong>: needed before the new drugs, to judge their risk</li>
+<li><strong>Genetic testing</strong>: for the rare families where it runs strongly and starts young</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="part-2-the-treatments-we-already-have" class="slide level2" data-background-color="#44475a">
+<h2>Part 2: The treatments we already have</h2>
+</section>
+<section id="the-first-big-idea-top-up-a-missing-chemical" class="slide level2 smaller">
+<h2>The first big idea: top up a missing chemical</h2>
+<ul>
+<li>In the 1970s, researchers found Alzheimer’s brains were short of <strong>acetylcholine</strong> — a chemical messenger the brain uses for memory and attention.</li>
+<li>It was being lost as a particular set of brain cells degenerated.</li>
+<li>The idea that followed: if we can <strong>boost that messenger</strong>, we might improve memory. That gave us the first generation of drugs.</li>
+</ul>
+</section>
+<section id="how-those-drugs-work" class="slide level2 smaller">
+<h2>How those drugs work</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="Pictures/ach.webp"></p>
+<figcaption>Inside a brain-cell connection</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>The brain normally breaks the messenger down quickly after use.</li>
+<li>These drugs <strong>slow that breakdown</strong>, so more of the messenger stays around — making the most of what’s left.</li>
+<li>That’s the key point: they help the <em>remaining</em> cells work better. They <strong>don’t stop the disease</strong>.</li>
+<li>Side-effects come from too much of the messenger: stomach upset, a slow pulse, vivid dreams.</li>
+</ul>
+</div></div>
+</section>
+<section id="the-everyday-tablets-and-patches" class="slide level2">
+<h2>The everyday tablets and patches</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Donepezil</a></li><li><a href="#tabset-4-2">Rivastigmine</a></li><li><a href="#tabset-4-3">Galantamine</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<ul>
+<li>A once-a-day tablet — the <strong>most common first choice in the UK</strong></li>
+<li>Side-effects: stomach upset, vivid dreams, a slower pulse</li>
+<li>A heart trace (ECG) first if there’s any heart history</li>
+</ul>
+</div>
+<div id="tabset-4-2">
+<ul>
+<li>A tablet, or a <strong>skin patch</strong> <code>handy if swallowing tablets is hard</code></li>
+<li>The patch causes far less stomach upset</li>
+<li>The <strong>go-to for Lewy body and Parkinson’s dementia</strong></li>
+</ul>
+</div>
+<div id="tabset-4-3">
+<ul>
+<li>A tablet, taken twice a day</li>
+<li>A little caution with some heart conditions</li>
+<li>Used less often in the UK</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="a-second-drug-working-a-different-way" class="slide level2 smaller">
+<h2>A second drug, working a different way</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./Pictures/memantine.png"></p>
+<figcaption>How memantine works</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<ul>
+<li>In Alzheimer’s, brain cells can be over-stimulated by another messenger (glutamate) — a slow “background noise” that damages them.</li>
+<li><strong>Memantine</strong> turns that background noise down, while leaving the <em>useful</em> signals — the ones you learn with — alone.</li>
+<li>Used in <strong>moderate-to-severe</strong> Alzheimer’s, or when the first drugs aren’t tolerated.</li>
+<li>Often taken <strong>alongside</strong> donepezil.</li>
+</ul>
+</div></div>
+</section>
+<section id="so-how-much-do-they-actually-help" class="slide level2 smaller">
+<h2>So how much do they actually help?</h2>
+<!-- ::: {style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;"}
+**[FIGURE PLACEHOLDER]**
+
+two cognitive-decline curves running in parallel, untreated vs on AChEi, **offset horizontally by ≈ 6 months**, with annotation: *curves run parallel; disease trajectory unchanged · ADAS-cog ~2–3 points · MMSE ~1 point*
+::: -->
+<iframe src="Widgets/achei_memantine_mmse_trajectory.html" width="1280" height="1020" style="border:0;" title="MMSE trajectory chart over 3 years comparing untreated AD, AChEi-treated AD, AChEi plus memantine, AChEi-treated DLB, and untreated DLB">
+</iframe>
+<aside class="notes">
+<p>This chart shows MMSE trajectories over three years for five groups, illustrating the realistic effect size of symptomatic treatment in AD versus DLB. Untreated Alzheimer’s disease starts at MMSE 22 and declines to about 14 over three years — roughly 2.5 points per year. AChEi treatment in AD shifts the curve up by about 1 MMSE point and the curves then run in parallel, meaning the disease trajectory is unchanged but patients are on average about 6 months ahead. AChEi plus memantine in moderate AD adds a small further offset. The DLB curves are the striking comparison: untreated DLB declines similarly to AD, but AChEi-treated DLB shows an early bump in cognition above baseline and a much slower trajectory of decline. The take-home is that AChEi do not modify disease in any subtype, but the symptomatic gain is much more meaningful in DLB than in AD. Curves are illustrative, parameterised from Knight 2018, Xu 2021 and 2024, and Truzzi 2022.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="they-help-some-types-far-more-than-others" class="slide level2 smaller">
+<h2>They help some types far more than others</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>Worth trying in</strong></p>
+<ul>
+<li><strong>Alzheimer’s</strong> <code>modest help, at any stage</code></li>
+<li><strong>Lewy body</strong> <code>often a big difference</code></li>
+<li><strong>Parkinson’s dementia</strong> <code>same chemical shortage</code></li>
+<li><strong>Mixed types</strong> <code>often benefit</code></li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>Little use, or harmful in</strong></p>
+<ul>
+<li><strong>Frontotemporal</strong> <code>no benefit; can worsen agitation</code></li>
+<li><strong>Pure vascular</strong> <code>inconsistent</code></li>
+<li><strong>Severe Alzheimer’s</strong> <code>memantine takes over</code></li>
+</ul>
+</div></div>
+</section>
+<section id="the-symptoms-that-are-hardest-on-families" class="slide level2 smaller">
+<h2>The symptoms that are hardest on families</h2>
+<ul>
+<li class="fragment">Beyond memory, most people develop <strong>changes in behaviour and mood</strong> at some point — up to <strong>9 in 10</strong>.</li>
+<li class="fragment">These are often what drives <strong>carer exhaustion</strong>, a move into a care home, and even shorter survival.</li>
+<li class="fragment">They tend to fall into five groups:
+<ol type="1">
+<li class="fragment">Agitation or aggression</li>
+<li class="fragment">Hallucinations or false beliefs</li>
+<li class="fragment">Depression or anxiety</li>
+<li class="fragment">Apathy — withdrawal, loss of drive</li>
+<li class="fragment">Disturbed sleep</li>
+</ol></li>
+</ul>
+</section>
+<section id="the-first-response-is-not-a-pill" class="slide level2 smaller">
+<h2>The first response is <em>not</em> a pill</h2>
+<ul>
+<li class="fragment"><strong>Always look for a trigger first</strong>: pain, an infection, constipation, a new medication, not being able to see or hear well.</li>
+<li class="fragment"><strong>Cognitive Stimulation Therapy</strong> <code>NICE-recommended group activity</code></li>
+<li class="fragment"><strong>Exercise</strong></li>
+<li class="fragment"><strong>Music therapy</strong> — strong evidence for calming agitation</li>
+<li class="fragment"><strong>The environment</strong>: good light, routine, clear signs, familiar things</li>
+<li class="fragment"><strong>Supporting the carer</strong> — often the highest-value thing of all</li>
+</ul>
+</section>
+<section id="when-medication-is-needed-tread-carefully" class="slide level2">
+<h2>When medication is needed, tread carefully</h2>
+<div title="Antipsychotics are a last resort">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Antipsychotics are a last resort</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>They <strong>raise the risk of stroke and of death</strong> in people with dementia.</li>
+<li><strong>Especially dangerous in Lewy body dementia</strong> — they can cause severe, lasting harm.</li>
+<li>Only when someone is genuinely at risk — lowest dose, shortest time, reviewed often.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Antidepressants</strong> can help low mood</li>
+<li><strong>Brexpiprazole</strong> — newly approved (in the US) for agitation, not yet on the NHS for this</li>
+<li><strong>Trazodone</strong> — sometimes used for sleep and agitation</li>
+<li><strong>Avoid sedatives/“benzos”</strong> — falls, dependence, and they can make agitation <em>worse</em></li>
+</ul>
+</section>
+<section id="the-honest-limit-of-all-of-this" class="slide level2">
+<h2>The honest limit of all of this</h2>
+<ul>
+<li>None of these drugs slow the loss of brain cells</li>
+<li>None of them clear away the amyloid or tau</li>
+<li>They <strong>don’t change where the disease is heading</strong></li>
+<li>Five years on, the brain has the same disease whether or not someone took them</li>
+</ul>
+<p><em>That’s exactly why the next part matters.</em></p>
+</section>
+<section id="minute-break" class="slide level2" data-background-color="#44475a">
+<h2>5 minute break <span class="emoji" data-emoji="potable_water">🚰</span> <span class="emoji" data-emoji="toilet">🚽</span></h2>
+<div class="r-fit-text" style="color:#50fa7b;">
+
+</div>
+</section>
+<section id="part-3-the-new-disease-modifying-drugs" class="slide level2" data-background-color="#44475a">
+<h2>Part 3: The new disease-modifying drugs</h2>
+</section>
+<section id="the-big-bet-clear-the-amyloid" class="slide level2 smaller">
+<h2>The big bet: clear the amyloid</h2>
+<ul>
+<li>The leading theory (from 1992) is that the build-up of <strong>amyloid</strong> is what sets Alzheimer’s in motion — with the tau tangles, inflammation and cell loss following on.</li>
+<li>The strongest clue: <strong>every</strong> gene fault that <em>causes</em> inherited Alzheimer’s affects amyloid in some way.</li>
+<li>People with <strong>Down’s syndrome</strong> carry an extra copy of the amyloid gene — and almost all develop Alzheimer’s changes by their 50s.</li>
+<li>So the prediction was simple and bold: <strong>clear the amyloid, and you should slow the disease.</strong></li>
+</ul>
+</section>
+<section id="it-took-decades-of-failure" class="slide level2 smaller">
+<h2>It took decades of failure</h2>
+<ul>
+<li>Through the 2010s, <strong>drug after drug failed</strong> — solanezumab, bapineuzumab, crenezumab, gantenerumab. Billions spent, no clear benefit.</li>
+<li>Slowly, the field worked out <em>why</em>:
+<ul>
+<li>They were probably treating <strong>too late</strong> — the disease has a 15–20 year head start</li>
+<li>They were aiming at the <strong>wrong form</strong> of the amyloid</li>
+<li>Too little of the drug reached the brain</li>
+</ul></li>
+<li>The lessons from those failures are what made the recent successes possible.</li>
+</ul>
+</section>
+<section id="then-one-drug-split-the-experts" class="slide level2 smaller">
+<h2>Then one drug split the experts</h2>
+<p><strong>Aducanumab</strong> (2021) — the controversial one:</p>
+<ul>
+<li>Two big trials <strong>disagreed</strong> with each other</li>
+<li>The US regulator (FDA) approved it anyway — over the near-unanimous objection of its own expert panel</li>
+<li>Europe <strong>refused</strong> it; the <strong>NHS never funded</strong> it</li>
+<li>The maker <strong>withdrew it</strong> in 2024</li>
+</ul>
+<p><em>It poisoned the well — but it wasn’t the end of the story.</em></p>
+</section>
+<section id="lecanemab-the-first-to-clearly-work" class="slide level2 smaller">
+<h2>Lecanemab — the first to clearly work</h2>
+<div class="trial-meta">~1,800 people · 18 months · early Alzheimer's, confirmed by biomarkers · clears the sticky amyloid clumps</div>
+<div class="trial-grid">
+  <div class="trial-block efficacy">
+    <div class="trial-cat">Benefit · how fast memory &amp; daily function declined</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">1.0</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">2.0</text>
+      <polyline points="22,100 62,87.2 102,74 142,62 182,52 222,42 262,33.6" fill="none" stroke="#ff79c6" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <polyline points="22,100 62,89.2 102,80 142,71.6 182,63.6 222,57.2 262,51.6" fill="none" stroke="#50fa7b" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <circle cx="262" cy="33.6" r="2.2" fill="#ff79c6"></circle>
+      <circle cx="262" cy="51.6" r="2.2" fill="#50fa7b"></circle>
+      <text x="258" y="29" fill="#ff79c6" font-size="6.5" text-anchor="end" font-family="monospace">placebo 1.66</text>
+      <text x="258" y="48" fill="#50fa7b" font-size="6.5" text-anchor="end" font-family="monospace">lecanemab 1.21</text>
+      <text x="22" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">0</text>
+      <text x="142" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">9 mo</text>
+      <text x="262" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">18 mo</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">27% slower</span><span class="trial-lab">decline slowed by about a quarter over 18 months · a real, but modest, effect</span></div>
+  </div>
+  <div class="trial-block safety">
+    <div class="trial-cat">Safety · brain-swelling risk, by gene type</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">25%</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">50%</text>
+      <rect x="60" y="92" width="50" height="8" fill="#ff79c6" opacity="0.45"></rect>
+      <rect x="125" y="82.4" width="50" height="17.6" fill="#ff79c6" opacity="0.65"></rect>
+      <rect x="190" y="47.2" width="50" height="52.8" fill="#ff79c6"></rect>
+      <text x="85" y="88" fill="#ff79c6" font-size="6.5" text-anchor="middle" font-family="monospace">~5%</text>
+      <text x="150" y="78" fill="#ff79c6" font-size="6.5" text-anchor="middle" font-family="monospace">~11%</text>
+      <text x="215" y="43" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">~33%</text>
+      <text x="85" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">no risk gene</text>
+      <text x="150" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">one copy</text>
+      <text x="215" y="111" fill="#6272a4" font-size="5.5" text-anchor="middle">two copies</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">mostly silent</span><span class="trial-lab">brain swelling/bleeding on scans · usually no symptoms, caught on routine MRI</span></div>
+  </div>
+  <div class="trial-block context">
+    <div class="trial-cat">Who can have it?</div>
+    <div class="trial-stat"><span class="trial-num">USA · 2023</span><span class="trial-lab">fully approved</span></div>
+    <div class="trial-stat"><span class="trial-num">Europe · 2025</span><span class="trial-lab">approved, but not for highest-risk gene carriers</span></div>
+    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Aug 2024 — benefit too small for the price</span></div>
+  </div>
+</div>
+<div class="trial-ref">van Dyck et al., New England Journal of Medicine, 2023</div>
+<aside class="notes">
+<p>This slide summarises the CLARITY-AD trial of lecanemab (van Dyck and colleagues, NEJM 2023). The trial enrolled 1,795 participants with biomarker-confirmed early symptomatic Alzheimer’s disease, randomised to lecanemab or placebo for 18 months. The main efficacy chart shows two cognitive decline curves on the Clinical Dementia Rating Sum of Boxes scale, with the placebo group declining faster than the lecanemab group; the placebo group ended at 1.66 points worse than baseline, the lecanemab group at 1.21 points worse, a difference of minus 0.45 points and a 27 percent slowing of decline, p less than 0.001 across primary and all key secondary endpoints. The safety chart shows ARIA-E rates by APOE genotype: about 5 percent in non-carriers, about 11 percent in heterozygotes, and about 33 percent in homozygotes — a striking gradient. Overall ARIA-E was 12.6 percent and ARIA-H 17.3 percent in the lecanemab arm, with 9.2 percent symptomatic ARIA-E in homozygotes specifically. Regulatory: FDA full approval July 2023; EMA approved on appeal in 2025 excluding APOE4 homozygotes; NICE rejected for NHS use in August 2024 on cost-effectiveness grounds.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="donanemab-a-second-drug-same-story" class="slide level2 smaller">
+<h2>Donanemab — a second drug, same story</h2>
+<div class="trial-meta">~1,700 people · 18 months · early Alzheimer's · clears established plaques, then stops once they're gone</div>
+<div class="trial-grid">
+  <div class="trial-block efficacy">
+    <div class="trial-cat">Benefit · decline in memory &amp; daily function</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">6 pt</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">12 pt</text>
+      <polyline points="22,100 60,90 98,80 136,70 186,58.7 224,48 262,38" fill="none" stroke="#ff79c6" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <polyline points="22,100 60,93.3 98,86.7 136,80 186,72 224,66 262,60" fill="none" stroke="#50fa7b" stroke-width="1.6" stroke-linecap="round"></polyline>
+      <circle cx="262" cy="38" r="2.2" fill="#ff79c6"></circle>
+      <circle cx="262" cy="60" r="2.2" fill="#50fa7b"></circle>
+      <text x="258" y="34" fill="#ff79c6" font-size="6.5" text-anchor="end" font-family="monospace">placebo −9.3</text>
+      <text x="258" y="56" fill="#50fa7b" font-size="6.5" text-anchor="end" font-family="monospace">donanemab −6.0</text>
+      <text x="22" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">0</text>
+      <text x="142" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">36 wk</text>
+      <text x="262" y="111" fill="#6272a4" font-size="6" text-anchor="middle" font-family="monospace">76 wk</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">35% slower</span><span class="trial-lab">and nearly half had no measurable decline at 1 year (vs 29% on placebo)</span></div>
+  </div>
+  <div class="trial-block safety">
+    <div class="trial-cat">Safety · scan changes — drug vs dummy</div>
+    <svg viewbox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"></line>
+      <line x1="20" y1="60" x2="22" y2="60" stroke="#44475a" stroke-width="0.5"></line>
+      <line x1="20" y1="20" x2="22" y2="20" stroke="#44475a" stroke-width="0.5"></line>
+      <text x="18" y="62" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">20%</text>
+      <text x="18" y="22" fill="#6272a4" font-size="6" text-anchor="end" font-family="monospace">40%</text>
+      <rect x="55" y="96" width="22" height="4" fill="#ff79c6" opacity="0.4"></rect>
+      <rect x="80" y="52" width="22" height="48" fill="#ff79c6"></rect>
+      <text x="66" y="92" fill="#6272a4" font-size="5.5" text-anchor="middle" font-family="monospace">2%</text>
+      <text x="91" y="48" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">24%</text>
+      <text x="78" y="111" fill="#6272a4" font-size="6" text-anchor="middle">swelling</text>
+      <rect x="160" y="84" width="22" height="16" fill="#ff79c6" opacity="0.4"></rect>
+      <rect x="185" y="37.2" width="22" height="62.8" fill="#ff79c6"></rect>
+      <text x="171" y="80" fill="#6272a4" font-size="5.5" text-anchor="middle" font-family="monospace">8%</text>
+      <text x="196" y="33" fill="#ff79c6" font-size="7.5" text-anchor="middle" font-family="monospace" font-weight="700">31%</text>
+      <text x="183" y="111" fill="#6272a4" font-size="6" text-anchor="middle">bleeding</text>
+      <rect x="225" y="28" width="6" height="6" fill="#ff79c6" opacity="0.4"></rect>
+      <text x="234" y="33.5" fill="#6272a4" font-size="5.5">dummy</text>
+      <rect x="225" y="38" width="6" height="6" fill="#ff79c6"></rect>
+      <text x="234" y="43.5" fill="#6272a4" font-size="5.5">donanemab</text>
+    </svg>
+    <div class="trial-stat"><span class="trial-num">rare but real</span><span class="trial-lab">most scan changes silent · a small number serious · 3 deaths linked to them</span></div>
+  </div>
+  <div class="trial-block context">
+    <div class="trial-cat">Who can have it?</div>
+    <div class="trial-stat"><span class="trial-num">USA · 2024</span><span class="trial-lab">fully approved</span></div>
+    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Oct 2024 — same cost-effectiveness verdict</span></div>
+    <div class="trial-stat"><span class="trial-num">gene matters</span><span class="trial-lab">far higher scan-change risk in two-copy gene carriers</span></div>
+  </div>
+</div>
+<div class="trial-ref">Sims et al., JAMA, 2023</div>
+<aside class="notes">
+<p>This slide summarises the TRAILBLAZER-ALZ 2 trial of donanemab (Sims and colleagues, JAMA 2023). 1,736 participants total with MCI or mild AD over 76 weeks; the primary analysis population was 1,182 participants with low or intermediate tau burden. Donanemab targets pyroglutamate-modified amyloid beta found only in established plaques; the trial used a stop-when-cleared design where patients with negative amyloid PET stopped treatment. The main efficacy chart shows two iADRS decline curves: the placebo group declined by about 9.3 points, the donanemab group by about 6.0, giving 35 percent slowing on iADRS as the primary endpoint and 36 percent slowing on CDR Sum of Boxes. 47 percent of donanemab participants showed no clinical decline at 1 year versus 29 percent on placebo. The safety chart shows paired bars of ARIA-E and ARIA-H rates: ARIA-E was 24 percent in donanemab vs about 2 percent in placebo, ARIA-H was 31 percent vs about 8 percent. Symptomatic ARIA-E was 5.8 percent and serious ARIA-E 1.5 percent. Three deaths in the donanemab arm were attributed to serious ARIA. APOE4 homozygotes had an odds ratio of 4.57 for ARIA-E versus non-carriers. Regulatory: FDA full approval July 2024; NICE rejected for NHS use October 2024.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="each-drug-grabs-the-amyloid-at-a-different-stage" class="slide level2">
+<h2>Each drug grabs the amyloid at a different stage</h2>
+<p>The amyloid builds up in stages — from single molecules, to small clumps, to hardened plaques. Each drug targets a different point along that path, which is part of why they behave differently.</p>
+
+<img data-src="Pictures/The-process-of-Ab-production-and-aggregation-Under-amyloidogenic-pathway-Ab-as-a.webp" class="r-stretch quarto-figure-center"><p class="caption">How amyloid forms and clumps together over time.</p></section>
+<section id="not-everyone-can-have-them" class="slide level2 smaller">
+<h2>Not everyone can have them</h2>
+<ul>
+<li class="fragment"><strong>Amyloid must be confirmed</strong> — a scan or spinal-fluid test first</li>
+<li class="fragment"><strong>Early stage only</strong> — mild memory problems or mild dementia, not later</li>
+<li class="fragment"><strong>A suitable brain scan</strong> — too many tiny bleeds already rules it out</li>
+<li class="fragment"><strong>Not on strong blood thinners</strong></li>
+<li class="fragment"><strong>The gene test</strong> — to weigh up the risk</li>
+<li class="fragment"><strong>Able to attend an infusion</strong> every 2–4 weeks for 18 months or more</li>
+<li class="fragment"><strong>Able to give informed consent</strong></li>
+</ul>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<iframe src="Widgets/apoe_risk.html" width="130%" height="100%" style="border:0;" title="APOE genotype-stratified ARIA-E risk for lecanemab and donanemab">
+</iframe>
+<aside class="notes">
+<p>This figure shows ARIA-E risk by APOE genotype for both lecanemab and donanemab. For lecanemab in CLARITY-AD: non-carriers about 5 percent, heterozygotes about 11 percent, homozygotes about 33 percent overall ARIA-E. Symptomatic ARIA-E rises from 1.4 percent in non-carriers to 9.2 percent in homozygotes. For donanemab in TRAILBLAZER-ALZ 2: non-carriers about 16 percent, heterozygotes about 23 percent, homozygotes about 41 percent. APOE4 homozygotes represent only about 2 percent of the population but bear most of the treatment-attributable ARIA risk. This is why APOE genotyping is mandatory before either antibody, and why the donanemab US label restricts use in homozygotes while the EMA label for lecanemab excludes homozygotes entirely.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-main-side-effect-in-plain-terms" class="slide level2 smaller">
+<h2>The main side-effect, in plain terms</h2>
+<p>Doctors call it <strong>ARIA</strong> — it shows up on brain scans as one of two things:</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><strong>Swelling</strong></p>
+<ul>
+<li>Temporary fluid build-up in part of the brain</li>
+<li><strong>Usually causes no symptoms</strong> — picked up on routine scans</li>
+<li>Occasionally headache, confusion, or worse</li>
+</ul>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p><strong>Tiny bleeds</strong></p>
+<ul>
+<li>Small spots of bleeding in the brain</li>
+<li><strong>Usually silent</strong> too</li>
+<li>But they leave a permanent mark</li>
+</ul>
+</div></div>
+<ul>
+<li>Mostly mild — but a small number are serious, and a few deaths have happened.</li>
+<li>That’s why people on these drugs need <strong>repeated MRI scans</strong> to catch problems early.</li>
+</ul>
+</section>
+<section id="one-gene-drives-most-of-the-risk" class="slide level2 smaller">
+<h2>One gene drives most of the risk</h2>
+<p>A common gene, <strong>APOE4</strong>, strongly raises the chance of these scan changes — especially in the ~2% of people who carry <strong>two copies</strong>:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Gene status</th>
+<th>Risk with lecanemab</th>
+<th>Risk with donanemab</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No risk gene</td>
+<td>~5%</td>
+<td>~16%</td>
+</tr>
+<tr class="even">
+<td>One copy</td>
+<td>~11%</td>
+<td>~23%</td>
+</tr>
+<tr class="odd">
+<td><strong>Two copies</strong></td>
+<td><strong>~33%</strong></td>
+<td><strong>~41%</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>So a <strong>gene test comes first</strong> — to weigh up whether the drug is worth the risk.</li>
+<li>It’s a sensitive result: it can carry implications for <strong>family members</strong> too, which has to be handled carefully.</li>
+</ul>
+</section>
+<section id="why-you-cant-get-these-on-the-nhs-yet" class="slide level2 smaller">
+<h2>Why you can’t get these on the NHS (yet)</h2>
+<ul>
+<li class="fragment"><strong>The drug alone costs £20–25,000 per person, per year</strong> — before any of the care around it.</li>
+<li class="fragment">It needs an <strong>infusion every 2–4 weeks</strong>, plus <strong>repeated MRI scans</strong>, plus a trained specialist team.</li>
+<li class="fragment">In <strong>August 2024, NICE said no</strong> to NHS funding — the benefit was judged too small for the cost.</li>
+<li class="fragment">So in the UK they’re currently <strong>private-only</strong> — a real <strong>fairness problem</strong>.</li>
+<li class="fragment">And an open scientific question remains: is clearing amyloid <em>enough</em>, or will we need combinations?</li>
+</ul>
+</section>
+<section id="lots-more-is-coming" class="slide level2 smaller">
+<h2>Lots more is coming</h2>
+<ul>
+<li><strong>Drugs aimed at tau</strong> — the other protein — are now in trials</li>
+<li>Approaches that target <strong>inflammation</strong> in the brain</li>
+<li><strong>Vaccines</strong> against amyloid</li>
+<li>And, crucially, <strong>prevention trials</strong> — treating people who carry the risk <em>before</em> symptoms ever start</li>
+</ul>
+<p><em>The first generation of these drugs is just that — the first.</em></p>
+</section>
+<section id="where-we-stand" class="slide level2 smaller">
+<h2>Where we stand</h2>
+<ul>
+<li class="fragment">The first disease-modifying drugs <strong>exist</strong> — a genuine milestone. But the benefit is modest, the side-effects real, and UK access restricted.</li>
+<li class="fragment">A simple <strong>blood test</strong> may soon make diagnosis far easier and earlier.</li>
+<li class="fragment">And <strong>prevention may matter more than any drug</strong>:
+<ul>
+<li class="fragment"><em>In 2024, the Lancet Commission found that <strong>45% of dementia</strong> is linked to <strong>14 risk factors we can do something about</strong>.</em></li>
+<li class="fragment">hearing · education · blood pressure · smoking · weight · depression · exercise · diabetes · alcohol · loneliness · air pollution · head injury · eyesight · cholesterol</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-a-brain-health-centre" class="slide level2 slide-cascade">
+<h2>What is a Brain Health Centre?</h2>
+<div class="slide-grid-cascade">
+<div class="cascade-header">
+<h2 class="big-q">
+Same patient. Same disease. Different future.
+</h2>
+<p class="lede">
+A Brain Health Centre is not a relabelled memory clinic. It redesigns the pathway so that biomarkers, vascular workup, and behavioural support arrive together, early, before too much brain has been lost.
+</p>
+</div>
+<div class="cascade-figure">
+<svg viewbox="0 0 1500 410" xmlns="http://www.w3.org/2000/svg" class="cascade-svg" role="img" aria-label="Two parallel timelines comparing a Memory Assessment Service journey and a Brain Health Centre journey for the same hypothetical patient, Mary aged 64">
+
+  <!-- Patient header -->
+  <rect x="0" y="0" width="1500" height="44" fill="#bd93f9"></rect>
+  <text x="40" y="28" font-family="Fraunces, Georgia, serif" font-size="20" font-weight="800" fill="#fff">Mary, 64.</text>
+  <text x="170" y="28" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#fff" opacity="0.95" font-style="italic">"My memory's not what it was. My dad had dementia. Should I be worried?"</text>
+
+  <!-- ===== MAS TRACK =====
+       Time scale: x=200 (D0) → x=1380 (D365),  3.233 px/day -->
+  <text x="40" y="84" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#bd93f9">MEMORY ASSESSMENT SERVICE</text>
+  <text x="40" y="101" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" fill="#b1bac4" font-style="italic">cognition-led, no biomarkers, sequential appointments</text>
+
+  <line x1="200" y1="148" x2="879" y2="148" stroke="#bd93f9" stroke-width="3"></line>
+  <line x1="879" y1="148" x2="1380" y2="148" stroke="#bd93f9" stroke-width="2" stroke-dasharray="3 5" opacity="0.45"></line>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <!-- D0 GP referral -->
+    <circle cx="200" cy="148" r="8" fill="#bd93f9"></circle>
+    <text x="200" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#f8f8f2">GP referral</text>
+    <text x="200" y="172" text-anchor="middle" font-size="10" fill="#6272a4">Day 0</text>
+    <!-- D60 MAS letter -->
+    <circle cx="394" cy="148" r="8" fill="#bd93f9"></circle>
+    <text x="394" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#f8f8f2">MAS letter</text>
+    <text x="394" y="172" text-anchor="middle" font-size="10" fill="#6272a4">Day 60</text>
+    <!-- D90 First visit -->
+    <circle cx="491" cy="148" r="8" fill="#bd93f9"></circle>
+    <text x="491" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#f8f8f2">First visit</text>
+    <text x="491" y="172" text-anchor="middle" font-size="10" fill="#6272a4">Day 90 · MMSE 25</text>
+    <!-- D180 Repeat MMSE -->
+    <circle cx="782" cy="148" r="8" fill="#bd93f9"></circle>
+    <text x="782" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#f8f8f2">Repeat MMSE</text>
+    <text x="782" y="172" text-anchor="middle" font-size="10" fill="#6272a4">Day 180</text>
+    <!-- D210 Clinical diagnosis (label BELOW line, emphasised) -->
+    <circle cx="879" cy="148" r="11" fill="#bd93f9" stroke="#fff" stroke-width="2"></circle>
+    <text x="879" y="200" text-anchor="middle" font-size="11.5" font-weight="800" fill="#bd93f9">Clinical diagnosis</text>
+    <text x="879" y="216" text-anchor="middle" font-size="10" fill="#6272a4">Day 210</text>
+  </g>
+
+  <!-- MAS outcome box -->
+  <rect x="1080" y="100" width="380" height="96" rx="8" fill="#44475a" stroke="#bd93f9" stroke-width="2"></rect>
+  <text x="1098" y="123" font-family="Fraunces, Georgia, serif" font-size="14" font-weight="800" fill="#bd93f9">"probable Alzheimer's disease"</text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#f8f8f2">
+    <text x="1098" y="144">✗ no biomarkers, no diagnostic certainty</text>
+    <text x="1098" y="161">✗ ineligible for disease-modifying therapy</text>
+    <text x="1098" y="178">✗ no structured risk-reduction plan</text>
+  </g>
+
+  <!-- ===== BHC TRACK ===== -->
+  <text x="40" y="244" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#50fa7b">BRAIN HEALTH CENTRE</text>
+  <text x="40" y="261" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" fill="#b1bac4" font-style="italic">biomarker-led, integrated, with active follow-up</text>
+
+  <!-- BHC spine: solid up to D42, then active follow-up bar to D365 -->
+  <line x1="200" y1="305" x2="336" y2="305" stroke="#00A499" stroke-width="3"></line>
+  <rect x="336" y="297" width="734" height="16" rx="8" fill="#00A499" opacity="0.25"></rect>
+  <text x="703" y="309" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#50fa7b" letter-spacing="1">ACTIVE FOLLOW-UP · BRAIN HEALTH ADVISOR · RISK MODIFICATION</text>
+
+  <g font-family="Inter, Helvetica, Arial, sans-serif">
+    <!-- D0 GP referral -->
+    <circle cx="200" cy="305" r="8" fill="#00A499"></circle>
+    <text x="200" y="287" text-anchor="middle" font-size="11" font-weight="700" fill="#f8f8f2">GP referral</text>
+    <text x="200" y="329" text-anchor="middle" font-size="10" fill="#6272a4">Day 0</text>
+    <!-- D42 ONE-DAY visit (emphasised) -->
+    <circle cx="336" cy="305" r="13" fill="#00A499" stroke="#fff" stroke-width="2"></circle>
+    <text x="336" y="284" text-anchor="middle" font-size="11.5" font-weight="800" fill="#50fa7b">ONE-DAY visit</text>
+    <text x="336" y="335" text-anchor="middle" font-size="10" fill="#b1bac4">Day 42</text>
+    <text x="336" y="349" text-anchor="middle" font-size="10" fill="#b1bac4">pTau217 + MRI + CV (+LP)</text>
+  </g>
+
+  <!-- BHC outcome box -->
+  <rect x="1080" y="245" width="380" height="96" rx="8" fill="#44475a" stroke="#00A499" stroke-width="2"></rect>
+  <text x="1098" y="268" font-family="Fraunces, Georgia, serif" font-size="14" font-weight="800" fill="#50fa7b">biomarker-confirmed diagnosis</text>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#f8f8f2">
+    <text x="1098" y="289">✓ blood pressure normalised, statin started</text>
+    <text x="1098" y="306">✓ hearing aid referral, social plan</text>
+    <text x="1098" y="323">✓ DMT-ready, in research, year-on review booked</text>
+  </g>
+
+  <!-- ===== Day axis ===== -->
+  <line x1="200" y1="383" x2="1380" y2="383" stroke="#6272a4" stroke-width="1"></line>
+  <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" fill="#b1bac4">
+    <line x1="200" y1="380" x2="200" y2="386" stroke="#6272a4"></line>
+    <text x="200" y="400" text-anchor="middle">0</text>
+    <line x1="491" y1="380" x2="491" y2="386" stroke="#6272a4"></line>
+    <text x="491" y="400" text-anchor="middle">90</text>
+    <line x1="782" y1="380" x2="782" y2="386" stroke="#6272a4"></line>
+    <text x="782" y="400" text-anchor="middle">180</text>
+    <line x1="1073" y1="380" x2="1073" y2="386" stroke="#6272a4"></line>
+    <text x="1073" y="400" text-anchor="middle">270</text>
+    <line x1="1380" y1="380" x2="1380" y2="386" stroke="#6272a4"></line>
+    <text x="1380" y="400" text-anchor="end" font-weight="700">365 days</text>
+  </g>
+</svg>
+</div>
+<div class="cascade-bottom">
+<div class="principle-card">
+<div class="principle-num">
+1
+</div>
+<div class="principle-body">
+<strong>Confirm with biology, not exclusion.</strong> Plasma pTau217, MRI and CSF give a positive diagnosis of Alzheimer’s pathology, instead of a diagnosis of last resort.
+</div>
+</div>
+<div class="principle-card">
+<div class="principle-num">
+2
+</div>
+<div class="principle-body">
+<strong>Treat the brain like the heart.</strong> Forty-five percent of dementia worldwide is linked to fourteen modifiable risk factors. Most are vascular and behavioural.
+</div>
+</div>
+<div class="principle-card">
+<div class="principle-num">
+3
+</div>
+<div class="principle-body">
+<strong>Be ready for therapy.</strong> Lecanemab and donanemab need confirmed amyloid. Without biomarkers, eligibility is impossible to establish.
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Today only <strong>1 in 800</strong> UK patients with memory symptoms gets a biomarker-confirmed diagnosis. The other 799 are Mary on the upper track.</p>
+</div>
+<aside class="notes">
+<p>This slide is built around a hypothetical patient: Mary, 64, presenting with memory concern and a family history of dementia. The central figure is a two-track timeline comparing two pathways over 365 days. The upper track is the standard Memory Assessment Service: GP referral on day zero, a letter on day 60, first visit on day 90 with an MMSE of 25, repeat MMSE at day 180, and a clinical diagnosis of probable Alzheimer’s disease at day 210. The outcome box reads: no biomarkers, no diagnostic certainty, ineligible for disease-modifying therapy, no structured risk reduction plan. The lower track is a Brain Health Centre pathway: GP referral on day zero, a single one-day visit on day 42 combining plasma p-tau217, MRI, cardiovascular workup and a lumbar puncture if needed, followed by an active follow-up phase out to day 365 with a Brain Health Advisor and risk modification. The outcome box reads: biomarker-confirmed diagnosis, blood pressure normalised and statin started, hearing aid referral and social plan, DMT-ready, in research, year-on review booked. Three principle cards below the figure: one, confirm with biology not exclusion; two, treat the brain like the heart, citing the 45 percent of dementia worldwide linked to fourteen modifiable risk factors; three, be ready for therapy, since lecanemab and donanemab need confirmed amyloid. The footnote reads: today only one in 800 UK patients with memory symptoms gets a biomarker-confirmed diagnosis, so the other 799 are Mary on the upper track.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="manchester-brain-health-centre" class="slide level2 slide-mbhc">
+<h2>Manchester Brain Health Centre</h2>
+<div class="slide-grid-mbhc">
+<div class="mbhc-partners">
+<svg viewbox="0 0 1100 130" xmlns="http://www.w3.org/2000/svg" class="partners-svg" role="img" aria-label="Three-way partnership: GMMH, MFT, Alzheimer's Society, with University of Manchester academic partner">
+  <!-- Three core partners -->
+  <g>
+    <rect x="40" y="20" width="320" height="90" rx="14" fill="#bd93f9"></rect>
+    <text x="200" y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">GMMH</text>
+    <text x="200" y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">mental health · old-age psychiatry · clinical lead</text>
+  </g>
+  <g>
+    <rect x="390" y="20" width="320" height="90" rx="14" fill="#005EB8"></rect>
+    <text x="550" y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">MFT</text>
+    <text x="550" y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">imaging · cardiology · labs · biobank host</text>
+  </g>
+  <g>
+    <rect x="740" y="20" width="320" height="90" rx="14" fill="#00A499"></rect>
+    <text x="900" y="58" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#fff">Alzheimer's Society</text>
+    <text x="900" y="84" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#fff" opacity="0.9">funding · Brain Health Advisors · public voice</text>
+  </g>
+  <!-- Academic partner ribbon -->
+  <text x="550" y="125" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-style="italic" fill="#b1bac4">academic partner: The University of Manchester</text>
+</svg>
+</div>
+<div class="mbhc-pathway">
+<svg viewbox="0 0 1100 240" xmlns="http://www.w3.org/2000/svg" class="pathway-svg" role="img" aria-label="One-day pathway: triage, blood test, MRI, clinical assessment with cardiovascular check, lumbar puncture if indicated, disclosure and Brain Health Advisor follow-up">
+  <!-- Backbone line -->
+  <line x1="80" y1="120" x2="1020" y2="120" stroke="#bd93f9" stroke-width="3" stroke-dasharray="2 6"></line>
+
+  <!-- Station: Triage -->
+  <g>
+    <circle cx="100" cy="120" r="34" fill="#fff" stroke="#bd93f9" stroke-width="3"></circle>
+    <text x="100" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">📋</text>
+    <text x="100" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">Triage</text>
+    <text x="100" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">MMSE &gt;22</text>
+    <text x="100" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">ACE-III &gt;85</text>
+  </g>
+
+  <!-- Station: Blood -->
+  <g>
+    <circle cx="265" cy="120" r="34" fill="#fff" stroke="#e8762a" stroke-width="3"></circle>
+    <text x="265" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🩸</text>
+    <text x="265" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">Plasma pTau217</text>
+    <text x="265" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">first-line</text>
+    <text x="265" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">biomarker</text>
+  </g>
+
+  <!-- Station: MRI -->
+  <g>
+    <circle cx="430" cy="120" r="34" fill="#fff" stroke="#1f6feb" stroke-width="3"></circle>
+    <text x="430" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🧠</text>
+    <text x="430" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">Same-day MRI</text>
+    <text x="430" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">T1, FLAIR, dMRI,</text>
+    <text x="430" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">swMRI, ASL</text>
+  </g>
+
+  <!-- Station: Clinic + CV -->
+  <g>
+    <circle cx="595" cy="120" r="34" fill="#fff" stroke="#d62728" stroke-width="3"></circle>
+    <text x="595" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">❤️</text>
+    <text x="595" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">Clinic + CV</text>
+    <text x="595" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">RBANS, history,</text>
+    <text x="595" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">pulse-wave velocity</text>
+  </g>
+
+  <!-- Station: LP -->
+  <g>
+    <circle cx="760" cy="120" r="34" fill="#fff" stroke="#2ca02c" stroke-width="3"></circle>
+    <text x="760" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">💉</text>
+    <text x="760" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">CSF (if needed)</text>
+    <text x="760" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">~20% of</text>
+    <text x="760" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">patients</text>
+  </g>
+
+  <!-- Station: Disclosure -->
+  <g>
+    <circle cx="925" cy="120" r="34" fill="#fff" stroke="#00A499" stroke-width="3"></circle>
+    <text x="925" y="127" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">🤝</text>
+    <text x="925" y="80" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#f8f8f2">Disclosure + BHA</text>
+    <text x="925" y="180" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">Brain Health</text>
+    <text x="925" y="195" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" fill="#b1bac4">Advisor follow-up</text>
+  </g>
+
+  <!-- Day banner -->
+  <rect x="60" y="218" width="980" height="22" rx="11" fill="#bd93f9"></rect>
+  <text x="550" y="234" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" letter-spacing="2">ONE VISIT, ONE DAY (Phase 2, Q3 2026)</text>
+</svg>
+</div>
+<div class="mbhc-kpis">
+<div class="kpi">
+<div class="kpi-num">
+49<span class="kpi-unit">d</span>
+</div>
+<div class="kpi-lbl">
+simulated median pathway, referral to disclosure
+</div>
+<div class="kpi-foot">
+vs 187 days currently
+</div>
+</div>
+<div class="kpi">
+<div class="kpi-num">
+73<span class="kpi-unit">%</span>
+</div>
+<div class="kpi-lbl">
+reduction in time to diagnosis
+</div>
+<div class="kpi-foot">
+Phase 2 vs Phase 1b
+</div>
+</div>
+<div class="kpi">
+<div class="kpi-num">
+~80<span class="kpi-unit">%</span>
+</div>
+<div class="kpi-lbl">
+of patients spared a lumbar puncture
+</div>
+<div class="kpi-foot">
+blood-first triage
+</div>
+</div>
+<div class="kpi">
+<div class="kpi-num">
+0
+</div>
+<div class="kpi-lbl">
+serious LP adverse events to date
+</div>
+<div class="kpi-foot">
+~92% acceptance, atraumatic technique
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>HSJ-recognised model · UK’s first Alzheimer’s Society-funded Brain Health Advisors in post · pTau217 Elecsys live by mid-2026 (first site globally)</p>
+</div>
+<aside class="notes">
+<p>This slide describes the Manchester Brain Health Centre. The top section shows the three core partners as coloured blocks: Greater Manchester Mental Health NHS Foundation Trust as clinical lead in old-age psychiatry, Manchester University NHS Foundation Trust providing imaging, cardiology, labs and the biobank, and the Alzheimer’s Society providing funding and training the Brain Health Advisors. Academic partner is the University of Manchester. The middle section is a one-day pathway with six stations connected by a horizontal line: triage with MMSE above 22 and ACE-III above 85, then plasma p-tau217 as the first-line biomarker, then same-day MRI with T1 FLAIR diffusion susceptibility-weighted and arterial spin labelling sequences, then clinic plus cardiovascular check including RBANS history and pulse-wave velocity, then CSF if needed in about 20 percent of patients, then disclosure with the Brain Health Advisor following up. The phase 2 model is one visit, one day, going live in Q3 2026. Four headline KPIs along the bottom: 49 days simulated median pathway from referral to disclosure versus 187 days currently, 73 percent reduction in time to diagnosis from phase 2 versus phase 1b, about 80 percent of patients spared a lumbar puncture by blood-first triage, and zero serious LP adverse events to date with about 92 percent acceptance using atraumatic technique. Footnote: HSJ-recognised model, UK’s first Alzheimer’s Society-funded Brain Health Advisors, p-tau217 Elecsys live by mid-2026 as the first site globally.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="whats-next-and-why-it-matters" class="slide level2 slide-why">
+<h2>What’s next, and why it matters</h2>
+<div class="slide-grid-why">
+<div class="why-headline">
+<div class="big-stat">
+<span class="num">45%</span><span class="lbl">of dementia worldwide is linked to <strong>14 modifiable risk factors</strong> (Lancet Commission, 2024)</span>
+</div>
+</div>
+<div class="why-grid">
+<div class="rf-grid">
+  <div class="rf-life early">
+    <div class="rf-life-label">Early life</div>
+    <div class="rf rf-5"><span class="rf-name">Less education</span><span class="rf-paf">5%</span></div>
+  </div>
+  <div class="rf-life mid">
+    <div class="rf-life-label">Midlife</div>
+    <div class="rf rf-7"><span class="rf-name">Hearing loss</span><span class="rf-paf">7%</span></div>
+    <div class="rf rf-7"><span class="rf-name">High LDL cholesterol</span><span class="rf-paf">7%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Depression</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Traumatic brain injury</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Physical inactivity</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Smoking</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Diabetes</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Hypertension</span><span class="rf-paf">2%</span></div>
+    <div class="rf rf-1"><span class="rf-name">Obesity</span><span class="rf-paf">1%</span></div>
+    <div class="rf rf-1"><span class="rf-name">Excessive alcohol</span><span class="rf-paf">1%</span></div>
+  </div>
+  <div class="rf-life late">
+    <div class="rf-life-label">Late life</div>
+    <div class="rf rf-5"><span class="rf-name">Social isolation</span><span class="rf-paf">5%</span></div>
+    <div class="rf rf-3"><span class="rf-name">Air pollution</span><span class="rf-paf">3%</span></div>
+    <div class="rf rf-2"><span class="rf-name">Vision loss</span><span class="rf-paf">2%</span></div>
+  </div>
+</div>
+</div>
+<div class="why-bottom">
+<div class="next-block">
+<h3>
+What’s next at MBHC
+</h3>
+<ul class="next-list">
+<li>
+One-stop blood-first pathway live in clinic from <strong>Q3 2026</strong>
+</li>
+<li>
+First UK site to deploy <strong>pTau217 Elecsys</strong> for routine NHS care
+</li>
+<li>
+Brain Health Advisors trained in <strong>motivational interviewing</strong>, embedded in pathway
+</li>
+<li>
+Five-year cohort study with <strong>GSK</strong>, ASL imaging endpoints for future trials
+</li>
+<li>
+Hub-and-spoke model across <strong>Greater Manchester</strong>
+</li>
+</ul>
+</div>
+<div class="matters-block">
+<h3>
+Why this matters for all of us
+</h3>
+<ul class="matters-list">
+<li>
+The disease starts <strong>20+ years</strong> before symptoms — so the earlier we act, the more we can do.
+</li>
+<li>
+Most of those 14 risk factors are <strong>everyday, changeable things</strong>: using a hearing aid, staying active, sleeping well, staying connected, treating low mood.
+</li>
+<li>
+None of this is out of reach. <strong>Brain health is something we can work on</strong> — for ourselves and the people we care for.
+</li>
+<li>
+And the single most powerful thing many of us can do is on the next slide.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca interim analysis · Brum et al., Nature Aging 2023 (two-step pTau217 workflow)</p>
+</div>
+<aside class="notes">
+<p>The headline statistic on this slide is from the Lancet Commission on dementia prevention 2024, Livingston and colleagues: 45 percent of dementia worldwide is linked to 14 modifiable risk factors. The body of the slide is a grid of those 14 factors organised by life stage with their population attributable fractions. Early life: less education, 5 percent. Midlife factors are the largest cluster: hearing loss 7 percent, high LDL cholesterol 7 percent, depression 3 percent, traumatic brain injury 3 percent, then physical inactivity, smoking, diabetes, and hypertension at 2 percent each, and obesity and excessive alcohol at 1 percent each. Late life: social isolation 5 percent, air pollution 3 percent, vision loss 2 percent. The bottom of the slide is in two columns. Left column, what’s next at MBHC: one-stop blood-first pathway live from Q3 2026, first UK site to deploy p-tau217 Elecsys for routine NHS care, Brain Health Advisors trained in motivational interviewing embedded in the pathway, a five-year cohort study with GSK using arterial spin labelling endpoints for future trials, and a hub-and-spoke model across Greater Manchester. Right column, why this matters for all of us: the disease starts 20-plus years before symptoms, so the earlier we act the more we can do; most of the 14 risk factors are everyday changeable things — hearing aid use, exercise, sleep, staying connected, treating low mood; brain health is something we can all work on, for ourselves and the people we care for; and the most powerful single action — joining dementia research — is on the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-most-powerful-thing-you-can-do-tonight" class="slide level2 smaller" data-background-color="#44475a">
+<h2>The most powerful thing you can do tonight</h2>
+<div class="r-fit-text" style="color:#50fa7b;">
+<p>Join Dementia Research</p>
+</div>
+<div style="text-align:center; margin-top:0.6em;">
+<p>Every drug I’ve talked about exists because people <strong>volunteered</strong>.</p>
+<p>You don’t need a diagnosis — <strong>anyone over 18 can sign up</strong>, with or without memory problems, including carers. You’re matched to studies near you, and you choose what to take part in.</p>
+<p><strong><a href="https://www.joindementiaresearch.nihr.ac.uk/">joindementiaresearch.nihr.ac.uk</a></strong> · or call the Alzheimer’s Society on <strong>0333 150 3456</strong></p>
+</div>
+<aside class="notes">
+<p>The single clearest call to action for this audience. NIHR Join Dementia Research, run with the Alzheimer’s Society, Alzheimer’s Research UK and Alzheimer Scotland. Open to anyone over 18 — people with and without memory problems, and carers. Registering takes a few minutes; you’re then matched to suitable studies and remain free to opt in or out of any one.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="to-sum-up" class="slide level2 smaller">
+<h2>To sum up</h2>
+<ol type="1">
+<li class="fragment"><p><strong>“Dementia” isn’t one thing — and Alzheimer’s is now a disease we can measure.</strong> The amyloid and tau proteins can be found in life, increasingly through a simple blood test.</p></li>
+<li class="fragment"><p><strong>The treatments we’ve had for years help a little, but don’t stop it.</strong> They’re still worth having — and looking after behaviour, mood and the carer matters just as much.</p></li>
+<li class="fragment"><p><strong>The first disease-modifying drugs have arrived.</strong> A real milestone, but the benefit is modest, the side-effects real, and they’re not yet on the NHS.</p></li>
+<li class="fragment"><p><strong>Prevention may be the biggest prize of all</strong> — and it’s something we can all act on, starting now.</p></li>
+</ol>
+</section>
+<section id="thank-you-over-to-you" class="slide level2" data-confetti="true" data-confetti-large="true" data-confetti-duration="5" data-background-color="#44475a">
+<h2>Thank you — over to you <span class="emoji" data-emoji="wave">👋</span></h2>
+<div class="r-fit-text" style="color:#8be9fd;">
+<p>Questions?</p>
+</div>
+</section>
+<section id="references" class="slide level2 tiny smaller scrollable" data-stack-name="Vertical">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bowen1976cholinergic" class="csl-entry" role="listitem">
+Bowen, David M., Charles B. Smith, Peter White, and Alan N. Davison. 1976. <span>‘Neurotransmitter-Related Enzymes and Indices of Hypoxia in Senile Dementia and Other Abiotrophies’</span>. <em>Brain</em> 99 (3): 459–96.
+</div>
+<div id="ref-vandyck2023lecanemab" class="csl-entry" role="listitem">
+Dyck, Christopher H. van, Chad J. Swanson, Paul Aisen, Randall J. Bateman, Christopher Chen, Michelle Gee, Michio Kanekiyo, et al. 2023. <span>‘Lecanemab in Early <span class="nocase">Alzheimer’s</span> Disease’</span>. <em>New England Journal of Medicine</em> 388 (1): 9–21.
+</div>
+<div id="ref-hardy1992amyloid" class="csl-entry" role="listitem">
+Hardy, John A., and Gerald A. Higgins. 1992. <span>‘Alzheimer’s Disease: The Amyloid Cascade Hypothesis’</span>. <em>Science</em> 256 (5054): 184–85.
+</div>
+<div id="ref-jack2018nia" class="csl-entry" role="listitem">
+Jack, Clifford R., David A. Bennett, Kaj Blennow, Maria C. Carrillo, Billy Dunn, Samantha Budd Haeberlein, David M. Holtzman, et al. 2018. <span>‘<span>NIA-AA</span> Research Framework: Toward a Biological Definition of Alzheimer’s Disease’</span>. <em>Alzheimer’s &amp; Dementia</em> 14 (4): 535–62.
+</div>
+<div id="ref-livingston2024lancet" class="csl-entry" role="listitem">
+Livingston, Gill, Jonathan Huntley, Kathy Y. Liu, Sergi G. Costafreda, Geir Selbæk, Suvarna Alladi, David Ames, et al. 2024. <span>‘Dementia Prevention, Intervention, and Care: 2024 Report of the <span>Lancet</span> Standing Commission’</span>. <em>The Lancet</em> 404 (10452): 572–628.
+</div>
+<div id="ref-NiuAmyloid" class="csl-entry" role="listitem">
+Niu, Zheng, Xinrui Gui, Shuang Feng, and Bernd Reif. 2024. <span>‘Aggregation Mechanisms and Molecular Structures of Amyloid-β in Alzheimer’s Disease’</span>. <em>Chemistry - A European Journal</em> 30 (August). <a href="https://doi.org/10.1002/chem.202400277">https://doi.org/10.1002/chem.202400277</a>.
+</div>
+<div id="ref-palmqvist2024ptau217" class="csl-entry" role="listitem">
+Palmqvist, Sebastian, Pontus Tideman, Niklas Mattsson-Carlgren, Suzanne E. Schindler, Ruben Smith, Rik Ossenkoppele, Shorena Janelidze, Erik Stomrud, Oskar Hansson, et al. 2024. <span>‘Blood Biomarkers to Detect <span>Alzheimer</span> Disease in Primary Care and Secondary Care’</span>. <em>JAMA</em> 332 (15): 1245–57.
+</div>
+<div id="ref-sims2023donanemab" class="csl-entry" role="listitem">
+Sims, John R., Jennifer A. Zimmer, Cynthia D. Evans, Ming Lu, Paul Ardayfio, Jennifer Sparks, Alette M. Wessels, et al. 2023. <span>‘Donanemab in Early Symptomatic <span class="nocase">Alzheimer’s</span> Disease: The <span>TRAILBLAZER-ALZ</span> 2 Randomized Clinical Trial’</span>. <em>JAMA</em> 330 (6): 512–27.
+</div>
+</div>
+<aside class="notes">
+<p>Key sources for the deck:</p>
+<ul>
+<li>Jack et al.&nbsp;2018: NIA-AA AT(N) framework (Alzheimer’s &amp; Dementia)</li>
+<li>Palmqvist et al.&nbsp;2024: plasma p-tau217 in primary and secondary care (JAMA)</li>
+<li>van Dyck et al.&nbsp;2023: CLARITY-AD lecanemab (NEJM)</li>
+<li>Sims et al.&nbsp;2023: TRAILBLAZER-ALZ 2 donanemab (JAMA)</li>
+<li>Livingston et al.&nbsp;2024: Lancet Commission on dementia prevention</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="GMDRClogo.jpg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Dementia - novel treatments</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="dementia_lecture_public_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-confetti/confetti.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-excalidraw/react.development.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-excalidraw/react-dom.development.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.development.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-excalidraw/excalidraw.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="dementia_lecture_public_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'confetti': {"particleCount":150,"angle":90,"spread":360,"startVelocity":25,"decay":0.9,"gravity":0.8,"drift":0,"ticks":400,"colors":["#feba00","#f54281","#1fd14f"],"shapes":null,"scalar":0.7,"zIndex":100,"disableForReducedMotion":false},
+'excalidraw': {"button":true,"shortcut":"`","template":"","library":"","langCode":"en","viewModeEnabled":false,"zenModeEnabled":false,"gridModeEnabled":false,"theme":"dark","autoFocus":false,"useLocalStorage":true},
+'pointer': {"key":"q","color":"#ff5555","pointerSize":18,"alwaysVisible":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 820,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealConfetti, RevealExcalidraw, RevealPointer, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
