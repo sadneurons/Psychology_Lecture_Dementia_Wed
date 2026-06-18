@@ -207,18 +207,16 @@ pointer:
 
 ### Thank you for having me this evening
 
-A talk about where dementia care is right now — what's changed, what's genuinely new, and what we can all do about it. Questions very welcome at the end.
+A talk about where dementia care has got to: what has changed, what is new, and what we can do about it. Questions very welcome at the end.
 
 :::
 
 ## What we'll cover tonight :watch:
-- **What dementia actually is** — and why "Alzheimer's" isn't the whole story
-- **Getting the diagnosis right** — the different types, and the treatable mimics
-- **The treatments we already have** — what they do, and what they honestly don't
-- **The new disease-modifying drugs** — the first that touch the disease itself
-- **Hope, and what we can do** — prevention, brain health, and joining the research
-
-*Plenty of time for your questions at the end.*
+- **What dementia is**, and why "Alzheimer's" isn't the whole story
+- **Getting the diagnosis right**: the different types, and the causes that can be treated
+- **The treatments we already have**, and their limits
+- **The new disease-modifying drugs**
+- **Prevention, and what we can do**
 
 ## Part 1: Dementia {background-color="#44475a"}
 
@@ -228,14 +226,14 @@ A modern framework
 
 ## "Dementia" and "Alzheimer's" are not the same thing {.smaller}
 ::: {.incremental}
-**Dementia** is an umbrella term. It describes a point where someone can no longer manage daily life on their own, because of problems with memory and thinking.
+**Dementia** is an umbrella term. It describes the point where someone can no longer manage daily life on their own, because of problems with memory and thinking.
 
-It is not one disease. There are many different causes — and each is defined in a different way:
+It is not one disease. There are several causes, and each is defined in its own way:
 
-1. Alzheimer's disease `defined by the proteins that build up in the brain`
-2. Vascular dementia `defined by its cause — the brain's blood supply`
-3. Dementia with Lewy bodies `defined by a particular protein deposit`
-4. Frontotemporal dementia `defined by where in the brain it strikes`
+1. Alzheimer's disease `by the proteins that build up in the brain`
+2. Vascular dementia `by its cause: the brain's blood supply`
+3. Dementia with Lewy bodies `by a particular protein deposit`
+4. Frontotemporal dementia `by where in the brain it begins`
 :::
 
 ## Nature Neuroscience overview
@@ -248,13 +246,13 @@ It is not one disease. There are many different causes — and each is defined i
         allowfullscreen
         style="border:0;"></iframe>
 
-## Alzheimer's is a disease, like any other disease
+## Alzheimer's is a disease in its own right
 
-- Alzheimer's is defined by two proteins building up in the brain: **amyloid** (which forms plaques) and **tau** (which forms tangles).
+- Alzheimer's is defined by two proteins building up in the brain: **amyloid**, which forms plaques, and **tau**, which forms tangles.
 
-- It's the brain changes that make it Alzheimer's — not just the symptoms. Someone can have dementia *without* these proteins, and a few people have the proteins *without* any symptoms at all.
+- It is the brain changes that make it Alzheimer's, not the symptoms alone. Someone can have dementia without these proteins, and a few people have the proteins without symptoms.
 
-- That distinction matters, because it's now something we can actually measure in a living person.
+- The difference now is that we can detect these proteins while a person is alive.
 
 ##
 
@@ -264,27 +262,27 @@ It is not one disease. There are many different causes — and each is defined i
 This slide is an interactive timeline showing the historical and biological development of Alzheimer's disease. It walks through the original 1907 case description by Alois Alzheimer, the cholinergic hypothesis of the 1970s, the amyloid cascade hypothesis of 1992, the discovery of presenilin and APP mutations, the introduction of PET amyloid imaging in the 2000s, the 2018 NIA-AA biological framework, and the 2023 to 2024 disease-modifying antibody approvals. Each milestone has a date and short description.
 :::
 
-## How we define Alzheimer's has completely changed {.small}
+## How we define Alzheimer's has changed {.small}
 
 :::: {.columns}
 
 ::: {.column width="45%"}
 **The old way** `until about 2010`
 
-- Diagnosis from symptoms alone → "probable Alzheimer's"
-- The proteins could only be confirmed *after death*, at post-mortem
+- Diagnosed from symptoms alone, as "probable Alzheimer's"
+- The proteins could only be confirmed after death, at post-mortem
 - So we were never quite certain in life
-- Often just called *"dementia of the Alzheimer type"*
+- Often just called "dementia of the Alzheimer type"
 :::
 ::: {.column width="5%"}
 :::
 ::: {.column width="45%"}
 **The modern way** `2018, updated 2024`
 
-- The **biology** defines the disease — the amyloid and tau themselves
+- The biology defines the disease: the amyloid and tau themselves
 - How advanced it is, is described separately
-- We can now measure those proteins *in life* — through a blood test, a spinal-fluid sample, or a brain scan
-- Which means we can spot it *before* symptoms appear
+- We can now measure those proteins in life, through a blood test, a spinal-fluid sample, or a brain scan
+- So it can be picked up before symptoms appear
 :::
 
 ::::
@@ -298,7 +296,7 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 
 ## What we can now measure {.smaller}
 
-*The same four ingredients clinicians use — in plain terms. Click each tab.*
+*The four things clinicians look for, in plain terms. Click each tab.*
 
 ::: {.panel-tabset}
 
@@ -306,16 +304,16 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 :::: {.columns}
 
 ::: {.column width="55%"}
-**The plaque protein** — the earliest sign.
+**The plaque protein.** It appears earliest.
 
 - A **blood test** can now pick it up
-- A sample of **spinal fluid** (a lumbar puncture — uncomfortable, but safe and quick)
+- A sample of **spinal fluid** (a lumbar puncture: uncomfortable, but safe and quick)
 - A **brain scan** (amyloid-PET) that lights up the plaques
 :::
 
 ::: {.column width="45%"}
 ::: {.fragment .blur-reveal}
-![click to reveal: a lumbar puncture — not as bad as people fear](Pictures/BHC_LP.jpeg)
+![click to reveal: a lumbar puncture (less unpleasant than people expect)](Pictures/BHC_LP.jpeg)
 :::
 :::
 
@@ -325,10 +323,10 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 :::: {.columns}
 
 ::: {.column width="55%"}
-**The tangle protein** — tracks more closely with symptoms.
+**The tangle protein.** It tracks more closely with symptoms.
 
 - A spinal-fluid test
-- **A blood test, "p-tau217"** — the breakthrough that makes testing in everyday clinics possible
+- **A blood test ("p-tau217")**, accurate enough to use in ordinary clinics
 - A tau brain scan, mostly used in research
 :::
 
@@ -343,7 +341,7 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 :::: {.columns}
 
 ::: {.column width="55%"}
-**The wear-and-tear signal** — shows the brain is being injured, but not *what* is doing it.
+**The wear-and-tear signal.** It shows the brain is being injured, but not what is doing it.
 
 - An **MRI scan** showing shrinkage in memory areas
 - A scan showing where the brain has slowed down
@@ -360,7 +358,7 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 :::: {.columns}
 
 ::: {.column width="55%"}
-**Everything else that adds up** — added to the picture in 2024.
+**Everything else that adds up**, brought into the picture in 2024.
 
 - **Blood-vessel damage** in the brain
 - **Inflammation**
@@ -375,18 +373,18 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 
 :::
 
-## The number of people with dementia is rising fast {.smaller}
+## The number of people with dementia is rising {.smaller}
 ::: {.incremental}
 
-- Alzheimer's is the most common cause of dementia in people over 65 — but it's far from the only one.
+- Alzheimer's is the most common cause in people over 65, but far from the only one.
 
 - In 2020, more than **55 million** people worldwide were living with dementia.
 
-- That's set to nearly **triple to over 150 million** by 2050 — with the fastest rise in lower- and middle-income countries.
+- It is set to nearly **triple, to over 150 million**, by 2050, with the fastest rise in lower- and middle-income countries.
 
-- And these are almost certainly *under*-counts: dementia is often missed or misdiagnosed.
+- These are almost certainly under-counts: dementia is often missed or misdiagnosed.
 
-- Worldwide, up to **three in four** people with dementia have never had a diagnosis at all.
+- Worldwide, up to **three in four** people with dementia have never had a diagnosis.
 :::
 
 ## From 55 million to over 150 million
@@ -403,7 +401,7 @@ This is an interactive figure based on Jack and colleagues, Lancet Neurology 201
 :::: {.columns}
 
 ::: {.column width="45%"}
-The new tests are powerful — but they don't replace the clinician. They're one piece of the picture.
+The new tests are useful, but they don't replace the clinician. They are one part of the picture.
 
 - Only tests that have been **properly validated** should be used to diagnose
 - A result always has to be read **alongside the person** in front of you
@@ -420,43 +418,43 @@ A doctor's judgement matters most when:
 
 ::::
 
-## The four main types tell themselves apart {.smaller}
+## How the main types differ {.smaller}
 
 ::: {.panel-tabset}
 
 ### Alzheimer's
 
-- **How it starts**: slowly, with **memory** first — recent events slip away
+- **How it starts**: slowly, with **memory** first; recent events slip away
 - **Hallmark**: forgetting, losing words, getting lost in familiar places
 - **On a scan**: shrinkage in the memory and reasoning areas
-- **Treatment**: the standard tablets — and now, possibly, the new drugs
+- **Treatment**: the standard tablets, and now possibly the new drugs
 
 ### Lewy body
 
 - **How it starts**: alertness that **comes and goes**, vivid **visual hallucinations**, acting out dreams, and stiffness like Parkinson's
-- **Hallmark**: attention and visual problems early, *more* than memory
+- **Hallmark**: attention and visual problems early, more than memory
 - **Watch out**: very sensitive to antipsychotic drugs
-- **Treatment**: one of the standard tablets often helps a lot — but **avoid antipsychotics**
+- **Treatment**: one of the standard tablets often helps; **avoid antipsychotics**
 
 ### Frontotemporal
 
 - **How it starts**: often **younger** (under 65), as **changes in personality** or in language
 - **Hallmark**: loss of inhibition, apathy, loss of empathy, changes in eating
 - **On a scan**: shrinkage at the front of the brain
-- **Treatment**: the standard tablets don't help — support and environment matter more
+- **Treatment**: the standard tablets don't help; support and environment matter more
 
 ### Vascular
 
 - **How it starts**: in **steps**, often after a stroke or mini-strokes
 - **Hallmark**: slowed thinking and planning more than forgetting
 - **On a scan**: evidence of damage to the brain's blood supply
-- **Treatment**: above all, **protect the blood vessels** — blood pressure, etc.
+- **Treatment**: above all, **protect the blood vessels** (blood pressure, and so on)
 :::
 
 ## Some "dementias" can be reversed {.smaller}
 
 ::: {.callout-warning title="Treatable things that can look like dementia"}
-Before anyone concludes it's dementia, these have to be ruled out — because they can be **fixed**:
+Before settling on dementia, these are ruled out first, because they can be **put right**:
 
 - Low vitamin B12 or folate
 - An underactive thyroid
@@ -467,14 +465,14 @@ Before anyone concludes it's dementia, these have to be ruled out — because th
 - Untreated sleep apnoea · a slow bleed on the brain · heavy alcohol use
 :::
 
-## What a good assessment actually involves {.smaller}
+## What a good assessment involves {.smaller}
 ::: {.panel-tabset}
 
 ### The story
 :::: {.columns}
 
 ::: {.column width="45%"}
-The history — from the person, **and** from someone who knows them well. Background that shapes risk:
+The history, from the person and from someone who knows them well. Background that shapes risk:
 
 - Education and the kind of work they did
 - Head injuries / contact sports `boxing, rugby`
@@ -500,7 +498,7 @@ Pen-and-paper tests that measure memory and thinking. Different tests suit diffe
 - **MoCA** `more sensitive than the MMSE`
 
 ### Physical exam
-A physical examination, blood tests, and a careful look at current medications — partly to catch the **treatable** causes from a few slides ago.
+A physical examination, blood tests, and a careful look at current medications, partly to catch the **treatable** causes from earlier.
 
 :::: {.columns}
 
@@ -526,7 +524,7 @@ A physical examination, blood tests, and a careful look at current medications �
 ### The new tests
 
 - **Spinal fluid**: measures amyloid and tau directly `needs a lumbar puncture`
-- **Blood test (p-tau217)**: nearly as good — and simple enough for an ordinary clinic
+- **Blood test (p-tau217)**: nearly as good, and simple enough for an ordinary clinic
 - **APOE gene test**: needed before the new drugs, to judge their risk
 - **Genetic testing**: for the rare families where it runs strongly and starts young
 
@@ -535,11 +533,11 @@ A physical examination, blood tests, and a careful look at current medications �
 ## Part 2: The treatments we already have {background-color="#44475a"}
 
 
-## The first big idea: top up a missing chemical {.smaller}
+## The first idea: top up a missing chemical {.smaller}
 
-- In the 1970s, researchers found Alzheimer's brains were short of **acetylcholine** — a chemical messenger the brain uses for memory and attention.
+- In the 1970s, researchers found that Alzheimer's brains were short of **acetylcholine**, a chemical messenger the brain uses for memory and attention.
 - It was being lost as a particular set of brain cells degenerated.
-- The idea that followed: if we can **boost that messenger**, we might improve memory. That gave us the first generation of drugs.
+- The idea that followed: if we top that messenger up, we might improve memory. That gave us the first generation of drugs.
 
 ## How those drugs work {.smaller}
 
@@ -552,8 +550,8 @@ A physical examination, blood tests, and a careful look at current medications �
 :::
 ::: {.column width="45%"}
 - The brain normally breaks the messenger down quickly after use.
-- These drugs **slow that breakdown**, so more of the messenger stays around — making the most of what's left.
-- That's the key point: they help the *remaining* cells work better. They **don't stop the disease**.
+- These drugs **slow that breakdown**, so more of the messenger stays around, making the most of what is left.
+- The key point: they help the remaining cells work better. They **do not stop the disease**.
 - Side-effects come from too much of the messenger: stomach upset, a slow pulse, vivid dreams.
 :::
 
@@ -565,7 +563,7 @@ A physical examination, blood tests, and a careful look at current medications �
 
 ### Donepezil
 
-- A once-a-day tablet — the **most common first choice in the UK**
+- A once-a-day tablet; the **most common first choice in the UK**
 - Side-effects: stomach upset, vivid dreams, a slower pulse
 - A heart trace (ECG) first if there's any heart history
 
@@ -593,15 +591,15 @@ A physical examination, blood tests, and a careful look at current medications �
 ::: {.column width="5%"}
 :::
 ::: {.column width="45%"}
-- In Alzheimer's, brain cells can be over-stimulated by another messenger (glutamate) — a slow "background noise" that damages them.
-- **Memantine** turns that background noise down, while leaving the *useful* signals — the ones you learn with — alone.
+- In Alzheimer's, brain cells can be over-stimulated by another messenger (glutamate), a kind of background noise that wears them down.
+- **Memantine** turns that background noise down, while leaving the useful signals, the ones you learn with, alone.
 - Used in **moderate-to-severe** Alzheimer's, or when the first drugs aren't tolerated.
 - Often taken **alongside** donepezil.
 :::
 
 ::::
 
-## So how much do they actually help? {.smaller}
+## So how much do they help? {.smaller}
 
 <!-- ::: {style="border:2px dashed #6272a4;padding:2em;margin:1em auto;text-align:center;color:#6272a4;border-radius:8px;max-width:80%;"}
 **[FIGURE PLACEHOLDER]**
@@ -615,7 +613,7 @@ two cognitive-decline curves running in parallel, untreated vs on AChEi, **offse
 This chart shows MMSE trajectories over three years for five groups, illustrating the realistic effect size of symptomatic treatment in AD versus DLB. Untreated Alzheimer's disease starts at MMSE 22 and declines to about 14 over three years — roughly 2.5 points per year. AChEi treatment in AD shifts the curve up by about 1 MMSE point and the curves then run in parallel, meaning the disease trajectory is unchanged but patients are on average about 6 months ahead. AChEi plus memantine in moderate AD adds a small further offset. The DLB curves are the striking comparison: untreated DLB declines similarly to AD, but AChEi-treated DLB shows an early bump in cognition above baseline and a much slower trajectory of decline. The take-home is that AChEi do not modify disease in any subtype, but the symptomatic gain is much more meaningful in DLB than in AD. Curves are illustrative, parameterised from Knight 2018, Xu 2021 and 2024, and Truzzi 2022.
 :::
 
-## They help some types far more than others {.smaller}
+## They help some types more than others {.smaller}
 
 :::: {.columns}
 
@@ -642,13 +640,13 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
 ## The symptoms that are hardest on families {.smaller}
 
 ::: {.incremental}
-- Beyond memory, most people develop **changes in behaviour and mood** at some point — up to **9 in 10**.
-- These are often what drives **carer exhaustion**, a move into a care home, and even shorter survival.
+- Beyond memory, most people develop **changes in behaviour and mood** at some point; up to **9 in 10**.
+- These are often what leads to **carer exhaustion**, a move into a care home, and shorter survival.
 - They tend to fall into five groups:
   1. Agitation or aggression
   2. Hallucinations or false beliefs
   3. Depression or anxiety
-  4. Apathy — withdrawal, loss of drive
+  4. Apathy (withdrawal, loss of drive)
   5. Disturbed sleep
 :::
 
@@ -658,32 +656,30 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
 - **Always look for a trigger first**: pain, an infection, constipation, a new medication, not being able to see or hear well.
 - **Cognitive Stimulation Therapy** `NICE-recommended group activity`
 - **Exercise**
-- **Music therapy** — strong evidence for calming agitation
+- **Music therapy**: good evidence for calming agitation
 - **The environment**: good light, routine, clear signs, familiar things
-- **Supporting the carer** — often the highest-value thing of all
+- **Supporting the carer**, often the most useful of all
 :::
 
 ## When medication is needed, tread carefully
 
 ::: {.callout-important title="Antipsychotics are a last resort"}
 - They **raise the risk of stroke and of death** in people with dementia.
-- **Especially dangerous in Lewy body dementia** — they can cause severe, lasting harm.
-- Only when someone is genuinely at risk — lowest dose, shortest time, reviewed often.
+- **Especially dangerous in Lewy body dementia**, where they can cause severe, lasting harm.
+- Only when someone is at real risk: lowest dose, shortest time, reviewed often.
 :::
 
 - **Antidepressants** can help low mood
-- **Brexpiprazole** — newly approved (in the US) for agitation, not yet on the NHS for this
-- **Trazodone** — sometimes used for sleep and agitation
-- **Avoid sedatives/"benzos"** — falls, dependence, and they can make agitation *worse*
+- **Brexpiprazole**: newly approved in the US for agitation, not yet on the NHS for this
+- **Trazodone**: sometimes used for sleep and agitation
+- **Avoid sedatives ("benzos")**: falls, dependence, and they can make agitation worse
 
-## The honest limit of all of this
+## The limits of all this
 
 - None of these drugs slow the loss of brain cells
 - None of them clear away the amyloid or tau
-- They **don't change where the disease is heading**
+- They **do not change where the disease is heading**
 - Five years on, the brain has the same disease whether or not someone took them
-
-*That's exactly why the next part matters.*
 
 
 ## 5 minute break :potable_water: :toilet:{background-color="#44475a"}
@@ -694,37 +690,35 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
 
 ## Part 3: The new disease-modifying drugs {background-color="#44475a"}
 
-## The big bet: clear the amyloid {.smaller}
+## The main idea: clear the amyloid {.smaller}
 
-- The leading theory (from 1992) is that the build-up of **amyloid** is what sets Alzheimer's in motion — with the tau tangles, inflammation and cell loss following on.
-- The strongest clue: **every** gene fault that *causes* inherited Alzheimer's affects amyloid in some way.
-- People with **Down's syndrome** carry an extra copy of the amyloid gene — and almost all develop Alzheimer's changes by their 50s.
-- So the prediction was simple and bold: **clear the amyloid, and you should slow the disease.**
+- The leading theory (from 1992) is that the build-up of **amyloid** is what sets Alzheimer's in motion, with the tau tangles, inflammation and cell loss following on.
+- The strongest clue: **every** gene fault that causes inherited Alzheimer's affects amyloid in some way.
+- People with **Down's syndrome** carry an extra copy of the amyloid gene, and almost all develop Alzheimer's changes by their 50s.
+- So the prediction was straightforward: **clear the amyloid, and the disease should slow.**
 
-## It took decades of failure {.smaller}
+## For a long time, nothing worked {.smaller}
 
-- Through the 2010s, **drug after drug failed** — solanezumab, bapineuzumab, crenezumab, gantenerumab. Billions spent, no clear benefit.
-- Slowly, the field worked out *why*:
-  - They were probably treating **too late** — the disease has a 15–20 year head start
+- Through the 2010s, **one drug after another failed**: solanezumab, bapineuzumab, crenezumab, gantenerumab. A great deal was spent, with no clear benefit.
+- Slowly, the reasons became clearer:
+  - They were probably treating **too late**; the disease has a 15–20 year head start
   - They were aiming at the **wrong form** of the amyloid
   - Too little of the drug reached the brain
-- The lessons from those failures are what made the recent successes possible.
+- What was learned from those failures is what made the more recent results possible.
 
-## Then one drug split the experts {.smaller}
+## One drug divided opinion {.smaller}
 
-**Aducanumab** (2021) — the controversial one:
+**Aducanumab** (2021), the controversial one:
 
-- Two big trials **disagreed** with each other
-- The US regulator (FDA) approved it anyway — over the near-unanimous objection of its own expert panel
+- Two large trials **disagreed** with each other
+- The US regulator approved it anyway, against the near-unanimous objection of its own expert panel
 - Europe **refused** it; the **NHS never funded** it
 - The maker **withdrew it** in 2024
 
-*It poisoned the well — but it wasn't the end of the story.*
-
-## Lecanemab — the first to clearly work {.smaller}
+## Lecanemab: the first to show a clear effect {.smaller}
 
 ```{=html}
-<div class="trial-meta">~1,800 people · 18 months · early Alzheimer's, confirmed by biomarkers · clears the sticky amyloid clumps</div>
+<div class="trial-meta">~1,800 people · 18 months · early Alzheimer's, confirmed by biomarkers · clears soluble amyloid clumps</div>
 <div class="trial-grid">
   <div class="trial-block efficacy">
     <div class="trial-cat">Benefit · how fast memory &amp; daily function declined</div>
@@ -772,7 +766,7 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
     <div class="trial-cat">Who can have it?</div>
     <div class="trial-stat"><span class="trial-num">USA · 2023</span><span class="trial-lab">fully approved</span></div>
     <div class="trial-stat"><span class="trial-num">Europe · 2025</span><span class="trial-lab">approved, but not for highest-risk gene carriers</span></div>
-    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Aug 2024 — benefit too small for the price</span></div>
+    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Aug 2024 · benefit too small for the price</span></div>
   </div>
 </div>
 <div class="trial-ref">van Dyck et al., New England Journal of Medicine, 2023</div>
@@ -782,7 +776,7 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
 This slide summarises the CLARITY-AD trial of lecanemab (van Dyck and colleagues, NEJM 2023). The trial enrolled 1,795 participants with biomarker-confirmed early symptomatic Alzheimer's disease, randomised to lecanemab or placebo for 18 months. The main efficacy chart shows two cognitive decline curves on the Clinical Dementia Rating Sum of Boxes scale, with the placebo group declining faster than the lecanemab group; the placebo group ended at 1.66 points worse than baseline, the lecanemab group at 1.21 points worse, a difference of minus 0.45 points and a 27 percent slowing of decline, p less than 0.001 across primary and all key secondary endpoints. The safety chart shows ARIA-E rates by APOE genotype: about 5 percent in non-carriers, about 11 percent in heterozygotes, and about 33 percent in homozygotes — a striking gradient. Overall ARIA-E was 12.6 percent and ARIA-H 17.3 percent in the lecanemab arm, with 9.2 percent symptomatic ARIA-E in homozygotes specifically. Regulatory: FDA full approval July 2023; EMA approved on appeal in 2025 excluding APOE4 homozygotes; NICE rejected for NHS use in August 2024 on cost-effectiveness grounds.
 :::
 
-## Donanemab — a second drug, same story {.smaller}
+## Donanemab: the second of these drugs {.smaller}
 
 ```{=html}
 <div class="trial-meta">~1,700 people · 18 months · early Alzheimer's · clears established plaques, then stops once they're gone</div>
@@ -809,7 +803,7 @@ This slide summarises the CLARITY-AD trial of lecanemab (van Dyck and colleagues
     <div class="trial-stat"><span class="trial-num">35% slower</span><span class="trial-lab">and nearly half had no measurable decline at 1 year (vs 29% on placebo)</span></div>
   </div>
   <div class="trial-block safety">
-    <div class="trial-cat">Safety · scan changes — drug vs dummy</div>
+    <div class="trial-cat">Safety · scan changes, drug vs dummy</div>
     <svg viewBox="0 0 280 120" class="trial-chart" xmlns="http://www.w3.org/2000/svg">
       <line x1="22" y1="100" x2="262" y2="100" stroke="#44475a" stroke-width="0.7"/>
       <line x1="22" y1="20" x2="22" y2="100" stroke="#44475a" stroke-width="0.7"/>
@@ -837,7 +831,7 @@ This slide summarises the CLARITY-AD trial of lecanemab (van Dyck and colleagues
   <div class="trial-block context">
     <div class="trial-cat">Who can have it?</div>
     <div class="trial-stat"><span class="trial-num">USA · 2024</span><span class="trial-lab">fully approved</span></div>
-    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Oct 2024 — same cost-effectiveness verdict</span></div>
+    <div class="trial-stat"><span class="trial-num">NHS · rejected</span><span class="trial-lab">NICE, Oct 2024 · same verdict</span></div>
     <div class="trial-stat"><span class="trial-num">gene matters</span><span class="trial-lab">far higher scan-change risk in two-copy gene carriers</span></div>
   </div>
 </div>
@@ -850,18 +844,18 @@ This slide summarises the TRAILBLAZER-ALZ 2 trial of donanemab (Sims and colleag
 
 ## Each drug grabs the amyloid at a different stage
 
-The amyloid builds up in stages — from single molecules, to small clumps, to hardened plaques. Each drug targets a different point along that path, which is part of why they behave differently.
+The amyloid builds up in stages, from single molecules, to small clumps, to hardened plaques. Each drug targets a different point along that path, which is part of why they behave differently.
 
 ![How amyloid forms and clumps together over time.](Pictures/The-process-of-Ab-production-and-aggregation-Under-amyloidogenic-pathway-Ab-as-a.webp)
 
 ## Not everyone can have them {.smaller}
 
 ::: {.incremental}
-- **Amyloid must be confirmed** — a scan or spinal-fluid test first
-- **Early stage only** — mild memory problems or mild dementia, not later
-- **A suitable brain scan** — too many tiny bleeds already rules it out
+- **Amyloid must be confirmed**, by a scan or spinal-fluid test first
+- **Early stage only**: mild memory problems or mild dementia, not later
+- **A suitable brain scan**: too many tiny bleeds already rules it out
 - **Not on strong blood thinners**
-- **The gene test** — to weigh up the risk
+- **The gene test**, to weigh up the risk
 - **Able to attend an infusion** every 2–4 weeks for 18 months or more
 - **Able to give informed consent**
 :::
@@ -875,7 +869,7 @@ This figure shows ARIA-E risk by APOE genotype for both lecanemab and donanemab.
 
 ## The main side-effect, in plain terms {.smaller}
 
-Doctors call it **ARIA** — it shows up on brain scans as one of two things:
+Doctors call it **ARIA**. It shows up on brain scans as one of two things:
 
 :::: {.columns}
 
@@ -883,7 +877,7 @@ Doctors call it **ARIA** — it shows up on brain scans as one of two things:
 **Swelling**
 
 - Temporary fluid build-up in part of the brain
-- **Usually causes no symptoms** — picked up on routine scans
+- **Usually causes no symptoms**; picked up on routine scans
 - Occasionally headache, confusion, or worse
 :::
 ::: {.column width="4%"}
@@ -898,12 +892,12 @@ Doctors call it **ARIA** — it shows up on brain scans as one of two things:
 
 ::::
 
-- Mostly mild — but a small number are serious, and a few deaths have happened.
-- That's why people on these drugs need **repeated MRI scans** to catch problems early.
+- Mostly mild, but a small number are serious, and there have been a few deaths.
+- So people on these drugs need **repeated MRI scans** to catch problems early.
 
 ## One gene drives most of the risk {.smaller}
 
-A common gene, **APOE4**, strongly raises the chance of these scan changes — especially in the ~2% of people who carry **two copies**:
+A common gene, **APOE4**, raises the chance of these scan changes, especially in the ~2% of people who carry **two copies**:
 
 | Gene status | Risk with lecanemab | Risk with donanemab |
 |---|---|---|
@@ -911,33 +905,31 @@ A common gene, **APOE4**, strongly raises the chance of these scan changes — e
 | One copy | ~11% | ~23% |
 | **Two copies** | **~33%** | **~41%** |
 
-- So a **gene test comes first** — to weigh up whether the drug is worth the risk.
-- It's a sensitive result: it can carry implications for **family members** too, which has to be handled carefully.
+- So a **gene test comes first**, to weigh up whether the drug is worth the risk.
+- It is a sensitive result: it can have implications for **family members** too, which has to be handled carefully.
 
 ## Why you can't get these on the NHS (yet) {.smaller}
 
 ::: {.incremental}
-- **The drug alone costs £20–25,000 per person, per year** — before any of the care around it.
+- **The drug alone costs £20–25,000 per person, per year**, before any of the care around it.
 - It needs an **infusion every 2–4 weeks**, plus **repeated MRI scans**, plus a trained specialist team.
-- In **August 2024, NICE said no** to NHS funding — the benefit was judged too small for the cost.
-- So in the UK they're currently **private-only** — a real **fairness problem**.
-- And an open scientific question remains: is clearing amyloid *enough*, or will we need combinations?
+- In **August 2024, NICE said no** to NHS funding: the benefit was judged too small for the cost.
+- So in the UK they are currently **private only**, which raises a real question of fairness.
+- And a scientific question remains open: is clearing amyloid enough, or will we need combinations?
 :::
 
-## Lots more is coming {.smaller}
+## More is in the pipeline {.smaller}
 
-- **Drugs aimed at tau** — the other protein — are now in trials
+- **Drugs aimed at tau**, the other protein, are now in trials
 - Approaches that target **inflammation** in the brain
 - **Vaccines** against amyloid
-- And, crucially, **prevention trials** — treating people who carry the risk *before* symptoms ever start
-
-*The first generation of these drugs is just that — the first.*
+- And **prevention trials**: treating people at risk before symptoms start
 
 ## Where we stand {.smaller}
 
 ::: {.incremental}
-- The first disease-modifying drugs **exist** — a genuine milestone. But the benefit is modest, the side-effects real, and UK access restricted.
-- A simple **blood test** may soon make diagnosis far easier and earlier.
+- The first disease-modifying drugs now **exist**. But the benefit is modest, the side-effects are real, and UK access is restricted.
+- A simple **blood test** may soon make diagnosis easier and earlier.
 - And **prevention may matter more than any drug**:
   - *In 2024, the Lancet Commission found that **45% of dementia** is linked to **14 risk factors we can do something about**.*
   - hearing · education · blood pressure · smoking · weight · depression · exercise · diabetes · alcohol · loneliness · air pollution · head injury · eyesight · cholesterol
@@ -1273,10 +1265,10 @@ This slide describes the Manchester Brain Health Centre. The top section shows t
 <h3>Why this matters for all of us</h3>
 
 <ul class="matters-list">
-<li>The disease starts <strong>20+ years</strong> before symptoms — so the earlier we act, the more we can do.</li>
+<li>The disease starts <strong>20+ years</strong> before symptoms, so the earlier we act, the more we can do.</li>
 <li>Most of those 14 risk factors are <strong>everyday, changeable things</strong>: using a hearing aid, staying active, sleeping well, staying connected, treating low mood.</li>
-<li>None of this is out of reach. <strong>Brain health is something we can work on</strong> — for ourselves and the people we care for.</li>
-<li>And the single most powerful thing many of us can do is on the next slide.</li>
+<li>None of this is out of reach. <strong>Brain health is something we can work on</strong>, for ourselves and the people we care for.</li>
+<li>And one of the most useful things many of us can do is on the next slide.</li>
 </ul>
 :::
 
@@ -1292,7 +1284,7 @@ Lancet Commission 2024 (Livingston et al). · MBHC Phase 2 simulation, Tranoca i
 The headline statistic on this slide is from the Lancet Commission on dementia prevention 2024, Livingston and colleagues: 45 percent of dementia worldwide is linked to 14 modifiable risk factors. The body of the slide is a grid of those 14 factors organised by life stage with their population attributable fractions. Early life: less education, 5 percent. Midlife factors are the largest cluster: hearing loss 7 percent, high LDL cholesterol 7 percent, depression 3 percent, traumatic brain injury 3 percent, then physical inactivity, smoking, diabetes, and hypertension at 2 percent each, and obesity and excessive alcohol at 1 percent each. Late life: social isolation 5 percent, air pollution 3 percent, vision loss 2 percent. The bottom of the slide is in two columns. Left column, what's next at MBHC: one-stop blood-first pathway live from Q3 2026, first UK site to deploy p-tau217 Elecsys for routine NHS care, Brain Health Advisors trained in motivational interviewing embedded in the pathway, a five-year cohort study with GSK using arterial spin labelling endpoints for future trials, and a hub-and-spoke model across Greater Manchester. Right column, why this matters for all of us: the disease starts 20-plus years before symptoms, so the earlier we act the more we can do; most of the 14 risk factors are everyday changeable things — hearing aid use, exercise, sleep, staying connected, treating low mood; brain health is something we can all work on, for ourselves and the people we care for; and the most powerful single action — joining dementia research — is on the next slide.
 :::
 
-## The most powerful thing you can do tonight {background-color="#44475a" .smaller}
+## Something everyone here can do {background-color="#44475a" .smaller}
 
 ::: {.r-fit-text style="color:#50fa7b;"}
 Join Dementia Research
@@ -1301,7 +1293,7 @@ Join Dementia Research
 ::: {style="text-align:center; margin-top:0.6em;"}
 Every drug I've talked about exists because people **volunteered**.
 
-You don't need a diagnosis — **anyone over 18 can sign up**, with or without memory problems, including carers. You're matched to studies near you, and you choose what to take part in.
+You don't need a diagnosis. **Anyone over 18 can sign up**, with or without memory problems, including carers. You are matched to studies near you, and you choose what to take part in.
 
 **[joindementiaresearch.nihr.ac.uk](https://www.joindementiaresearch.nihr.ac.uk/)**  ·  or call the Alzheimer's Society on **0333 150 3456**
 :::
@@ -1313,16 +1305,16 @@ The single clearest call to action for this audience. NIHR Join Dementia Researc
 ## To sum up {.smaller}
 
 ::: {.incremental}
-1. **"Dementia" isn't one thing — and Alzheimer's is now a disease we can measure.** The amyloid and tau proteins can be found in life, increasingly through a simple blood test.
+1. **"Dementia" isn't one thing, and Alzheimer's is now a disease we can measure.** The amyloid and tau proteins can be found in life, increasingly through a simple blood test.
 
-2. **The treatments we've had for years help a little, but don't stop it.** They're still worth having — and looking after behaviour, mood and the carer matters just as much.
+2. **The treatments we've had for years help a little, but don't stop it.** They are still worth having, and looking after behaviour, mood and the carer matters just as much.
 
-3. **The first disease-modifying drugs have arrived.** A real milestone, but the benefit is modest, the side-effects real, and they're not yet on the NHS.
+3. **The first disease-modifying drugs have arrived.** The benefit is modest, the side-effects are real, and they are not yet on the NHS.
 
-4. **Prevention may be the biggest prize of all** — and it's something we can all act on, starting now.
+4. **Prevention may matter most of all**, and it is something we can act on now.
 :::
 
-## Thank you — over to you :wave: {data-confetti=true data-confetti-large=true data-confetti-duration="5" background-color="#44475a"}
+## Thank you, over to you :wave: {data-confetti=true data-confetti-large=true data-confetti-duration="5" background-color="#44475a"}
 
 ::: {.r-fit-text style="color:#8be9fd;"}
 Questions?
