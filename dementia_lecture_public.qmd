@@ -689,12 +689,6 @@ This chart shows MMSE trajectories over three years for five groups, illustratin
 - Five years on, the brain has the same disease whether or not someone took them
 
 
-## 5 minute break :potable_water: :toilet:{background-color="#44475a"}
-
-::: {.r-fit-text style="color:#50fa7b;"}
-
-:::
-
 ## Part 3: The new disease-modifying drugs {background-color="#44475a"}
 
 ## The main idea: clear the amyloid {.smaller}
